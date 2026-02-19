@@ -1688,7 +1688,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/us-map-outline.png') center center / contain no-repeat;
+  background: url('../images/us-map-outline.png') center center / cover no-repeat;
   opacity: 1;
   pointer-events: none;
 }
