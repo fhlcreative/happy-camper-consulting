@@ -261,9 +261,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  width: 100%;
+  padding: 0 clamp(2rem, 4vw, 4rem);
 }
 
 .navbar__logo img {
@@ -1104,6 +1103,11 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-navy-deep);
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: var(--space-3xl) 0 var(--space-xl);
+}
+
+.footer__inner {
+  width: 100%;
+  padding: 0 clamp(2rem, 4vw, 4rem);
 }
 
 .footer__grid {
