@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  width: 50%;
   padding: clamp(8rem, 14vw, 12rem) clamp(2rem, 4vw, 4rem) clamp(5rem, 10vw, 8rem);
   text-align: left;
 }
