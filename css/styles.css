@@ -333,6 +333,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
+.hamburger-btn.active {
+  z-index: calc(var(--z-overlay) + 1);
+  position: relative;
+}
+
 .hamburger-btn.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 6px);
 }
