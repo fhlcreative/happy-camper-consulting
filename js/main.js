@@ -42,6 +42,10 @@
   if (mobileOverlay) {
     mobileOverlay.addEventListener('click', toggleMenu);
   }
+  var mobileClose = document.querySelector('.mobile-nav__close');
+  if (mobileClose) {
+    mobileClose.addEventListener('click', toggleMenu);
+  }
 
   // Close mobile menu on link click
   const mobileLinks = document.querySelectorAll('.mobile-nav a');

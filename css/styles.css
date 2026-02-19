@@ -366,6 +366,33 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
 }
 
+.mobile-nav__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav__close:hover {
+  color: var(--color-gold);
+}
+
+.mobile-nav .btn--primary {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--color-navy-deep);
+}
+
 .mobile-nav__overlay {
   position: fixed;
   inset: 0;
