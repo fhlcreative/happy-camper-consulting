@@ -1681,6 +1681,16 @@ h1, h2, h3, h4, h5, h6 {
 .section-national {
   padding: var(--space-section) 0;
   background: var(--color-warm-white);
+  position: relative;
+}
+
+.section-national::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/us-map-outline.png') center center / contain no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
 }
 
 .section-national__content {
