@@ -1689,7 +1689,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   inset: 0;
   background: url('../images/us-map-outline.png') center center / contain no-repeat;
-  opacity: 0.04;
+  opacity: 1;
   pointer-events: none;
 }
 
