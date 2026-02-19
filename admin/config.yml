@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: fhlcreative/happy-camper-consulting
+  branch: main
+
+media_folder: "images/articles"
+public_folder: "/images/articles"
+
+collections:
+  - name: "insights"
+    label: "Insights Articles"
+    folder: "insights/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Culture", "Leadership", "Sustainability", "Safety & Systems"] }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false, hint: "Short summary for article cards (1-2 sentences)" }
+      - { label: "Body", name: "body", widget: "markdown" }
