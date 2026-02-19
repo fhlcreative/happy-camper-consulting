@@ -1254,6 +1254,10 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 
+  .hero__overline::before {
+    display: none;
+  }
+
   .hero__heading {
     font-size: clamp(1.75rem, 6vw, 2.5rem);
   }
