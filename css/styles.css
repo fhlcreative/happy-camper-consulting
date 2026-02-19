@@ -902,6 +902,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+.outcome-card--quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+}
+
+.outcome-card__quote-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--color-navy);
+  line-height: 1.4;
+}
+
 .outcome-card p {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
