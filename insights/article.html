@@ -13,6 +13,7 @@
 
   <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../js/main.js" defer></script>
 
   <style>
     .article-hero {
@@ -128,6 +129,30 @@
   </style>
 </head>
 <body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar navbar--transparent" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="../" class="navbar__logo" aria-label="Happy Camper Consulting — Home">
+        <img src="../images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143">
+      </a>
+      <ul class="navbar__links">
+        <li><a href="../#why">Why Us</a></li>
+        <li><a href="../#framework">How We Help</a></li>
+        <li><a href="../#who">Who It's For</a></li>
+        <li><a href="../#about">Approach</a></li>
+        <li><a href="./">Insights</a></li>
+        <li class="navbar__cta">
+          <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary">Schedule a Conversation</a>
+        </li>
+      </ul>
+      <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
   <a class="article-back" href="index.html">← Back to Insights</a>
 
