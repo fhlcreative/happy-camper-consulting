@@ -753,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .framework-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: var(--space-3xl);
 }
