@@ -1543,28 +1543,40 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(to right, transparent, var(--color-border), transparent);
 }
 
-.section-culture-forming__content {
-  max-width: 740px;
-  margin: 0 auto;
-  text-align: center;
+.section-culture-forming__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
 }
 
-.section-culture-forming__content h2 {
+.section-culture-forming__left h2 {
   font-size: var(--text-3xl);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
-.section-culture-forming__content > p {
+.section-culture-forming__closing {
   color: var(--color-text);
   font-size: var(--text-lg);
   line-height: 1.7;
-  margin-bottom: var(--space-md);
+  margin-top: var(--space-xl);
 }
 
-.section-culture-forming__content .challenge-list {
+.section-culture-forming__intro {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+.section-culture-forming__right .challenge-list {
   text-align: left;
-  max-width: 540px;
-  margin: var(--space-xl) auto;
+}
+
+@media (max-width: 768px) {
+  .section-culture-forming__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---- Framework Closing Quote ---- */
