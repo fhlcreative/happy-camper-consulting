@@ -743,11 +743,25 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 20ch;
 }
 
+.section-framework__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section-framework__diagram img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
 .section-framework__intro {
   color: rgba(255,255,255,0.7);
   font-size: var(--text-lg);
   max-width: 55ch;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-lg);
   line-height: 1.7;
 }
 
