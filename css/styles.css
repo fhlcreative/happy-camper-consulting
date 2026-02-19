@@ -889,6 +889,17 @@ h1, h2, h3, h4, h5, h6 {
 .section-about {
   padding: var(--space-section) 0;
   background: #fff;
+  position: relative;
+}
+
+.section-about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
 }
 
 .section-about__grid {
