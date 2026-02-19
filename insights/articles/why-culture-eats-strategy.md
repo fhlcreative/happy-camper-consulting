@@ -2,6 +2,7 @@
 title: "Why Culture Eats Strategy for Breakfast at Camp"
 date: 2026-03-03T09:00:00.000Z
 category: "Culture"
+featured_image: "/images/articles/campfire-friends.jpg"
 excerpt: "You can have the best programming, the newest facilities, and a killer marketing plan — but if your culture is broken, none of it matters."
 ---
 
@@ -14,6 +15,8 @@ I've seen it over and over in 32 years of camp leadership: the camps that thrive
 Most camp directors I work with know something feels off. Retention is down. Staff morale is shaky. Parents are harder to please. But when I ask about their culture, they point to their mission statement.
 
 A mission statement isn't culture. Culture is what happens when nobody's watching.
+
+![Camp counselors outdoors](/images/articles/camp-team.jpg)
 
 ## Three Signs Your Camp Culture Needs Work
 
