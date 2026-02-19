@@ -1205,7 +1205,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--text-base);
 }
 
-.cta-note {
+.cta-trust {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.5);
+  margin-top: var(--space-lg);
+  font-style: italic;
+}
+
+.cta-note-unused {
   margin-top: var(--space-lg);
   font-size: var(--text-sm);
   color: rgba(255,255,255,0.45);
