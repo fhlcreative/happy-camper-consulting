@@ -40,10 +40,7 @@
           "height": 450
         },
         "founder": { "@id": "https://happycamperconsultant.com/#jeff" },
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        },
+        "areaServed": { "@type": "Country", "name": "United States" },
         "knowsAbout": [
           "Camp Leadership Consulting",
           "Camp Governance",
@@ -52,8 +49,7 @@
           "Christian Camp Consulting",
           "Nonprofit Leadership",
           "Board-Director Alignment"
-        ],
-        "sameAs": []
+        ]
       },
       {
         "@type": "Person",
@@ -104,7 +100,7 @@
             "name": "How do I get started with Happy Camper Consulting?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Start with a 45-60 minute virtual conversation at no obligation. This is not a sales pitch — it's a time to understand your camp's current realities. Schedule through the website and you'll receive a Camp Health Snapshot questionnaire in your confirmation email."
+              "text": "Start with a conversation at no obligation. This is not a sales pitch — it's a time to understand your camp's current realities. Schedule through the website."
             }
           }
         ]
@@ -122,13 +118,22 @@
         <img src="images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143">
       </a>
       <ul class="navbar__links">
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#framework">How We Help</a></li>
-        <li><a href="#who">Who It's For</a></li>
-        <li><a href="#about">Approach</a></li>
-        <li><a href="insights/">Insights</a></li>
+        <li><a href="about/">About</a></li>
+        <li class="navbar__dropdown">
+          <a href="#" class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Insights
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </a>
+          <ul class="navbar__dropdown-menu">
+            <li><a href="insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="insights/culture/">Culture</a></li>
+            <li><a href="insights/leadership/">Leadership</a></li>
+            <li><a href="insights/sustainability/">Sustainability</a></li>
+            <li><a href="insights/safety-systems/">Safety &amp; Systems</a></li>
+          </ul>
+        </li>
         <li class="navbar__cta">
-          <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary">Schedule a Conversation</a>
+          <a href="conversation/" class="btn btn--primary">Start a Conversation</a>
         </li>
       </ul>
       <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
@@ -143,19 +148,28 @@
   <div class="mobile-nav__overlay" aria-hidden="true"></div>
   <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
     <ul>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#framework">How We Help</a></li>
-      <li><a href="#who">Who It's For</a></li>
-      <li><a href="#about">Approach</a></li>
-      <li><a href="insights/">Insights</a></li>
+      <li><a href="about/">About</a></li>
+      <li class="mobile-nav__dropdown">
+        <a href="#" class="mobile-nav__dropdown-toggle">
+          Insights
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+        </a>
+        <ul class="mobile-nav__submenu">
+          <li><a href="insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+          <li><a href="insights/culture/">Culture</a></li>
+          <li><a href="insights/leadership/">Leadership</a></li>
+          <li><a href="insights/sustainability/">Sustainability</a></li>
+          <li><a href="insights/safety-systems/">Safety &amp; Systems</a></li>
+        </ul>
+      </li>
     </ul>
-    <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary">Schedule a Conversation</a>
+    <a href="conversation/" class="btn btn--primary">Start a Conversation</a>
   </div>
 
   <!-- ===== Hero ===== -->
   <section class="hero" aria-label="Introduction">
     <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1504703635429-e206c7b286a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Campfire under the night sky" width="1080" height="720" loading="eager">
+      <img src="https://images.unsplash.com/photo-1504703635429-e206c7b286a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920" alt="Campfire under the night sky" width="1920" height="1080" loading="eager">
     </div>
     <div class="hero__content">
       <div class="hero__text">
@@ -163,11 +177,10 @@
         <h1 class="hero__heading">Healthy Camps Don't Happen by <em>Accident</em></h1>
         <p class="hero__sub">Happy Camper Consulting strengthens the leadership, governance, and culture that sustain thriving camp organizations&hairsp;—&hairsp;across seasons, transitions, and generations.</p>
         <div class="hero__buttons">
-          <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary btn--large">
-            Schedule a Conversation
+          <a href="conversation/" class="btn btn--primary btn--large">
+            Start a Conversation
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
           </a>
-          <a href="#framework" class="btn btn--outline-light">Explore the Framework</a>
         </div>
       </div>
       <div class="hero__portrait">
@@ -201,7 +214,7 @@
     </div>
   </div>
 
-  <!-- ===== Why Section ===== -->
+  <!-- ===== Why Happy Camper Consulting? ===== -->
   <section id="why" class="section-why" aria-labelledby="why-heading">
     <div class="container">
       <div class="section-why__grid">
@@ -210,150 +223,153 @@
         </div>
         <div class="section-why__content reveal">
           <span class="overline">Why Happy Camper Consulting?</span>
-          <h2 id="why-heading">Most Camps Don't Struggle from a Lack of Passion</h2>
-          <p class="answer-capsule">They struggle because leadership, governance, and culture drift out of alignment over time. Happy Camper Consulting exists to strengthen the underlying framework that sustains healthy leadership and culture — so camps can thrive across seasons, transitions, and generations.</p>
-          <ul class="challenge-list">
-            <li>Recurring staff conflict that never fully resolves</li>
-            <li>Board and director tension around roles and authority</li>
-            <li>Mission statements that inspire but lack reinforcement</li>
-            <li>Growth that introduces complexity faster than structure can support</li>
-            <li>Values clearly stated but not consistently lived</li>
-          </ul>
-          <p>These challenges are rarely about intent — they're about <strong>alignment</strong>.</p>
+          <h2 id="why-heading">Why Happy Camper Consulting?</h2>
+          <p>Most camps do not struggle because they lack passion. They struggle because leadership, governance, and culture drift out of alignment over time.</p>
+          <p>Recurring staff conflict. Board and director tension. Mission statements that inspire but lack reinforcement. Growth that introduces complexity faster than structure can support.</p>
+          <p>Happy Camper Consulting exists to strengthen the underlying framework that sustains healthy leadership and culture—so camps can thrive across seasons, transitions, and generations.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Framework Section (Healthy Camp Operating Model™) ===== -->
-  <section id="framework" class="section-framework" aria-labelledby="framework-heading">
-    <div class="container">
-      <span class="overline reveal">The Healthy Camp Operating Model™</span>
-      <h2 id="framework-heading" class="reveal">A Complete Framework for Healthy Camps</h2>
-      <p class="section-framework__intro reveal">Healthy culture does not sustain itself. It must be structured, reinforced, and protected. These four layers work together to create camps that flourish — structurally, relationally, and culturally.</p>
-
-      <div class="framework-grid">
-        <div class="framework-card reveal reveal-delay-1">
-          <div class="framework-card__number">01</div>
-          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
-          <h3>Structure</h3>
-          <p>Value-Driven Management Systems that create clarity in governance, authority, and operational accountability.</p>
-        </div>
-        <div class="framework-card reveal reveal-delay-2">
-          <div class="framework-card__number">02</div>
-          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg>
-          <h3>Translation</h3>
-          <p>Core values translated into observable, everyday behaviors — making culture visible and reinforceable.</p>
-        </div>
-        <div class="framework-card reveal reveal-delay-3">
-          <div class="framework-card__number">03</div>
-          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
-          <h3>Formation</h3>
-          <p>Leadership and staff development programs that build capacity, clarity, and cohesion across your team.</p>
-        </div>
-        <div class="framework-card reveal reveal-delay-4">
-          <div class="framework-card__number">04</div>
-          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
-          <h3>Protection</h3>
-          <p>Safety, risk, and accountability systems that safeguard your mission, your people, and your organizational health.</p>
-        </div>
-      </div>
-
-      <div style="text-align: center;" class="reveal">
-        <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary btn--large">
-          Explore How This Applies to Your Camp
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Culture Outcomes ===== -->
-  <section class="section-culture" aria-labelledby="culture-heading">
-    <div class="container">
-      <span class="overline reveal" style="text-align:center; display:block;">What Healthy Culture Produces</span>
-      <h2 id="culture-heading" class="reveal">When These Four Layers Align, Camps Flourish</h2>
-      <p class="section-culture__sub reveal">Healthy systems create space for healthy campers. Here's what alignment looks like in practice.</p>
-
-      <div class="outcomes-grid">
-        <div class="outcome-card reveal reveal-delay-1">
-          <div class="outcome-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
-          </div>
-          <h3>Stronger Staff Retention</h3>
-          <p>When expectations are clear and culture is healthy, staff stay longer and bring more energy to their roles.</p>
-        </div>
-        <div class="outcome-card reveal reveal-delay-2">
-          <div class="outcome-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"/></svg>
-          </div>
-          <h3>Clearer Leadership Accountability</h3>
-          <p>Leaders know what's expected, boards know their boundaries, and everyone operates from a shared understanding.</p>
-        </div>
-        <div class="outcome-card reveal reveal-delay-3">
-          <div class="outcome-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-          </div>
-          <h3>Reduced Recurring Conflict</h3>
-          <p>Systemic alignment eliminates the root causes of friction — so the same issues stop resurfacing year after year.</p>
-        </div>
-        <div class="outcome-card reveal reveal-delay-1">
-          <div class="outcome-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
-          </div>
-          <h3>Board Confidence &amp; Clarity</h3>
-          <p>Boards gain governance clarity and confidence in the camp's direction, strengthening organizational trust at every level.</p>
-        </div>
-        <div class="outcome-card reveal reveal-delay-2">
-          <div class="outcome-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
-          </div>
-          <h3>Sustainable Growth</h3>
-          <p>Grow without mission drift. Expand programs, staff, and reach while keeping your culture and values intact.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== About Jeff ===== -->
-  <section id="about" class="section-about" aria-labelledby="about-heading">
+  <!-- ===== Experience That Understands Camp Leadership Realities ===== -->
+  <section id="experience" class="section-about" aria-labelledby="experience-heading">
     <div class="container">
       <div class="section-about__grid">
         <div class="section-about__image reveal">
           <img src="images/team/jeff-headshot.jpg" alt="Jeff Rorabaugh — Founder of Happy Camper Consulting" width="800" height="800" loading="lazy">
         </div>
         <div class="section-about__content reveal">
-          <span class="overline">Meet Jeff Rorabaugh</span>
-          <h2 id="about-heading">32+ Years of Hands-On Camp Leadership</h2>
-          <p>Camp leadership requires more than passion — it requires <strong>clarity that sustains culture</strong> through seasons of growth, transition, and complexity.</p>
-          <p>Jeff's work is grounded in more than three decades of hands-on camp leadership and advisory experience, including long-term partnerships with camps such as Camp Swamp USA, Camp Mavela RSA, and other domestic and international organizations.</p>
-          <p>He helps leaders recognize patterns early, strengthen alignment between directors and boards, and build frameworks that outlast personalities.</p>
-          <div class="about-credentials">
-            <div class="about-credential">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              32+ Years Experience
-            </div>
-            <div class="about-credential">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              U.S. &amp; International
-            </div>
-            <div class="about-credential">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              Proprietary Framework
-            </div>
-          </div>
+          <span class="overline">Real-World Experience</span>
+          <h2 id="experience-heading">Experience That Understands Camp Leadership Realities</h2>
+          <p>Camp leadership requires more than passion—it requires clarity that sustains culture through seasons of growth, transition, and complexity.</p>
+          <p>Our work is grounded in more than three decades of hands-on camp leadership and advisory experience, including long-term partnerships with camps such as Camp Swamp USA, Camp Mavela RSA, and other domestic and international organizations.</p>
+          <p>We help leaders recognize patterns early, strengthen alignment between directors and boards, and build frameworks that outlast personalities.</p>
+        </div>
+      </div>
+      <!-- Callout -->
+      <div class="experience-callout reveal">
+        <div class="experience-callout__inner">
+          <h3>Experienced Camp Consulting Across Diverse Contexts</h3>
+          <p>With over three decades of camp leadership experience, Happy Camper Consulting has partnered with independent camps across varied organizational structures, including multi-site and international initiatives. Our frameworks are shaped by real implementation—not theory.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Who We Serve ===== -->
+  <!-- ===== Culture Is Always Forming ===== -->
+  <section id="culture-forming" class="section-culture-forming" aria-labelledby="culture-forming-heading">
+    <div class="container">
+      <div class="section-culture-forming__content reveal">
+        <span class="overline">The Reality</span>
+        <h2 id="culture-forming-heading">Culture Is Always Forming—Intentionally or Not</h2>
+        <p>Even healthy camps experience moments where:</p>
+        <ul class="challenge-list">
+          <li>Values are clearly stated but not consistently lived.</li>
+          <li>Staff expectations feel uneven or unclear.</li>
+          <li>Leadership carries too much operational weight.</li>
+          <li>The same issues resurface year after year.</li>
+        </ul>
+        <p>These challenges are rarely about intent—they're about alignment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== A Complete Framework for Healthy Camps ===== -->
+  <section id="framework" class="section-framework" aria-labelledby="framework-heading">
+    <div class="container">
+      <span class="overline reveal">The Healthy Camp Operating Model™</span>
+      <h2 id="framework-heading" class="reveal">A Complete Framework for Healthy Camps</h2>
+      <p class="section-framework__intro reveal">"Healthy culture does not sustain itself. It must be structured, reinforced, and protected."</p>
+      <p class="section-framework__intro reveal" style="margin-top: -2rem;">Our Healthy Camp Operating Model™ integrates four essential layers:</p>
+
+      <div class="framework-grid">
+        <div class="framework-card reveal reveal-delay-1">
+          <div class="framework-card__number">01</div>
+          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+          <h3>Structure</h3>
+          <p>Value-Driven Management Systems. We clarify mission, define governance boundaries, align strategic priorities, and establish measurable performance rhythms so leadership operates with clarity.</p>
+        </div>
+        <div class="framework-card reveal reveal-delay-2">
+          <div class="framework-card__number">02</div>
+          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg>
+          <h3>Translation</h3>
+          <p>Core Values into Observable Behaviors. We help camps define clear values and translate them into lived expectations that staff can see, model, and reinforce daily.</p>
+        </div>
+        <div class="framework-card reveal reveal-delay-3">
+          <div class="framework-card__number">03</div>
+          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+          <h3>Formation</h3>
+          <p>Leadership &amp; Staff Development. Through practical training frameworks, we equip directors, boards, and staff to sustain culture intentionally—not just seasonally.</p>
+        </div>
+        <div class="framework-card reveal reveal-delay-4">
+          <div class="framework-card__number">04</div>
+          <svg class="framework-card__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+          <h3>Protection</h3>
+          <p>Safety, Risk &amp; Accountability Systems. Healthy camps protect what they value. We strengthen policies, reporting systems, and accountability rhythms that reinforce trust and stability.</p>
+        </div>
+      </div>
+
+      <p class="section-framework__closing reveal">"When these four layers align, camps flourish—structurally, relationally, and culturally."</p>
+    </div>
+  </section>
+
+  <!-- ===== What Healthy Culture Produces ===== -->
+  <section class="section-culture" aria-labelledby="culture-heading">
+    <div class="container">
+      <span class="overline reveal" style="text-align:center; display:block;">What Healthy Culture Produces</span>
+      <h2 id="culture-heading" class="reveal">What Healthy Frameworks Produce</h2>
+
+      <div class="outcomes-grid">
+        <div class="outcome-card reveal reveal-delay-1">
+          <div class="outcome-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+          </div>
+          <h3>Stronger Staff Retention &amp; Morale</h3>
+          <p>When expectations are clear and culture is healthy, staff stay longer and bring more energy to their roles.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-2">
+          <div class="outcome-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"/></svg>
+          </div>
+          <h3>Clearer Leadership Expectations &amp; Accountability</h3>
+          <p>Leaders know what's expected, boards know their boundaries, and everyone operates from a shared understanding.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-3">
+          <div class="outcome-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3>Reduced Recurring Conflict &amp; Operational Friction</h3>
+          <p>Systemic alignment eliminates the root causes of friction — so the same issues stop resurfacing year after year.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-1">
+          <div class="outcome-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <h3>Greater Board Confidence &amp; Governance Clarity</h3>
+          <p>Boards gain governance clarity and confidence in the camp's direction, strengthening organizational trust at every level.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-2">
+          <div class="outcome-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
+          </div>
+          <h3>Sustainable Growth Without Mission Drift</h3>
+          <p>Grow without mission drift. Expand programs, staff, and reach while keeping your culture and values intact.</p>
+        </div>
+      </div>
+
+      <p class="section-culture__quote reveal">"Healthy systems create space for healthy campers."</p>
+    </div>
+  </section>
+
+  <!-- ===== Designed for Camp Leaders and Boards ===== -->
   <section class="section-serve" aria-labelledby="serve-heading">
     <div class="container">
       <div class="section-serve__split reveal">
         <div class="section-serve__content">
           <span class="overline">Who This Work Serves</span>
-          <h2 id="serve-heading">Designed for Camp Leaders &amp; Boards</h2>
+          <h2 id="serve-heading">Designed for Camp Leaders and Boards</h2>
+          <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-md);">This work serves:</p>
           <ul class="serve-list">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
@@ -367,15 +383,8 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
               Faith-based camps committed to excellence and mission integrity
             </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              Independent and nonprofit camp organizations nationwide
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
-              Multi-site and international camp networks
-            </li>
           </ul>
+          <p style="color: rgba(255,255,255,0.85); margin-top: var(--space-xl); font-weight: 600; font-size: var(--text-lg);">If culture matters, this work matters.</p>
         </div>
         <div class="section-serve__image">
           <img src="https://images.unsplash.com/photo-1636434981723-9904d5aead9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Camp cabins nestled in the woods" width="1080" height="720" loading="lazy">
@@ -384,50 +393,25 @@
     </div>
   </section>
 
-  <!-- ===== VDMS Section ===== -->
-  <section id="vdms" class="section-vdms" aria-labelledby="vdms-heading">
-    <div class="container">
-      <span class="overline reveal" style="text-align:center; display:block;">Value-Driven Management System</span>
-      <h2 id="vdms-heading" class="reveal">The Five Pillars of VDMS</h2>
-      <p class="section-vdms__sub reveal">A structured management approach that connects your camp's mission to measurable, everyday operations.</p>
-
-      <div class="vdms-pillars reveal">
-        <div class="vdms-pillar">
-          <div class="vdms-pillar__number">1</div>
-          <h3>Mission &amp; Stakeholder Clarity</h3>
-          <p>Define why the camp exists and who it serves — with precision and alignment.</p>
-        </div>
-        <div class="vdms-pillar">
-          <div class="vdms-pillar__number">2</div>
-          <h3>One Aligned Plan</h3>
-          <p>A unified strategic plan with clear authority boundaries and shared ownership.</p>
-        </div>
-        <div class="vdms-pillar">
-          <div class="vdms-pillar__number">3</div>
-          <h3>Measurable Accountability</h3>
-          <p>Goals, metrics, and Green/Yellow/Red visibility for every initiative.</p>
-        </div>
-        <div class="vdms-pillar">
-          <div class="vdms-pillar__number">4</div>
-          <h3>Disciplined Review Rhythms</h3>
-          <p>Regular mission plan reviews and special attention sessions that keep alignment active.</p>
-        </div>
-        <div class="vdms-pillar">
-          <div class="vdms-pillar__number">5</div>
-          <h3>Cultural Reinforcement</h3>
-          <p>Values translated into lived behaviors — reinforced at every level of the organization.</p>
-        </div>
+  <!-- ===== National Camp Consulting ===== -->
+  <section class="section-national" aria-labelledby="national-heading">
+    <div class="container container--narrow">
+      <div class="section-national__content reveal">
+        <span class="overline" style="text-align: center; display: block;">Nationwide Service</span>
+        <h2 id="national-heading">National Camp Consulting for Christian and Independent Camps</h2>
+        <p>Happy Camper Consulting provides camp consulting services nationwide, partnering with Christian camps, nonprofit camps, and independent camp organizations seeking stronger leadership alignment, governance clarity, and sustainable cultural frameworks.</p>
+        <p>Whether your camp is faith-based or mission-driven in a broader sense, our Healthy Camp Operating Model™ provides structured clarity without sacrificing relational leadership or joy.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Final CTA ===== -->
+  <!-- ===== Start with a Conversation ===== -->
   <section class="section-cta" aria-labelledby="cta-heading">
     <div class="container">
       <span class="overline reveal">Ready to Begin?</span>
       <h2 id="cta-heading" class="reveal">Start with a Conversation</h2>
-      <p class="reveal">Not every camp needs the same solution. A conversation helps clarify what support — if any — would be most helpful for your leadership team and board.</p>
-      <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary btn--large reveal">
+      <p class="reveal">Not every camp needs the same solution. A conversation helps clarify what support—if any—would be most helpful for your leadership team and board.</p>
+      <a href="conversation/" class="btn btn--primary btn--large reveal">
         Schedule a Conversation
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
       </a>
@@ -446,22 +430,24 @@
         <div class="footer__col">
           <h4>Explore</h4>
           <ul>
-            <li><a href="#why">Why Happy Camper</a></li>
-            <li><a href="#framework">Healthy Camp Operating Model™</a></li>
-            <li><a href="#about">About Jeff</a></li>
-            <li><a href="#vdms">VDMS Framework</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="insights/">Insights</a></li>
+            <li><a href="conversation/">Start a Conversation</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Connect</h4>
+          <h4>Insights</h4>
           <ul>
-            <li><a href="https://happycamperconsultant.com/conversation/">Schedule a Conversation</a></li>
-            <li><a href="https://happycamperconsultant.com/christian-camps/">For Christian Camps</a></li>
+            <li><a href="insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="insights/culture/">Culture</a></li>
+            <li><a href="insights/leadership/">Leadership</a></li>
+            <li><a href="insights/sustainability/">Sustainability</a></li>
+            <li><a href="insights/safety-systems/">Safety &amp; Systems</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 Happy Camper Consulting. All rights reserved.</p>
+        <p>&copy; 2025 Happy Camper Consulting, LLC. All rights reserved.</p>
         <p>Camp Leadership &amp; Culture Consulting — Nationwide</p>
       </div>
     </div>
