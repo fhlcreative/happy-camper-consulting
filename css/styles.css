@@ -1003,6 +1003,24 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.section-serve::before,
+.section-serve::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-border), transparent);
+}
+
+.section-serve::before {
+  top: 0;
+}
+
+.section-serve::after {
+  bottom: 0;
+}
+
 .section-serve__split {
   display: grid;
   grid-template-columns: 1fr 1fr;
