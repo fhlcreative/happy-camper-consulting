@@ -1,6 +1,6 @@
 ---
 title: This is a tester post
-date: 2026-02-19T09:46:00.000-05:00
+date: 2026-02-19T16:25:00.000-05:00
 category: Leadership
 featured_image: /images/articles/camp-team.jpg
 ---
