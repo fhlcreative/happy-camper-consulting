@@ -1,9 +1,10 @@
 ---
-title: "Why Culture Eats Strategy for Breakfast at Camp"
+title: "[TEST] Why Culture Eats Strategy for Breakfast at Camp"
 date: 2026-03-03T09:00:00.000Z
-category: "Culture"
-featured_image: "/images/articles/campfire-friends.jpg"
-excerpt: "You can have the best programming, the newest facilities, and a killer marketing plan — but if your culture is broken, none of it matters."
+category: Culture
+featured_image: /images/articles/campfire-friends.jpg
+excerpt: You can have the best programming, the newest facilities, and a killer
+  marketing plan — but if your culture is broken, none of it matters.
 ---
 
 You can have the best programming, the newest facilities, and a killer marketing plan — but if your culture is broken, none of it matters.
