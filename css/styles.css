@@ -1254,6 +1254,21 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 35ch;
 }
 
+.footer__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: var(--space-lg);
+}
+
+.footer__social a {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.3s;
+}
+
+.footer__social a:hover {
+  color: var(--color-gold-light);
+}
+
 .footer__col h4 {
   color: #fff;
   font-family: var(--font-body);

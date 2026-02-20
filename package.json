@@ -1,0 +1,7 @@
+{
+  "name": "happy-camper-consulting",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  }
+}

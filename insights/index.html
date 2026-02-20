@@ -160,13 +160,29 @@
         <img src="../images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143">
       </a>
       <ul class="navbar__links">
-        <li><a href="../#why">Why Us</a></li>
-        <li><a href="../#framework">How We Help</a></li>
-        <li><a href="../#who">Who It's For</a></li>
-        <li><a href="../#about">Approach</a></li>
-        <li><a href="./">Insights</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../how-we-help/">How We Help</a></li>
+        <li><a href="../who-its-for/">Who It's For</a></li>
+        <li><a href="../approach/">Approach</a></li>
+        <li class="navbar__dropdown">
+          <a href="./" class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Insights
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </a>
+          <ul class="navbar__dropdown-menu">
+            <li><a href="what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="camp-culture/">Culture</a></li>
+            <li><a href="camp-leadership/">Leadership</a></li>
+            <li><a href="camp-sustainability/">Sustainability</a></li>
+            <li><a href="camp-safety-and-systems/">Safety &amp; Systems</a></li>
+          </ul>
+        </li>
+        <li><a href="../investment/">Investment</a></li>
         <li class="navbar__cta">
-          <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary">Schedule a Conversation</a>
+          <a href="../conversation/" class="btn btn--primary btn--nav">
+            Start a Conversation
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
         </li>
       </ul>
       <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
@@ -178,14 +194,30 @@
   </nav>
   <div class="mobile-nav__overlay" aria-hidden="true"></div>
   <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-nav__close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+    </button>
     <ul>
-      <li><a href="../#why">Why Us</a></li>
-      <li><a href="../#framework">How We Help</a></li>
-      <li><a href="../#who">Who It's For</a></li>
-      <li><a href="../#about">Approach</a></li>
-      <li><a href="./">Insights</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../how-we-help/">How We Help</a></li>
+      <li><a href="../who-its-for/">Who It's For</a></li>
+      <li><a href="../approach/">Approach</a></li>
+      <li class="mobile-nav__dropdown">
+        <a href="#" class="mobile-nav__dropdown-toggle">
+          Insights
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+        </a>
+        <ul class="mobile-nav__submenu">
+          <li><a href="what-is-camp-consulting/">What is Camp Consulting?</a></li>
+          <li><a href="camp-culture/">Culture</a></li>
+          <li><a href="camp-leadership/">Leadership</a></li>
+          <li><a href="camp-sustainability/">Sustainability</a></li>
+          <li><a href="camp-safety-and-systems/">Safety &amp; Systems</a></li>
+        </ul>
+      </li>
+      <li><a href="../investment/">Investment</a></li>
     </ul>
-    <a href="https://happycamperconsultant.com/conversation/" class="btn btn--primary">Schedule a Conversation</a>
+    <a href="../conversation/" class="btn btn--primary">Start a Conversation</a>
   </div>
 
   <section class="insights-hero">
@@ -206,23 +238,10 @@
   </div>
 
   <script>
-    // Article registry — Decap CMS commits markdown files, this list drives the static rendering.
-    // When a new article is published via /admin, add it here (or automate via build script).
-    var articles = [
-      {
-        slug: "why-culture-eats-strategy",
-        title: "Why Culture Eats Strategy for Breakfast at Camp",
-        date: "2026-03-03",
-        category: "Culture",
-        excerpt: "You can have the best programming, the newest facilities, and a killer marketing plan — but if your culture is broken, none of it matters.",
-        image: "/images/articles/campfire-friends.jpg"
-      }
-    ];
-
     var grid = document.getElementById('articles-grid');
     var filters = document.getElementById('filters');
 
-    function renderArticles(filter) {
+    function renderArticles(articles, filter) {
       grid.innerHTML = '';
       var filtered = filter === 'all' ? articles : articles.filter(function(a) { return a.category === filter; });
 
@@ -252,14 +271,18 @@
       });
     }
 
-    filters.addEventListener('click', function(e) {
-      if (e.target.tagName !== 'BUTTON') return;
-      filters.querySelectorAll('button').forEach(function(b) { b.classList.remove('active'); });
-      e.target.classList.add('active');
-      renderArticles(e.target.dataset.category);
-    });
+    fetch('articles.json')
+      .then(function(r) { return r.json(); })
+      .then(function(articles) {
+        renderArticles(articles, 'all');
 
-    renderArticles('all');
+        filters.addEventListener('click', function(e) {
+          if (e.target.tagName !== 'BUTTON') return;
+          filters.querySelectorAll('button').forEach(function(b) { b.classList.remove('active'); });
+          e.target.classList.add('active');
+          renderArticles(articles, e.target.dataset.category);
+        });
+      });
   </script>
 
 </body>
