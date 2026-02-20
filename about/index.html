@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Happy Camper Consulting | Jeff Rorabaugh, Camp Leadership Advisor</title>
+  <meta name="description" content="Meet Jeff Rorabaugh — 32+ years of camp leadership experience. Happy Camper Consulting equips camp leaders to build healthy cultures that shape lives for generations.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://happycamperconsultant.com/about/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — Happy Camper Consulting">
+  <meta property="og:description" content="Meet Jeff Rorabaugh — 32+ years of camp leadership experience equipping camp leaders to build healthy cultures.">
+  <meta property="og:image" content="https://happycamperconsultant.com/images/team/jeff-headshot.jpg">
+  <meta property="og:url" content="https://happycamperconsultant.com/about/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Jeff Rorabaugh",
+      "jobTitle": "Camp Leadership Advisor",
+      "description": "Founder of Happy Camper Consulting with 32+ years of camp leadership experience across faith-based, nonprofit, multi-site, and international contexts.",
+      "worksFor": {
+        "@type": "ProfessionalService",
+        "name": "Happy Camper Consulting",
+        "url": "https://happycamperconsultant.com"
+      }
+    }
+  }
+  </script>
+
+  <style>
+    /* ---- About Hero ---- */
+    .about-hero {
+      position: relative;
+      background: var(--color-navy-deep);
+      padding: var(--space-section) var(--space-xl) var(--space-3xl);
+      text-align: center;
+      overflow: hidden;
+    }
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+    }
+    .about-hero .overline {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+    .about-hero h1 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: #fff;
+      margin-bottom: var(--space-md);
+    }
+    .about-hero p {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.6);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ---- Mission Section ---- */
+    .section-mission {
+      position: relative;
+      background: var(--color-warm-white);
+      padding: var(--space-section) 0;
+    }
+    .section-mission::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .mission-quote {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--color-navy);
+      line-height: 1.5;
+      padding-left: 1.5rem;
+      border-left: 4px solid var(--color-gold);
+      margin-bottom: var(--space-xl);
+    }
+    .mission-text p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .mission-image {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .mission-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .mission-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+    }
+
+    /* ---- Core Values ---- */
+    .section-values {
+      position: relative;
+      background: var(--color-cream);
+      padding: var(--space-section) 0;
+    }
+    .section-values::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .values-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto var(--space-3xl);
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    .values-grid--bottom {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(1.5rem, 2.5vw, 2rem);
+      max-width: 66.666%;
+      margin: clamp(1.5rem, 2.5vw, 2rem) auto 0;
+    }
+    .value-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .value-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .value-card__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-gold-muted);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-lg);
+    }
+    .value-card__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-gold);
+    }
+    .value-card h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-sm);
+    }
+    .value-card__subtitle {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: var(--color-gold);
+      margin-bottom: var(--space-lg);
+    }
+    .value-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .value-card li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.35rem;
+    }
+    .value-card li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 6px;
+      height: 6px;
+      background: var(--color-gold);
+      border-radius: 50%;
+    }
+
+    /* ---- Jeff Bio Intro ---- */
+    .section-jeff {
+      position: relative;
+      background: #fff;
+      padding: var(--space-section) 0;
+    }
+    .section-jeff::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .jeff-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .jeff-portrait {
+      position: relative;
+    }
+    .jeff-portrait__frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+    .jeff-portrait__frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .jeff-portrait__frame::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 2px solid var(--color-gold);
+      border-radius: calc(var(--radius-lg) + 4px);
+      opacity: 0.3;
+      z-index: -1;
+    }
+    .jeff-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: var(--space-xl);
+    }
+    .jeff-credential {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--color-navy);
+      background: var(--color-gold-muted);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+    }
+    .jeff-credential svg {
+      width: 16px;
+      height: 16px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+    }
+    .jeff-content h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .jeff-content h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--color-navy);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
+    }
+    .jeff-content p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .jeff-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---- Framework Section ---- */
+    .section-framework-about {
+      position: relative;
+      background: var(--color-cream);
+      padding: var(--space-section) 0;
+    }
+    .section-framework-about::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .framework-about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .framework-about-text h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .framework-about-text p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .framework-about-text p strong {
+      color: var(--color-navy);
+    }
+    .hcom-callout {
+      background: var(--color-gold-muted);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+    }
+    .hcom-callout h4 {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .hcom-callout ul {
+      list-style: none;
+      padding: 0;
+    }
+    .hcom-callout li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: var(--text-base);
+      color: var(--color-text);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .hcom-callout li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ---- Proven Results (Dark) ---- */
+    .section-proven {
+      position: relative;
+      background: var(--color-navy-deep);
+      padding: var(--space-section) 0;
+      overflow: hidden;
+    }
+    .proven-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .proven-content p {
+      color: rgba(255,255,255,0.7);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .proven-content h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: #fff;
+      margin-bottom: var(--space-lg);
+    }
+    .proven-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: var(--space-xl);
+    }
+    .proven-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.8);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .proven-list li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .proven-note {
+      font-family: var(--font-heading);
+      font-style: italic;
+      color: var(--color-gold) !important;
+      font-size: var(--text-sm) !important;
+    }
+    .proven-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .proven-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ---- Partnership Section ---- */
+    .section-partnership {
+      position: relative;
+      background: var(--color-warm-white);
+      padding: var(--space-section) 0;
+    }
+    .section-partnership::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .section-partnership {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-partnership > * {
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-sizing: border-box;
+    }
+    .section-partnership h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .section-partnership > p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .partnership-pillars {
+      display: flex;
+      justify-content: center;
+      gap: clamp(2rem, 4vw, 4rem);
+      margin: var(--space-2xl) 0;
+    }
+    .partnership-pillar {
+      text-align: center;
+    }
+    .partnership-pillar__icon {
+      width: 56px;
+      height: 56px;
+      background: var(--color-gold-muted);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-md);
+    }
+    .partnership-pillar__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-gold);
+    }
+    .partnership-pillar p {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--color-navy);
+    }
+    /* ---- Heart Section ---- */
+    .section-heart {
+      position: relative;
+      background: var(--color-cream);
+      padding: var(--space-section) 0;
+      overflow: hidden;
+    }
+    .section-heart::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .section-heart::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -5%;
+      transform: translateY(-50%);
+      width: clamp(400px, 50vw, 700px);
+      height: clamp(400px, 50vw, 700px);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c4922a'%3E%3Cpath d='M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .heart-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .heart-left .overline {
+      margin-bottom: var(--space-md);
+    }
+    .heart-left h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-2xl);
+    }
+    .heart-left__pullquote {
+      position: relative;
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--color-navy);
+      line-height: 1.5;
+      padding-left: 1.5rem;
+      border-left: 4px solid var(--color-gold);
+    }
+    .heart-right {
+      padding-top: 3.5rem;
+    }
+    .heart-right p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .heart-note {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      font-style: italic;
+      margin-top: var(--space-xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 768px) {
+      .heart-grid {
+        grid-template-columns: 1fr;
+      }
+      .heart-right {
+        padding-top: 0;
+      }
+    }
+
+    /* ---- CTA Section ---- */
+    .section-about-cta {
+      position: relative;
+      background: var(--color-navy-deep);
+      padding: var(--space-section) 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+    .section-about-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1504703635429-e206c7b286a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+    }
+    .section-about-cta > *:not(.btn) {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-sizing: border-box;
+    }
+    .section-about-cta .overline {
+      color: var(--color-gold);
+    }
+    .section-about-cta h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: #fff;
+      margin-bottom: var(--space-lg);
+    }
+    .section-about-cta .cta-quote {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.7);
+      max-width: 680px;
+      margin: 0 auto var(--space-2xl);
+      line-height: 1.7;
+    }
+    .section-about-cta .cta-trust {
+      max-width: 480px;
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.5);
+      margin-top: var(--space-lg);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 1024px) {
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .values-grid--bottom {
+        grid-template-columns: 1fr;
+        max-width: 50%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mission-grid,
+      .jeff-grid,
+      .framework-about-grid,
+      .proven-grid {
+        grid-template-columns: 1fr;
+      }
+      .mission-image {
+        aspect-ratio: 16/10;
+        order: -1;
+      }
+      .jeff-portrait {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .values-grid--bottom {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+      .proven-image {
+        order: -1;
+      }
+      .partnership-pillars {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-xl);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar navbar--transparent" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="../" class="navbar__logo" aria-label="Happy Camper Consulting — Home">
+        <img src="../images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143">
+      </a>
+      <ul class="navbar__links">
+        <li><a href="./">About</a></li>
+        <li><a href="../how-we-help/">How We Help</a></li>
+        <li><a href="../who-its-for/">Who It's For</a></li>
+        <li><a href="../approach/">Approach</a></li>
+        <li class="navbar__dropdown">
+          <a href="../insights/" class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Insights
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </a>
+          <ul class="navbar__dropdown-menu">
+            <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="../insights/camp-culture/">Culture</a></li>
+            <li><a href="../insights/camp-leadership/">Leadership</a></li>
+            <li><a href="../insights/camp-sustainability/">Sustainability</a></li>
+            <li><a href="../insights/camp-safety-and-systems/">Safety &amp; Systems</a></li>
+          </ul>
+        </li>
+        <li><a href="../investment/">Investment</a></li>
+        <li class="navbar__cta">
+          <a href="../conversation/" class="btn btn--primary btn--nav">
+            Start a Conversation
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </li>
+      </ul>
+      <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+  <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-nav__close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+    </button>
+    <ul>
+      <li><a href="./">About</a></li>
+      <li><a href="../how-we-help/">How We Help</a></li>
+      <li><a href="../who-its-for/">Who It's For</a></li>
+      <li><a href="../approach/">Approach</a></li>
+      <li class="mobile-nav__dropdown">
+        <a href="#" class="mobile-nav__dropdown-toggle">
+          Insights
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+        </a>
+        <ul class="mobile-nav__submenu">
+          <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+          <li><a href="../insights/camp-culture/">Culture</a></li>
+          <li><a href="../insights/camp-leadership/">Leadership</a></li>
+          <li><a href="../insights/camp-sustainability/">Sustainability</a></li>
+          <li><a href="../insights/camp-safety-and-systems/">Safety &amp; Systems</a></li>
+        </ul>
+      </li>
+      <li><a href="../investment/">Investment</a></li>
+    </ul>
+    <a href="../conversation/" class="btn btn--primary">Start a Conversation</a>
+  </div>
+
+
+  <!-- ===== Hero ===== -->
+  <section class="about-hero">
+    <span class="overline reveal">About</span>
+    <h1 class="reveal">About Happy Camper Consulting, LLC</h1>
+    <p class="reveal">Strengthening the leadership, governance, and culture that sustain thriving camp organizations.</p>
+  </section>
+
+
+  <!-- ===== Mission ===== -->
+  <section class="section-mission" aria-labelledby="mission-heading">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-text">
+          <span class="overline reveal" id="mission-heading">Our Mission</span>
+          <blockquote class="mission-quote reveal">
+            "To equip camp leaders to build healthy cultures that shape lives for generations."
+          </blockquote>
+          <p class="reveal">When leadership is aligned and systems reinforce shared values, camps become places where staff thrive and campers flourish. When clarity fades, confusion and drift quietly take over. Healthy culture does not happen by accident. It is built intentionally.</p>
+          <p class="reveal">At Happy Camper Consulting, we help leaders strengthen alignment, clarify expectations, and build foundations that can carry weight — not just for one season, but for the long term. Because when culture is healthy, everything else gets better.</p>
+        </div>
+        <div class="mission-image reveal">
+          <img src="../images/camp-team-outdoors.jpg" alt="Camp team gathered outdoors" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Core Values ===== -->
+  <section class="section-values" aria-labelledby="values-heading">
+    <div class="container">
+      <div class="values-header">
+        <span class="overline reveal" id="values-heading">Our Core Values</span>
+        <h2 class="reveal">What Guides Our Work</h2>
+      </div>
+
+      <div class="values-grid">
+        <!-- Value 1: Clarity Over Confusion -->
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <h3>Clarity Over Confusion</h3>
+          <p class="value-card__subtitle">Confusion creates drift. Clarity creates alignment.</p>
+          <ul>
+            <li>We define what matters.</li>
+            <li>We ask questions before offering answers.</li>
+            <li>We simplify complexity into usable frameworks.</li>
+            <li>We do not allow ambiguity to linger.</li>
+          </ul>
+        </div>
+
+        <!-- Value 2: Culture Is Built on Purpose -->
+        <div class="value-card reveal reveal-delay-2">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+          </div>
+          <h3>Culture Is Built on Purpose</h3>
+          <p class="value-card__subtitle">Healthy cultures are not accidental. They are designed.</p>
+          <ul>
+            <li>We connect stated values to observable behaviors.</li>
+            <li>We identify patterns early.</li>
+            <li>We address misalignment directly and respectfully.</li>
+            <li>We build systems that reinforce culture over time.</li>
+          </ul>
+        </div>
+
+        <!-- Value 3: Leadership Shapes Everything -->
+        <div class="value-card reveal reveal-delay-3">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+          </div>
+          <h3>Leadership Shapes Everything</h3>
+          <p class="value-card__subtitle">Strong culture begins with strong leadership.</p>
+          <ul>
+            <li>We strengthen leaders because leaders shape people, systems, and outcomes.</li>
+            <li>We speak candidly.</li>
+            <li>We coach for growth, not dependency.</li>
+            <li>We equip leaders to lead with confidence and clarity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="values-grid--bottom">
+        <!-- Value 4: Health Before Growth -->
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>
+          </div>
+          <h3>Health Before Growth</h3>
+          <p class="value-card__subtitle">Growth without health creates fragility.</p>
+          <ul>
+            <li>We diagnose before prescribing.</li>
+            <li>We build foundations that can carry weight.</li>
+            <li>We prioritize sustainability over short-term momentum.</li>
+            <li>We measure long-term stability, not just activity.</li>
+          </ul>
+        </div>
+
+        <!-- Value 5: Legacy Matters -->
+        <div class="value-card reveal reveal-delay-2">
+          <div class="value-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3>Legacy Matters</h3>
+          <p class="value-card__subtitle">What happens at camp echoes far beyond one summer.</p>
+          <ul>
+            <li>We build systems that outlast personalities.</li>
+            <li>We document processes intentionally.</li>
+            <li>We think in decades, not just seasons.</li>
+            <li>We evaluate decisions through a generational lens.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== About Jeff ===== -->
+  <section class="section-jeff" aria-labelledby="jeff-heading">
+    <div class="container">
+      <div class="jeff-grid">
+        <div class="jeff-portrait reveal">
+          <div class="jeff-portrait__frame">
+            <img src="../images/team/jeff-headshot.jpg" alt="Jeff Rorabaugh — Founder, Happy Camper Consulting" loading="lazy">
+          </div>
+          <div class="jeff-credentials">
+            <span class="jeff-credential">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+              Founder
+            </span>
+            <span class="jeff-credential">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+              Camp Leadership Advisor
+            </span>
+            <span class="jeff-credential">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+              HCOM&#8482; Architect
+            </span>
+          </div>
+        </div>
+        <div class="jeff-content">
+          <span class="overline reveal" id="jeff-heading">About Jeff Rorabaugh</span>
+          <h2 class="reveal">A Life Shaped by Camp</h2>
+          <p class="reveal">For more than 32 years, my life and leadership have been shaped by the camp environment.</p>
+          <p class="reveal">I have served in leadership, formation, and advisory roles across diverse camp models — including faith-based, nonprofit, multi-site, and international contexts. Through these experiences, I have walked alongside directors and boards navigating growth, transition, governance complexity, and generational change.</p>
+          <p class="reveal">Camp leadership is deeply meaningful work. It deserves clarity that sustains mission across seasons — not just momentum for a single year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== From Experience to Framework ===== -->
+  <section class="section-framework-about" aria-labelledby="framework-about-heading">
+    <div class="container">
+      <div class="framework-about-grid">
+        <div class="framework-about-text">
+          <span class="overline reveal">The Origin</span>
+          <h2 class="reveal" id="framework-about-heading">From Experience to Framework</h2>
+          <p class="reveal">Over time, I began to notice a consistent pattern:</p>
+          <p class="reveal">Recurring camp challenges were rarely isolated incidents. They were often signs of misalignment between mission, leadership, governance, and structure.</p>
+          <p class="reveal">Unclear authority boundaries. Values stated but not translated. Passion without measurable reinforcement. Growth without disciplined review.</p>
+          <p class="reveal">The solution was not more activity. It was a clear framework.</p>
+          <p class="reveal">That realization led to the development of the <strong>Healthy Camp Operating Model&#8482;</strong> — a structured, transferable framework that integrates:</p>
+        </div>
+        <div class="reveal">
+          <div class="hcom-callout">
+            <h4>Healthy Camp Operating Model&#8482;</h4>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Value-Driven Management System
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Core values translated into observable behaviors
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Leadership and staff formation
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Safety and accountability reinforcement
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Measurable review rhythms
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Proven Results ===== -->
+  <section class="section-proven" aria-labelledby="proven-heading">
+    <div class="container">
+      <div class="proven-grid">
+        <div class="proven-content">
+          <span class="overline reveal" id="proven-heading">Real Results</span>
+          <h2 class="reveal">Proven Across Diverse Camp Contexts</h2>
+          <p class="reveal">This framework has been implemented in varied camp environments, including multi-site initiatives and international settings, supporting leadership teams through transition, expansion, and structural realignment.</p>
+          <p class="reveal" style="color:rgba(255,255,255,0.8);">The Healthy Camp Operating Model&#8482; has helped camps:</p>
+          <ul class="proven-list">
+            <li class="reveal reveal-delay-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Strengthen board and director alignment
+            </li>
+            <li class="reveal reveal-delay-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Reduce recurring operational friction
+            </li>
+            <li class="reveal reveal-delay-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Reinforce cultural consistency
+            </li>
+            <li class="reveal reveal-delay-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Develop leadership pipelines
+            </li>
+            <li class="reveal reveal-delay-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+              Sustain mission integrity across leadership change
+            </li>
+          </ul>
+          <p class="proven-note reveal">This work is not theoretical. It has been tested through real implementation.</p>
+        </div>
+        <div class="proven-image reveal">
+          <img src="../images/site-resources-from-cilent/00B8D53D-EBB3-4E44-9DFC-08F192E339AB.JPG" alt="International camp leadership team" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Partnership & Heart ===== -->
+  <section class="section-partnership" aria-labelledby="partnership-heading">
+    <span class="overline reveal">Our Approach</span>
+    <h2 class="reveal" id="partnership-heading">Partnership Over Prescription</h2>
+    <p class="reveal">I do not replace leadership. I strengthen it.</p>
+    <p class="reveal">Happy Camper Consulting exists to partner with directors and boards who care deeply about long-term health. Together, we clarify what matters most, design intentional frameworks, and implement systems that outlast personalities.</p>
+
+    <div class="partnership-pillars reveal">
+          <div class="partnership-pillar">
+            <div class="partnership-pillar__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/></svg>
+            </div>
+            <p>Structure protects joy.</p>
+          </div>
+          <div class="partnership-pillar">
+            <div class="partnership-pillar__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"/></svg>
+            </div>
+            <p>Clarity strengthens mission.</p>
+          </div>
+          <div class="partnership-pillar">
+            <div class="partnership-pillar__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"/></svg>
+            </div>
+            <p>Alignment reduces fatigue.</p>
+          </div>
+        </div>
+
+    <p class="reveal">Healthy culture does not happen accidentally. It is built intentionally.</p>
+  </section>
+
+
+  <!-- ===== The Heart Behind the Work ===== -->
+  <section class="section-heart" aria-labelledby="heart-heading">
+    <div class="container">
+      <div class="heart-grid">
+        <div class="heart-left">
+          <span class="overline reveal">Why It Matters</span>
+          <h2 class="reveal" id="heart-heading">The Heart Behind the Work</h2>
+          <blockquote class="heart-left__pullquote reveal">Camp should be a place of belonging, growth, safety, and fun.</blockquote>
+        </div>
+        <div class="heart-right">
+          <p class="reveal">Systems are not meant to sterilize that experience. They are meant to protect it.</p>
+          <p class="reveal">My commitment is to help camps build sustainable clarity so that leadership transitions smoothly, staff are better equipped, boards govern wisely, and campers experience something meaningful and lasting.</p>
+          <p class="heart-note reveal">Happy Camper Consulting is currently led by its founder and collaborates with trusted partners as needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CTA ===== -->
+  <section class="section-about-cta" aria-labelledby="about-cta-heading">
+    <span class="overline reveal">Let's Talk</span>
+    <h2 id="about-cta-heading" class="reveal">Start a Conversation</h2>
+    <p class="cta-quote reveal">"If you would like to explore how strengthening your camp's framework could support long-term leadership health, I would welcome the conversation."</p>
+    <a href="../conversation/" class="btn btn--primary btn--large reveal">
+      Schedule a Conversation
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    </a>
+    <p class="cta-trust reveal">No obligation. Just time with another leader who cares deeply about building healthy camps and happy campers.</p>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="../images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143" style="max-width:200px;height:auto;">
+          <p>Strengthening the leadership, governance, and culture that sustain thriving camp organizations.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/profile.php?id=61578060761544" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/swampcamp_missionalliance/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="./">About</a></li>
+            <li><a href="../insights/">Insights</a></li>
+            <li><a href="../conversation/">Start a Conversation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Insights</h4>
+          <ul>
+            <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="../insights/culture/">Culture</a></li>
+            <li><a href="../insights/leadership/">Leadership</a></li>
+            <li><a href="../insights/sustainability/">Sustainability</a></li>
+            <li><a href="../insights/safety-systems/">Safety &amp; Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Happy Camper Consulting, LLC. All rights reserved. Website by <a href="https://townsite.co/" target="_blank">Townsite</a>.</p>
+        <p>Camp Leadership &amp; Culture Consulting — Nationwide</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

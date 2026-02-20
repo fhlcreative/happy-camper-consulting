@@ -904,7 +904,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
-.outcome-card__quote-text {
+.outcome-card p {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.outcome-card--quote p.outcome-card__quote-text {
   font-family: Lora, var(--font-heading);
   font-style: italic;
   font-size: 24px;
@@ -913,12 +919,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
   letter-spacing: -0.24px;
   text-align: center;
-}
-
-.outcome-card p {
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
-  line-height: 1.6;
 }
 
 /* ---- About / Jeff Section ---- */
@@ -1207,12 +1207,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--text-base);
 }
 
-.cta-trust {
-  font-family: var(--font-body);
+.section-cta p.cta-trust {
+  font-family: var(--font-heading);
   font-size: var(--text-sm);
   color: rgba(255,255,255,0.5);
-  margin-top: var(--space-lg);
+  margin: var(--space-lg) auto 0;
   font-style: italic;
+  max-width: none;
 }
 
 .cta-note-unused {
