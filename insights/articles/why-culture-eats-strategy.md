@@ -1,6 +1,6 @@
 ---
 title: Why Culture Eats Strategy for Breakfast at Camp
-date: 2026-03-03T09:00:00.000Z
+date: 2026-02-19T22:46:00.000-05:00
 category: Culture
 featured_image: /images/articles/campfire-friends.jpg
 excerpt: You can have the best programming, the newest facilities, and a killer
