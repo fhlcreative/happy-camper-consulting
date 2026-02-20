@@ -31,7 +31,7 @@ const articles = files.map(file => {
   };
 }).filter(Boolean);
 
-const today = new Date().toISOString().split('T')[0];
+const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 const published = articles.filter(a => a.date <= today);
 const scheduled = articles.length - published.length;
 
