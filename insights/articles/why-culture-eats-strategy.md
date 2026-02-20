@@ -1,5 +1,5 @@
 ---
-title: "[TEST] Why Culture Eats Strategy for Breakfast at Camp"
+title: Why Culture Eats Strategy for Breakfast at Camp
 date: 2026-03-03T09:00:00.000Z
 category: Culture
 featured_image: /images/articles/campfire-friends.jpg
