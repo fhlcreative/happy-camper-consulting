@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "this-is-a-tester-post",
+    "title": "This is a tester post",
+    "date": "2026-02-19",
+    "category": "Leadership",
+    "excerpt": "",
+    "image": "/images/articles/camp-team.jpg"
+  },
+  {
+    "slug": "why-culture-eats-strategy",
+    "title": "Why Culture Eats Strategy for Breakfast at Camp",
+    "date": "2026-02-19",
+    "category": "Culture",
+    "excerpt": "You can have the best programming, the newest facilities, and a killer",
+    "image": "/images/articles/campfire-friends.jpg"
+  }
+]

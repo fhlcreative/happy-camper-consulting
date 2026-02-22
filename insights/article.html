@@ -18,7 +18,7 @@
   <style>
     .article-hero {
       background: var(--color-navy-deep);
-      padding: var(--space-section) var(--space-xl) var(--space-3xl);
+      padding: calc(var(--space-section) + 3rem) var(--space-xl) var(--space-3xl);
       text-align: center;
     }
     .article-hero__category {
@@ -100,21 +100,20 @@
     }
 
     .article-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: block;
       font-family: var(--font-body);
       font-size: var(--text-sm);
       font-weight: 600;
       color: var(--color-gold);
       text-decoration: none;
-      padding: var(--space-xl) 0;
-      max-width: 700px;
-      margin: 0 auto;
-      display: block;
-      padding-left: var(--space-xl);
+      margin-bottom: var(--space-xl);
     }
     .article-back:hover { text-decoration: underline; }
+    .article-back--bottom {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: var(--space-xl) var(--space-xl) var(--space-section);
+    }
 
     .article-featured-img {
       max-width: 900px;
@@ -197,9 +196,8 @@
     <a href="../conversation/" class="btn btn--primary">Start a Conversation</a>
   </div>
 
-  <a class="article-back" href="index.html">← Back to Insights</a>
-
   <section class="article-hero" id="hero">
+    <a class="article-back" href="index.html">← Back to Insights</a>
     <div class="article-hero__category" id="category"></div>
     <h1 id="title">Loading...</h1>
     <div class="article-hero__date" id="date"></div>
@@ -213,7 +211,7 @@
     <p>Loading article...</p>
   </article>
 
-  <a class="article-back" href="index.html" style="padding-bottom:var(--space-section);">← Back to Insights</a>
+  <a class="article-back article-back--bottom" href="index.html">← Back to Insights</a>
 
   <script>
     var params = new URLSearchParams(window.location.search);

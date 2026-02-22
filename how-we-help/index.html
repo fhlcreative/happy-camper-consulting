@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Help — Happy Camper Consulting | Camp Leadership & Culture Support</title>
+  <meta name="description" content="Happy Camper Consulting provides focused camp consulting services — culture assessment, leadership development, governance clarity, and sustainable management systems for camps.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://happycamperconsultant.com/how-we-help/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="How We Help — Happy Camper Consulting">
+  <meta property="og:description" content="Practical leadership support for healthy, sustainable camps. Culture assessment, VDMS design, leadership development, and hands-on training.">
+  <meta property="og:image" content="https://happycamperconsultant.com/images/team/jeff-headshot.jpg">
+  <meta property="og:url" content="https://happycamperconsultant.com/how-we-help/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Camp Leadership & Culture Consulting",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Happy Camper Consulting",
+      "url": "https://happycamperconsultant.com"
+    },
+    "description": "Focused camp consulting services including culture assessment, leadership development, governance clarity, and sustainable management systems.",
+    "serviceType": "Camp Leadership Consulting"
+  }
+  </script>
+
+  <style>
+    /* ---- Hero ---- */
+    .hwh-hero {
+      position: relative;
+      background: var(--color-navy-deep);
+      padding: var(--space-section) var(--space-xl) var(--space-3xl);
+      text-align: center;
+      overflow: hidden;
+    }
+    .hwh-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+    }
+    .hwh-hero .overline {
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+    .hwh-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.125rem, 1.35rem + 3.9vw, 3.25rem);
+      color: #fff;
+      max-width: 800px;
+      margin: 0 auto var(--space-md);
+    }
+    .hwh-hero p {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.6);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ---- Overview ---- */
+    .section-overview {
+      position: relative;
+      background: var(--color-warm-white);
+      padding: var(--space-section) 0;
+    }
+    .section-overview::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+    .section-overview h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .section-overview p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .section-overview p:last-of-type {
+      margin-bottom: 0;
+    }
+    .overview-image {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .overview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overview-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-lg);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+    }
+
+    /* ---- Service Lanes ---- */
+    .section-services {
+      position: relative;
+      background: var(--color-cream);
+      padding: var(--space-section) 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .section-services .container {
+      width: 100%;
+    }
+    .section-services::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .section-services > h2,
+    .section-services > .services-desc {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-sizing: border-box;
+    }
+    .section-services > h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .services-desc {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-3xl);
+    }
+    .service-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 4vw, 3rem);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    .service-card:last-child {
+      margin-bottom: 0;
+    }
+    .service-card__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      align-items: start;
+    }
+    .service-card__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--color-gold-muted);
+      border-radius: var(--radius-md);
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: var(--space-lg);
+    }
+    .service-card__left h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-md);
+    }
+    .service-card__tagline {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-base);
+      color: var(--color-gold);
+      line-height: 1.5;
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--color-gold);
+    }
+    .service-card__right p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .service-card__right .service-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--color-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-sm);
+    }
+    .service-card__right ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: var(--space-xl);
+    }
+    .service-card__right li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: 0.35rem;
+    }
+    .service-card__right li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 6px;
+      height: 6px;
+      background: var(--color-gold);
+      border-radius: 50%;
+    }
+    .service-outcome {
+      background: var(--color-gold-muted);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: clamp(1rem, 2vw, 1.5rem);
+    }
+    .service-outcome .service-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--color-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-xs);
+    }
+    .service-outcome p {
+      font-size: var(--text-sm) !important;
+      color: var(--color-text) !important;
+      line-height: 1.6;
+      margin-bottom: 0 !important;
+    }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--color-gold);
+      text-decoration: none;
+      margin-top: var(--space-md);
+      transition: color 0.2s;
+    }
+    .service-link:hover {
+      color: var(--color-gold-light);
+    }
+    .service-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s;
+    }
+    .service-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ---- Not Sure Callout ---- */
+    .section-not-sure {
+      position: relative;
+      background: #fff;
+      padding: var(--space-section) 0;
+    }
+    .section-not-sure::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .not-sure-callout {
+      background: var(--color-gold-muted);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: clamp(2rem, 4vw, 3rem);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .not-sure-callout h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-md);
+    }
+    .not-sure-callout p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+    }
+    .not-sure-callout a {
+      color: var(--color-gold);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .not-sure-callout a:hover {
+      color: var(--color-gold-light);
+    }
+
+    /* ---- Engagements ---- */
+    .section-engagements {
+      position: relative;
+      background: var(--color-warm-white);
+      padding: var(--space-section) 0;
+    }
+    .section-engagements::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .engagements-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .engagements-text h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .engagements-text p {
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+    .engagements-text p strong {
+      color: var(--color-navy);
+    }
+    .engagements-card {
+      background: var(--color-gold-muted);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+    }
+    .engagements-card h4 {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--color-navy);
+      margin-bottom: var(--space-lg);
+    }
+    .engagements-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .engagements-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: var(--text-base);
+      color: var(--color-text);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    .engagements-card li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .engagements-card li:last-child {
+      margin-bottom: 0;
+    }
+    .engagements-closing {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: var(--space-xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* ---- CTA ---- */
+    .section-hwh-cta {
+      position: relative;
+      background: var(--color-navy-deep);
+      padding: var(--space-section) 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+    .section-hwh-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1504703635429-e206c7b286a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+    }
+    .section-hwh-cta > *:not(.btn) {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      box-sizing: border-box;
+    }
+    .section-hwh-cta .overline {
+      color: var(--color-gold);
+    }
+    .section-hwh-cta h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      color: #fff;
+      margin-bottom: var(--space-lg);
+    }
+    .section-hwh-cta .cta-subtitle {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.7);
+      max-width: 680px;
+      margin: 0 auto var(--space-2xl);
+      line-height: 1.7;
+    }
+    .section-hwh-cta .cta-trust {
+      max-width: 480px;
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.5);
+      margin-top: var(--space-lg);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 768px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+      .overview-image {
+        aspect-ratio: 16/10;
+        order: -1;
+      }
+      .service-card__grid {
+        grid-template-columns: 1fr;
+      }
+      .engagements-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar navbar--transparent" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="../" class="navbar__logo" aria-label="Happy Camper Consulting — Home">
+        <img src="../images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143">
+      </a>
+      <ul class="navbar__links">
+        <li><a href="../about/">About</a></li>
+        <li><a href="./">How We Help</a></li>
+        <li><a href="../who-its-for/">Who It's For</a></li>
+        <li><a href="../approach/">Approach</a></li>
+        <li class="navbar__dropdown">
+          <a href="../insights/" class="navbar__dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Insights
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+          </a>
+          <ul class="navbar__dropdown-menu">
+            <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="../insights/camp-culture/">Culture</a></li>
+            <li><a href="../insights/camp-leadership/">Leadership</a></li>
+            <li><a href="../insights/camp-sustainability/">Sustainability</a></li>
+            <li><a href="../insights/camp-safety-and-systems/">Safety &amp; Systems</a></li>
+          </ul>
+        </li>
+        <li><a href="../investment/">Investment</a></li>
+        <li class="navbar__cta">
+          <a href="../conversation/" class="btn btn--primary btn--nav">
+            Start a Conversation
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </li>
+      </ul>
+      <button class="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav__overlay" aria-hidden="true"></div>
+  <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <button class="mobile-nav__close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+    </button>
+    <ul>
+      <li><a href="../about/">About</a></li>
+      <li><a href="./">How We Help</a></li>
+      <li><a href="../who-its-for/">Who It's For</a></li>
+      <li><a href="../approach/">Approach</a></li>
+      <li class="mobile-nav__dropdown">
+        <a href="#" class="mobile-nav__dropdown-toggle">
+          Insights
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+        </a>
+        <ul class="mobile-nav__submenu">
+          <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+          <li><a href="../insights/camp-culture/">Culture</a></li>
+          <li><a href="../insights/camp-leadership/">Leadership</a></li>
+          <li><a href="../insights/camp-sustainability/">Sustainability</a></li>
+          <li><a href="../insights/camp-safety-and-systems/">Safety &amp; Systems</a></li>
+        </ul>
+      </li>
+      <li><a href="../investment/">Investment</a></li>
+    </ul>
+    <a href="../conversation/" class="btn btn--primary">Start a Conversation</a>
+  </div>
+
+
+  <!-- ===== 1. Hero ===== -->
+  <section class="hwh-hero">
+    <span class="overline reveal">How We Help</span>
+    <h1 class="reveal">Practical Leadership Support for Healthy, Sustainable Camps</h1>
+    <p class="reveal">We partner with camp directors and boards to clarify mission, align leadership, strengthen culture, and implement structured systems that support long-term health.</p>
+  </section>
+
+
+  <!-- ===== 2. Overview ===== -->
+  <section class="section-overview" aria-labelledby="overview-heading">
+    <div class="container">
+      <div class="overview-grid">
+        <div>
+          <span class="overline reveal">Our Focus</span>
+          <h2 class="reveal" id="overview-heading">Focused, Context-Specific Support</h2>
+          <p class="reveal">Every camp is different. Governance structures vary. Missions differ. Stakeholders have unique expectations. Growth introduces complexity.</p>
+          <p class="reveal">Whether your camp is faith-based or mission-driven in a broader sense, sustainable health requires intentional clarity and structure.</p>
+          <p class="reveal">Our work begins with listening carefully and understanding your specific context. From there, we provide focused support designed to strengthen alignment, accountability, and culture.</p>
+          <p class="reveal">Engagements are structured according to scope and complexity. We work with camps at different stages of development through phased partnerships.</p>
+        </div>
+        <div class="overview-image reveal">
+          <img src="https://images.unsplash.com/photo-1613950190144-4f2a84c75e8c?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kids playing outdoors at camp" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 3. Core Service Lanes ===== -->
+  <section class="section-services" aria-labelledby="services-heading">
+    <h2 class="reveal" id="services-heading">Core Service Lanes</h2>
+    <p class="services-desc reveal">Happy Camper Consulting provides camp consulting services focused on culture development, leadership alignment, governance clarity, practical value-based training, and sustainable management systems for Christian and independent camps.</p>
+
+    <div class="container">
+      <!-- Card 01 -->
+      <div class="service-card reveal">
+        <div class="service-card__grid">
+          <div class="service-card__left">
+            <span class="service-card__number">01</span>
+            <h3>Culture &amp; Leadership Assessment</h3>
+            <blockquote class="service-card__tagline">Clarity comes before correction.</blockquote>
+          </div>
+          <div class="service-card__right">
+            <p>We conduct a focused review of your camp's leadership alignment, governance health, cultural consistency, and performance visibility. Through structured conversations and document review, we identify strengths, recurring friction points, and areas where alignment may be drifting.</p>
+            <p class="service-label">May Include</p>
+            <ul>
+              <li>Director interviews</li>
+              <li>Board conversations</li>
+              <li>Staff feedback</li>
+              <li>Review of mission, values, and governing documents</li>
+              <li>Identification of recurring operational patterns</li>
+            </ul>
+            <div class="service-outcome">
+              <p class="service-label">Outcome</p>
+              <p>A practical understanding of what is strong, what is misaligned, and what next steps would produce meaningful improvement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 02 -->
+      <div class="service-card reveal">
+        <div class="service-card__grid">
+          <div class="service-card__left">
+            <span class="service-card__number">02</span>
+            <h3>Value-Driven Management System (VDMS) Design &amp; Implementation</h3>
+            <blockquote class="service-card__tagline">Healthy culture must be protected by intentional structure.</blockquote>
+          </div>
+          <div class="service-card__right">
+            <p>We design and implement a Value-Driven Management System tailored to your camp's mission, governance model, and stage of growth. The VDMS integrates:</p>
+            <ul>
+              <li>Mission and stakeholder clarity</li>
+              <li>One aligned strategic plan</li>
+              <li>Clear governance and operational boundaries</li>
+              <li>Measurable performance goals</li>
+              <li>Transparent accountability rhythms</li>
+              <li>Disciplined review processes</li>
+            </ul>
+            <p>Rather than relying on personality or seasonal momentum, the VDMS creates sustainable clarity that strengthens culture year after year.</p>
+            <div class="service-outcome">
+              <p class="service-label">Outcome</p>
+              <p>A structured management framework that reduces friction, strengthens leadership confidence, and protects long-term sustainability.</p>
+            </div>
+            <a href="../approach/" class="service-link">
+              Dive Deeper
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 03 -->
+      <div class="service-card reveal">
+        <div class="service-card__grid">
+          <div class="service-card__left">
+            <span class="service-card__number">03</span>
+            <h3>Leadership Development &amp; Culture Clarification</h3>
+            <blockquote class="service-card__tagline">Values shape culture only when they shape behavior.</blockquote>
+          </div>
+          <div class="service-card__right">
+            <p>We help leadership teams:</p>
+            <ul>
+              <li>Translate core values into observable behavior</li>
+              <li>Clarify expectations across departments</li>
+              <li>Strengthen accountability structures</li>
+              <li>Address recurring relational tension</li>
+              <li>Reinforce leadership modeling</li>
+            </ul>
+            <p>This work reduces ambiguity, strengthens morale, and aligns teams around shared purpose.</p>
+            <div class="service-outcome">
+              <p class="service-label">Outcome</p>
+              <p>Clear expectations, stronger leadership cohesion, and consistent cultural reinforcement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 04 -->
+      <div class="service-card reveal">
+        <div class="service-card__grid">
+          <div class="service-card__left">
+            <span class="service-card__number">04</span>
+            <h3>Practical Guiding &amp; Training</h3>
+            <blockquote class="service-card__tagline">Clarity must be reinforced through equipping.</blockquote>
+          </div>
+          <div class="service-card__right">
+            <p>We provide hands-on guiding and training for directors, boards, and staff, including:</p>
+            <ul>
+              <li>Governance workshops</li>
+              <li>Director intensives</li>
+              <li>Staff culture alignment sessions</li>
+              <li>Risk-awareness training</li>
+              <li>System implementation coaching</li>
+              <li>Mission Plan Review setup and facilitation</li>
+            </ul>
+            <p>Training is practical, immediately applicable, and designed to integrate into your existing leadership rhythms.</p>
+            <div class="service-outcome">
+              <p class="service-label">Outcome</p>
+              <p>Leaders who are better equipped to sustain healthy culture long after the engagement concludes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 4. Not Sure Callout ===== -->
+  <section class="section-not-sure" aria-labelledby="not-sure-heading">
+    <div class="container">
+      <div class="not-sure-callout reveal">
+        <h3 id="not-sure-heading">Not Sure Which Area Fits?</h3>
+        <p>Many camps begin with a Culture &amp; Leadership Assessment to gain clarity before determining next steps. If you're unsure where to start, <a href="../conversation/">schedule a Camp Leadership Conversation</a> and we'll determine the appropriate focus together.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 5. How Engagements Work ===== -->
+  <section class="section-engagements" aria-labelledby="engagements-heading">
+    <div class="container">
+      <div class="engagements-grid">
+        <div class="engagements-text">
+          <span class="overline reveal">How It Works</span>
+          <h2 class="reveal" id="engagements-heading">Flexible, Relational, Structured</h2>
+          <p class="reveal">Most camps begin with a <strong>Focused Clarity Engagement</strong> to assess alignment and identify priority next steps. From there, partnerships may expand into framework design and longer-term strategic reinforcement.</p>
+          <p class="reveal">Each engagement is tailored intentionally based on scope, leadership complexity, and desired outcomes.</p>
+          <p class="engagements-closing reveal">Every engagement begins with a conversation to determine the appropriate level of support. We build what is needed — not more, not less.</p>
+        </div>
+        <div class="reveal">
+          <div class="engagements-card">
+            <h4>Engagements May Include</h4>
+            <ul>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                On-site visits
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Observational trip to an international camp in training
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Virtual advisory sessions
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Board workshops
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Leadership retreats
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                System design intensives
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>
+                Ongoing advisory partnerships
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 6. CTA ===== -->
+  <section class="section-hwh-cta" aria-labelledby="hwh-cta-heading">
+    <span class="overline reveal">Take the Next Step</span>
+    <h2 id="hwh-cta-heading" class="reveal">Healthy camps do not happen accidentally.</h2>
+    <p class="cta-subtitle reveal">If you are sensing growth complexity, cultural drift, governance tension, or simply want stronger clarity moving forward, start with a conversation.</p>
+    <a href="../conversation/" class="btn btn--primary btn--large reveal">
+      Schedule a Conversation
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+    </a>
+    <p class="cta-trust reveal">No obligation. Just clarity.</p>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="../images/logo/logo-white.png" alt="Happy Camper Consulting" width="548" height="143" style="max-width:200px;height:auto;">
+          <p>Strengthening the leadership, governance, and culture that sustain thriving camp organizations.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/profile.php?id=61578060761544" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/swampcamp_missionalliance/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../insights/">Insights</a></li>
+            <li><a href="../conversation/">Start a Conversation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Insights</h4>
+          <ul>
+            <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
+            <li><a href="../insights/culture/">Culture</a></li>
+            <li><a href="../insights/leadership/">Leadership</a></li>
+            <li><a href="../insights/sustainability/">Sustainability</a></li>
+            <li><a href="../insights/safety-systems/">Safety &amp; Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Happy Camper Consulting, LLC. All rights reserved. Website by <a href="https://townsite.co/" target="_blank">Townsite</a>.</p>
+        <p>Camp Leadership &amp; Culture Consulting — Nationwide</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
