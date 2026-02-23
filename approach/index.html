@@ -295,29 +295,47 @@
       height: 1px;
       background: linear-gradient(to right, transparent, var(--color-border), transparent);
     }
-    .partnership-content {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto;
+    .partnership-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 6vw, 5rem);
+      align-items: center;
     }
-    .partnership-content .overline {
+    .partnership-text .overline {
       margin-bottom: var(--space-md);
     }
-    .partnership-content h2 {
+    .partnership-text h2 {
       font-family: var(--font-heading);
       font-size: var(--text-3xl);
       color: var(--color-navy);
       margin-bottom: var(--space-lg);
     }
-    .partnership-content > p {
+    .partnership-text > p {
       color: var(--color-text);
       font-size: var(--text-base);
       line-height: 1.8;
-      max-width: 600px;
-      margin: 0 auto var(--space-lg);
+      margin-bottom: var(--space-lg);
     }
-    .partnership-content .approach-callout {
-      text-align: left;
+    .partnership-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      box-shadow: var(--shadow-md);
+    }
+    .partnership-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .partnership-layout {
+        grid-template-columns: 1fr;
+      }
+      .partnership-image {
+        order: -1;
+        aspect-ratio: 3 / 4;
+      }
     }
 
     /* ---- The Result ---- */
@@ -333,12 +351,25 @@
       height: 1px;
       background: linear-gradient(to right, transparent, var(--color-border), transparent);
     }
-    .result-content {
-      max-width: 700px;
-      margin: 0 auto;
+    .result-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 6vw, 5rem);
+      align-items: center;
+    }
+    .result-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      box-shadow: var(--shadow-md);
+    }
+    .result-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .result-content .overline {
-      text-align: center;
       margin-bottom: var(--space-md);
     }
     .result-content h2 {
@@ -346,7 +377,11 @@
       font-size: var(--text-3xl);
       color: var(--color-navy);
       margin-bottom: var(--space-xl);
-      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .result-layout {
+        grid-template-columns: 1fr;
+      }
     }
     .result-list {
       list-style: none;
@@ -355,21 +390,22 @@
     }
     .result-list li {
       position: relative;
-      padding-left: 1.5rem;
+      padding-left: 2rem;
       font-size: var(--text-base);
       color: var(--color-text);
       line-height: 1.8;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
     .result-list li::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 0.65em;
-      width: 6px;
-      height: 6px;
-      background: var(--color-gold);
-      border-radius: 50%;
+      top: 0.2em;
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke-width='2.5'%3E%3Cpath d='M4 12l5 5L20 7' stroke='%23c4922a' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
     /* ---- CTA ---- */
@@ -419,6 +455,7 @@
     .section-approach-cta .btn {
       position: relative;
       z-index: 1;
+      width: auto;
     }
     .section-approach-cta .cta-trust {
       max-width: 480px;
@@ -675,13 +712,22 @@
   <!-- ===== 8. Partnership ===== -->
   <section class="section-partnership" aria-labelledby="partnership-heading">
     <div class="container">
-      <div class="partnership-content reveal">
-        <span class="overline">Our Process</span>
-        <h2 id="partnership-heading">How Partnership Works</h2>
-        <p>Our work is collaborative. We listen carefully. We assess honestly. We design intentionally. We implement practically. We review consistently.</p>
-        <p>The goal is not to replace your leadership.</p>
-        <div class="approach-callout">
-          <p>It is to strengthen it.</p>
+      <div class="partnership-layout">
+        <div class="partnership-text reveal">
+          <span class="overline">Our Process</span>
+          <h2 id="partnership-heading">How Partnership Works</h2>
+          <p>Our work is collaborative. We listen carefully. We assess honestly. We design intentionally. We implement practically. We review consistently.</p>
+          <p>The goal is not to replace your leadership.</p>
+          <p><strong>It is to strengthen it.</strong></p>
+        </div>
+        <div class="partnership-image reveal">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1686836995642-fdac8d91c8da?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Children at summer camp outdoors"
+            loading="lazy"
+            width="800"
+            height="600"
+          >
         </div>
       </div>
     </div>
@@ -691,18 +737,29 @@
   <!-- ===== 9. The Result ===== -->
   <section class="section-result" aria-labelledby="result-heading">
     <div class="container">
-      <div class="result-content reveal">
-        <span class="overline">The Outcome</span>
-        <h2 id="result-heading">The Result</h2>
-        <ul class="result-list">
-          <li>Directors better equipped to lead</li>
-          <li>Boards clearer on governance</li>
-          <li>Staff aligned in behavior</li>
-          <li>Systems reinforcing mission</li>
-          <li>Culture that supports fun, growth, and belonging</li>
-        </ul>
-        <div class="approach-callout">
-          <p>Healthy systems create space for happy campers.</p>
+      <div class="result-layout">
+        <div class="result-image reveal">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1687757693041-a1271a34dd67?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Happy campers at summer camp"
+            loading="lazy"
+            width="800"
+            height="600"
+          >
+        </div>
+        <div class="result-content reveal">
+          <span class="overline">The Outcome</span>
+          <h2 id="result-heading">The Result</h2>
+          <ul class="result-list">
+            <li>Directors better equipped to lead</li>
+            <li>Boards clearer on governance</li>
+            <li>Staff aligned in behavior</li>
+            <li>Systems reinforcing mission</li>
+            <li>Culture that supports fun, growth, and belonging</li>
+          </ul>
+          <div class="approach-callout">
+            <p>Healthy systems create space for happy campers.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -711,6 +768,7 @@
 
   <!-- ===== 10. CTA ===== -->
   <section class="section-approach-cta" aria-labelledby="approach-cta-heading">
+    <span class="overline reveal" style="color:var(--color-gold);">Take the Next Step</span>
     <h2 id="approach-cta-heading" class="reveal">Healthy camps do not happen accidentally.</h2>
     <p class="cta-subtitle reveal">If you believe your camp can improve&mdash;not just incrementally, but systemically&mdash;let&rsquo;s start with a conversation.</p>
     <a href="../conversation/" class="btn btn--primary btn--large reveal">
