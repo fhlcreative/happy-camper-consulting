@@ -14,6 +14,15 @@ collections:
     folder: "insights/articles"
     create: true
     slug: "{{slug}}"
+    sortable_fields: ["title", "date", "category"]
+    view_filters:
+      - { label: "Culture", field: "category", pattern: "Culture" }
+      - { label: "Leadership", field: "category", pattern: "Leadership" }
+      - { label: "Sustainability", field: "category", pattern: "Sustainability" }
+      - { label: "Safety & Systems", field: "category", pattern: "Safety & Systems" }
+    view_groups:
+      - { label: "Category", field: "category" }
+      - { label: "Year", field: "date", pattern: "\\d{4}" }
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "MM/DD/YYYY", time_format: false }
