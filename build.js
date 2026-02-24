@@ -6,6 +6,18 @@ const outFile = path.join(__dirname, 'insights', 'articles.json');
 
 const files = fs.readdirSync(articlesDir).filter(f => f.endsWith('.md'));
 
+// Normalize dates to YYYY-MM-DD regardless of input format
+function normalizeDate(dateStr) {
+  const isoDate = dateStr.split('T')[0];
+  // Handle MM/DD/YYYY from Decap CMS
+  const slashMatch = isoDate.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (slashMatch) {
+    const [, m, d, y] = slashMatch;
+    return `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`;
+  }
+  return isoDate;
+}
+
 const articles = files.map(file => {
   const raw = fs.readFileSync(path.join(articlesDir, file), 'utf8');
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
@@ -24,7 +36,7 @@ const articles = files.map(file => {
   return {
     slug: file.replace(/\.md$/, ''),
     title: fm.title || '',
-    date: fm.date ? fm.date.split('T')[0] : '',
+    date: fm.date ? normalizeDate(fm.date) : '',
     category: fm.category || '',
     excerpt: fm.excerpt || '',
     image: fm.featured_image || ''

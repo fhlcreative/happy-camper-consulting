@@ -16,7 +16,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "MM/DD/YYYY", time_format: false }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "MM/DD/YYYY", time_format: false }
       - { label: "Category", name: "category", widget: "select", options: ["Culture", "Leadership", "Sustainability", "Safety & Systems"] }
       - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false, hint: "Short summary for article cards (1-2 sentences)" }

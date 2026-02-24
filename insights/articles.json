@@ -1,11 +1,11 @@
 [
   {
-    "slug": "this-is-a-tester-post",
-    "title": "This is a tester post",
-    "date": "2026-02-19",
-    "category": "Leadership",
-    "excerpt": "",
-    "image": "/images/articles/camp-team.jpg"
+    "slug": "post-for-feb-20-test",
+    "title": "A Behavior Is a Value in Action",
+    "date": "2026-02-24",
+    "category": "Culture",
+    "excerpt": "Why Camp Culture Is Built Through Repeated Behaviors",
+    "image": "/images/articles/week2set1.jpg"
   },
   {
     "slug": "why-culture-eats-strategy",
