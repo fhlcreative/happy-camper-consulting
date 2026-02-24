@@ -2,11 +2,11 @@
 title: Why Camp Directors Feel Isolated
 date: 2026-02-24
 category: Leadership
-featured_image: ''
+featured_image: /images/articles/Director_Isolation.JPG
 excerpt: And What Strong Leaders Do About It
 ---
 
----
+***
 
 <h2>Introduction</h2>
 
@@ -253,9 +253,6 @@ excerpt: And What Strong Leaders Do About It
 <p>The goal is to ensure you are <strong>better equipped</strong> to manage it with clarity and confidence.</p>
 
 <hr />
-
-
-<br><br>
 
 <p>If leadership feels heavier than it should, it may be time for structured perspective.</p>
 
