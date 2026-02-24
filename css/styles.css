@@ -1391,6 +1391,11 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
+  [class*="-hero"][id="main-content"],
+  .article-hero {
+    padding-top: calc(var(--space-section) + 2rem);
+  }
+
   .hero__content {
     width: 100%;
     text-align: center;
