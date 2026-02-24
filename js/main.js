@@ -137,21 +137,6 @@
     });
   }
 
-  // ---- Mobile dropdown toggle ----
-  var mobileDropdownToggles = document.querySelectorAll('.mobile-nav__dropdown-toggle');
-  mobileDropdownToggles.forEach(function(toggle) {
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      var isActive = this.classList.contains('active');
-      this.classList.toggle('active');
-      this.setAttribute('aria-expanded', isActive ? 'false' : 'true');
-      var submenu = this.nextElementSibling;
-      if (submenu) {
-        submenu.classList.toggle('open');
-      }
-    });
-  });
-
   // ---- Smooth scroll for anchor links ----
   document.querySelectorAll('a[href^="#"]').forEach(function(link) {
     link.addEventListener('click', function(e) {

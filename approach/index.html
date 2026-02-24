@@ -237,10 +237,14 @@
       margin: 0 auto;
     }
     .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
       margin-bottom: var(--space-2xl);
+    }
+    .impact-grid .impact-item {
+      flex: 0 1 calc(33.333% - 0.67rem);
     }
     .impact-item {
       background: rgba(255,255,255,0.05);
@@ -474,8 +478,8 @@
 
     /* ---- Responsive ---- */
     @media (max-width: 768px) {
-      .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .impact-grid .impact-item {
+        flex: 0 1 calc(50% - 0.5rem);
       }
     }
   </style>
@@ -528,18 +532,13 @@
       <li><a href="../how-we-help/">How We Help</a></li>
       <li><a href="../who-its-for/">Who It's For</a></li>
       <li><a href="./">Approach</a></li>
-      <li class="mobile-nav__dropdown">
-        <a href="#" class="mobile-nav__dropdown-toggle" aria-expanded="false">
-          Insights
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
-        </a>
-        <ul class="mobile-nav__submenu">
-          <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
-          <li><a href="../insights/?category=Culture">Culture</a></li>
-          <li><a href="../insights/?category=Leadership">Leadership</a></li>
-          <li><a href="../insights/?category=Sustainability">Sustainability</a></li>
-          <li><a href="../insights/?category=Safety %26 Systems">Safety &amp; Systems</a></li>
-        </ul>
+      <li><a href="../insights/">Insights</a></li>
+      <li class="mobile-nav__subitems">
+        <a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a>
+        <a href="../insights/?category=Culture">Culture</a>
+        <a href="../insights/?category=Leadership">Leadership</a>
+        <a href="../insights/?category=Sustainability">Sustainability</a>
+        <a href="../insights/?category=Safety %26 Systems">Safety &amp; Systems</a>
       </li>
       <li><a href="../investment/">Investment</a></li>
     </ul>

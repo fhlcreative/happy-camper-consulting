@@ -315,6 +315,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 clamp(2rem, 4vw, 4rem);
 }
 
+.navbar__logo {
+  flex-shrink: 0;
+}
+
 .navbar__logo img {
   height: 50px;
   width: auto;
@@ -381,8 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 80%;
-  max-width: 360px;
+  width: 100%;
   height: 100vh;
   background: var(--color-navy-deep);
   z-index: var(--z-overlay);
@@ -1366,7 +1369,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* ---- Tablet: collapse nav links, keep CTA + hamburger ---- */
+@media (max-width: 1024px) {
+  .navbar__links > li:not(.navbar__cta) {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: inline-flex;
+  }
+
+  .navbar__links {
+    gap: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .navbar__cta {
+    display: none;
+  }
+
   .hero__content {
     width: 100%;
     text-align: center;
@@ -1420,12 +1442,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 1px;
   }
 
-  .navbar__links {
-    display: none;
-  }
-
-  .hamburger-btn {
-    display: inline-flex;
+  .navbar__logo img {
+    height: 37px;
   }
 
   .section-why__grid {
@@ -1561,43 +1579,26 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255,255,255,0.05);
 }
 
-/* ---- Mobile Nav Dropdown ---- */
-.mobile-nav__dropdown-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.mobile-nav__dropdown-toggle svg {
-  transition: transform 0.3s var(--ease-out-expo);
-}
-
-.mobile-nav__dropdown-toggle.active svg {
-  transform: rotate(180deg);
-}
-
-.mobile-nav__submenu {
+/* ---- Mobile Nav Sub-items ---- */
+.mobile-nav__subitems {
   list-style: none;
-  padding-left: 1rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s var(--ease-out-expo);
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0.5rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-top: -0.25rem;
 }
 
-.mobile-nav__submenu.open {
-  max-height: 300px;
+.mobile-nav .mobile-nav__subitems a {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.45);
+  padding: 0.35rem 0;
+  border-bottom: none;
+  font-weight: 400;
 }
 
-.mobile-nav__submenu a {
-  font-size: var(--text-base) !important;
-  padding: 0.5rem 0 !important;
-  border-bottom: none !important;
-  color: rgba(255,255,255,0.6) !important;
-}
-
-.mobile-nav__submenu a:hover {
-  color: var(--color-gold-light) !important;
+.mobile-nav .mobile-nav__subitems a:hover {
+  color: var(--color-gold-light);
 }
 
 /* ---- Experience Callout ---- */
