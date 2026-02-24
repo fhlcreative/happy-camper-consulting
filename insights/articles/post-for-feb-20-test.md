@@ -2,7 +2,7 @@
 title: A Behavior Is a Value in Action
 date: 2026-02-20T06:00:00.000-05:00
 category: Culture
-featured_image: /images/articles/week2set1.jpg
+featured_image: ""
 excerpt: Why Camp Culture Is Built Through Repeated Behaviors
 ---
 <h2>Introduction</h2>
