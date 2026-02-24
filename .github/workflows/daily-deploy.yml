@@ -1,5 +1,7 @@
-name: Daily scheduled deploy
+name: Deploy to Vercel
 on:
+  push:
+    branches: [main]
   schedule:
     # Every day at 6:00 AM UTC (1:00 AM EST / 12:00 AM CST)
     - cron: '0 6 * * *'
