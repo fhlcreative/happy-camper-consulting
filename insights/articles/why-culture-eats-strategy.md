@@ -1,10 +1,11 @@
 ---
-title: "Safety Culture: More Than Policies"
+title: 'Safety Culture: More Than Policies'
 date: 02/24/2026
 category: Safety & Systems
-featured_image: /images/articles/campfire-friends.jpg
+featured_image: /images/articles/IMG_8384.jpg
 excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
 ---
+
 <h2>Introduction</h2>
 
 <p>Every overnight camp has policies.</p>
