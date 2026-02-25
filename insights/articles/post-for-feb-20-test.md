@@ -2,7 +2,7 @@
 title: A Behavior Is a Value in Action
 date: 02/24/2026
 category: Culture
-featured_image: /images/articles/img_8399.jpg
+featured_image: /images/articles/Happy_Camper_Collage.png
 excerpt: Why Camp Culture Is Built Through Repeated Behaviors
 ---
 
@@ -172,7 +172,9 @@ It is shared behavioral patterns.</p>
 
 <p>Because culture is not what you proclaim.</p>
 
-<p><strong>It is what you practice repeatedly.</strong></p>
+<p><strong>It is what you practice repeatedly.</strong>
+
+Leading to a Value-Driven, Behavior-Based Staff, a Healthy Culture and Happy Campers. </p>
 
 <hr />
 
