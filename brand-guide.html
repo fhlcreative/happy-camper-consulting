@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Camper Consulting — Brand Guide</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      color: #2c3e50;
+      background: #fefcf8;
+      line-height: 1.6;
+      padding: 3rem 1.5rem 6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ---- Header ---- */
+    .brand-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e8e4de;
+    }
+    .brand-header img { max-width: 280px; margin-bottom: 1.5rem; }
+    .brand-header h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.25rem;
+      color: #1a2744;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .brand-header p { color: #6b7a8d; margin-top: 0.5rem; font-size: 1.1rem; }
+
+    /* ---- Section ---- */
+    section { margin-bottom: 4rem; }
+    section > h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      color: #1a2744;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    section > .section-desc {
+      color: #6b7a8d;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- Color Palette ---- */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+    .color-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e8e4de;
+      background: #fff;
+    }
+    .color-swatch {
+      height: 100px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+    }
+    .color-swatch span {
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: 'Source Sans 3', sans-serif;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.85);
+      color: #1a2744;
+    }
+    .color-swatch--light span {
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+    }
+    .color-info {
+      padding: 0.75rem;
+    }
+    .color-info strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #1a2744;
+    }
+    .color-info code {
+      font-size: 0.85rem;
+      color: #6b7a8d;
+      background: #faf8f4;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+    }
+    .color-info .color-usage {
+      font-size: 0.82rem;
+      color: #94a3b4;
+      margin-top: 0.25rem;
+    }
+
+    /* ---- Typography ---- */
+    .type-specimen {
+      background: #fff;
+      border: 1px solid #e8e4de;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.25rem;
+    }
+    .type-specimen__label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #c4922a;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .type-specimen__sample {
+      margin-bottom: 0.5rem;
+    }
+    .type-specimen__meta {
+      font-size: 0.82rem;
+      color: #6b7a8d;
+    }
+    .type-specimen__meta code {
+      background: #faf8f4;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+    }
+
+    .type-scale {
+      display: grid;
+      gap: 1rem;
+      background: #fff;
+      border: 1px solid #e8e4de;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 1.5rem;
+    }
+    .type-scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #f0ede8;
+    }
+    .type-scale-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .type-scale-row .ts-label {
+      font-size: 0.8rem;
+      color: #6b7a8d;
+      min-width: 80px;
+      flex-shrink: 0;
+      font-family: monospace;
+    }
+    .type-scale-row .ts-sample {
+      font-family: 'Source Sans 3', sans-serif;
+      color: #1a2744;
+    }
+
+    /* ---- Buttons ---- */
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 2rem;
+      border-radius: 6px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: default;
+      border: 2px solid transparent;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-demo--primary {
+      background: #c4922a;
+      color: #1a2744;
+    }
+    .btn-demo--outline {
+      background: transparent;
+      border-color: #1a2744;
+      color: #1a2744;
+    }
+    .btn-demo--outline-light {
+      background: transparent;
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+    .btn-label {
+      font-size: 0.82rem;
+      color: #6b7a8d;
+    }
+    .dark-demo {
+      background: #1a2744;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ---- Logos ---- */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .logo-card {
+      border-radius: 12px;
+      border: 1px solid #e8e4de;
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-card img { max-width: 220px; max-height: 80px; }
+    .logo-card--dark { background: #1a2744; border-color: #1a2744; }
+    .logo-card--light { background: #fff; }
+
+    /* ---- Spacing ---- */
+    .spacing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .spacing-item {
+      background: #fff;
+      border: 1px solid #e8e4de;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .spacing-bar {
+      height: 12px;
+      background: #c4922a;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+    .spacing-item code {
+      font-size: 0.82rem;
+      color: #1a2744;
+      display: block;
+    }
+    .spacing-item .spacing-val {
+      font-size: 0.78rem;
+      color: #6b7a8d;
+    }
+
+    /* ---- Overline ---- */
+    .overline-demo {
+      text-transform: uppercase;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: #c4922a;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .type-scale-row { flex-direction: column; gap: 0.25rem; }
+      .type-scale-row .ts-label { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="brand-header">
+    <img src="images/logo/logo.png" alt="Happy Camper Consulting logo">
+    <h1>Brand Guide</h1>
+    <p>Colors, typography, and design tokens for Happy Camper Consulting</p>
+  </div>
+
+  <!-- ===== LOGOS ===== -->
+  <section>
+    <h2>Logo</h2>
+    <p class="section-desc">Primary logo on light and dark backgrounds.</p>
+    <div class="logo-grid">
+      <div class="logo-card logo-card--light">
+        <img src="images/logo/logo.png" alt="Logo on light background">
+      </div>
+      <div class="logo-card logo-card--dark">
+        <img src="images/logo/logo-white.png" alt="Logo on dark background">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLOR PALETTE ===== -->
+  <section>
+    <h2>Color Palette</h2>
+    <p class="section-desc">Primary brand colors and their usage.</p>
+    <div class="color-grid">
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1a2744;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#1a2744</span>
+        </div>
+        <div class="color-info">
+          <strong>Navy</strong>
+          <code>--color-navy</code>
+          <div class="color-usage">Headings, primary dark backgrounds</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#0f1a30;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#0f1a30</span>
+        </div>
+        <div class="color-info">
+          <strong>Navy Deep</strong>
+          <code>--color-navy-deep</code>
+          <div class="color-usage">Navbar, footer, dark sections</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#2a3d5e;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#2a3d5e</span>
+        </div>
+        <div class="color-info">
+          <strong>Navy Light</strong>
+          <code>--color-navy-light</code>
+          <div class="color-usage">Lighter navy accents</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#c4922a;">
+          <span>#c4922a</span>
+        </div>
+        <div class="color-info">
+          <strong>Gold</strong>
+          <code>--color-gold</code>
+          <div class="color-usage">Accent, overlines, icons, CTA buttons</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#e8b94a;">
+          <span>#e8b94a</span>
+        </div>
+        <div class="color-info">
+          <strong>Gold Light</strong>
+          <code>--color-gold-light</code>
+          <div class="color-usage">Hover state for gold elements</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#3d6b4f;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#3d6b4f</span>
+        </div>
+        <div class="color-info">
+          <strong>Forest Green</strong>
+          <code>--color-green</code>
+          <div class="color-usage">Secondary accent</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#faf8f4;">
+          <span>#faf8f4</span>
+        </div>
+        <div class="color-info">
+          <strong>Cream</strong>
+          <code>--color-cream</code>
+          <div class="color-usage">Alternating light sections</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#fefcf8;">
+          <span>#fefcf8</span>
+        </div>
+        <div class="color-info">
+          <strong>Warm White</strong>
+          <code>--color-warm-white</code>
+          <div class="color-usage">Body background</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#ffffff; border-bottom: 1px solid #e8e4de;">
+          <span>#ffffff</span>
+        </div>
+        <div class="color-info">
+          <strong>White</strong>
+          <code>--color-surface</code>
+          <div class="color-usage">Cards, content surfaces</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#2c3e50;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#2c3e50</span>
+        </div>
+        <div class="color-info">
+          <strong>Text</strong>
+          <code>--color-text</code>
+          <div class="color-usage">Body copy</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#6b7a8d;">
+          <span style="color:#fff; background:rgba(0,0,0,0.3);">#6b7a8d</span>
+        </div>
+        <div class="color-info">
+          <strong>Text Muted</strong>
+          <code>--color-text-muted</code>
+          <div class="color-usage">Descriptions, secondary text</div>
+        </div>
+      </div>
+
+      <div class="color-card">
+        <div class="color-swatch" style="background:#e8e4de;">
+          <span>#e8e4de</span>
+        </div>
+        <div class="color-info">
+          <strong>Border</strong>
+          <code>--color-border</code>
+          <div class="color-usage">Dividers, card borders</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TYPOGRAPHY ===== -->
+  <section>
+    <h2>Typography</h2>
+    <p class="section-desc">Two-font system loaded from Google Fonts.</p>
+
+    <!-- Heading font -->
+    <div class="type-specimen">
+      <div class="type-specimen__label">Heading Font</div>
+      <div class="type-specimen__sample" style="font-family:'Lora',serif; font-size:2.25rem; color:#1a2744; font-weight:700; letter-spacing:-0.02em; line-height:1.2;">
+        Lora — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__sample" style="font-family:'Lora',serif; font-size:1.5rem; color:#1a2744; font-weight:400; font-style:italic; line-height:1.3; margin-top:0.5rem;">
+        Lora Italic — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__meta">
+        <code>font-family: 'Lora', serif</code> &middot; Weights: 400, 500, 600, 700 + Italic
+      </div>
+    </div>
+
+    <!-- Body font -->
+    <div class="type-specimen">
+      <div class="type-specimen__label">Body Font</div>
+      <div class="type-specimen__sample" style="font-family:'Source Sans 3',sans-serif; font-size:1.5rem; color:#2c3e50; font-weight:400; line-height:1.5;">
+        Source Sans 3 — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__sample" style="font-family:'Source Sans 3',sans-serif; font-size:1.125rem; color:#2c3e50; font-weight:600; line-height:1.5; margin-top:0.5rem;">
+        Source Sans 3 Semibold — The quick brown fox jumps over the lazy dog
+      </div>
+      <div class="type-specimen__meta">
+        <code>font-family: 'Source Sans 3', sans-serif</code> &middot; Weights: 300, 400, 500, 600, 700
+      </div>
+    </div>
+
+    <!-- Overline -->
+    <div class="type-specimen">
+      <div class="type-specimen__label">Overline Style</div>
+      <div class="type-specimen__sample">
+        <span class="overline-demo">Section Label</span>
+      </div>
+      <div class="type-specimen__meta">
+        Uppercase &middot; <code>letter-spacing: 0.15em</code> &middot; <code>font-weight: 600</code> &middot; Gold (<code>#c4922a</code>)
+      </div>
+    </div>
+
+    <!-- Type scale -->
+    <h3 style="font-family:'Lora',serif; font-size:1.15rem; color:#1a2744; margin-top:2rem; margin-bottom:0.5rem;">Type Scale</h3>
+    <p style="font-size:0.9rem; color:#6b7a8d; margin-bottom:1rem;">Fluid sizes using CSS <code>clamp()</code> — scales between mobile and desktop.</p>
+    <div class="type-scale">
+      <div class="type-scale-row">
+        <span class="ts-label">--text-hero</span>
+        <span class="ts-sample" style="font-family:'Lora',serif; font-size:clamp(2.75rem,1.5rem + 4.5vw,4.25rem); font-weight:700; color:#1a2744; line-height:1.1;">Hero Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-4xl</span>
+        <span class="ts-sample" style="font-family:'Lora',serif; font-size:clamp(2.25rem,1.2rem + 5.3vw,3.75rem); font-weight:700; color:#1a2744; line-height:1.15;">Page Title</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-3xl</span>
+        <span class="ts-sample" style="font-family:'Lora',serif; font-size:clamp(1.875rem,1.2rem + 3.4vw,2.75rem); font-weight:700; color:#1a2744; line-height:1.2;">Section Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-2xl</span>
+        <span class="ts-sample" style="font-family:'Lora',serif; font-size:clamp(1.5rem,1.1rem + 2vw,2rem); font-weight:700; color:#1a2744; line-height:1.25;">Sub-Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-xl</span>
+        <span class="ts-sample" style="font-size:clamp(1.25rem,1rem + 1.2vw,1.5rem); font-weight:600; color:#1a2744;">Large Text</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-lg</span>
+        <span class="ts-sample" style="font-size:clamp(1.125rem,1rem + 0.6vw,1.25rem); color:#2c3e50;">Lead Paragraph</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-base</span>
+        <span class="ts-sample" style="font-size:clamp(1rem,0.9rem + 0.5vw,1.125rem); color:#2c3e50;">Body Text — The quick brown fox jumps over the lazy dog.</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-sm</span>
+        <span class="ts-sample" style="font-size:clamp(0.875rem,0.8rem + 0.35vw,1rem); color:#6b7a8d;">Small Text / Captions</span>
+      </div>
+      <div class="type-scale-row">
+        <span class="ts-label">--text-xs</span>
+        <span class="ts-sample" style="font-size:clamp(0.75rem,0.7rem + 0.25vw,0.875rem); color:#6b7a8d;">Fine Print / Labels</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUTTONS ===== -->
+  <section>
+    <h2>Buttons</h2>
+    <p class="section-desc">Primary and outline button styles on light and dark backgrounds.</p>
+
+    <div class="button-row">
+      <span class="btn-demo btn-demo--primary">Schedule a Conversation</span>
+      <span class="btn-label">Primary — Gold bg, navy text</span>
+    </div>
+    <div class="button-row">
+      <span class="btn-demo btn-demo--outline">Learn More</span>
+      <span class="btn-label">Outline — Navy border on light bg</span>
+    </div>
+    <div class="dark-demo">
+      <span class="btn-demo btn-demo--primary">Schedule a Conversation</span>
+      <span class="btn-demo btn-demo--outline-light">Learn More</span>
+      <span class="btn-label" style="color:rgba(255,255,255,0.5);">On dark backgrounds</span>
+    </div>
+  </section>
+
+  <!-- ===== SPACING ===== -->
+  <section>
+    <h2>Spacing Scale</h2>
+    <p class="section-desc">Consistent spacing tokens used across the site.</p>
+    <div class="spacing-grid">
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:4px;"></div>
+        <code>--space-xs</code>
+        <span class="spacing-val">0.25rem (4px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:8px;"></div>
+        <code>--space-sm</code>
+        <span class="spacing-val">0.5rem (8px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:16px;"></div>
+        <code>--space-md</code>
+        <span class="spacing-val">1rem (16px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:24px;"></div>
+        <code>--space-lg</code>
+        <span class="spacing-val">1.5rem (24px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:32px;"></div>
+        <code>--space-xl</code>
+        <span class="spacing-val">2rem (32px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:48px;"></div>
+        <code>--space-2xl</code>
+        <span class="spacing-val">3rem (48px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:64px;"></div>
+        <code>--space-3xl</code>
+        <span class="spacing-val">4rem (64px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-bar" style="width:100%;"></div>
+        <code>--space-section</code>
+        <span class="spacing-val">clamp(5rem, 3rem + 5vw, 8rem)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION PATTERNS ===== -->
+  <section>
+    <h2>Section Backgrounds</h2>
+    <p class="section-desc">Alternating background colors used to create visual rhythm between sections.</p>
+    <div style="display:grid; gap:0; border-radius:12px; overflow:hidden; border:1px solid #e8e4de;">
+      <div style="background:#1a2744; color:#fff; padding:1.5rem 2rem;">
+        <strong style="color:#c4922a;">Dark Navy</strong> — Hero sections, dark feature sections
+        <div style="font-size:0.85rem; color:rgba(255,255,255,0.5); margin-top:0.25rem;">#1a2744 / --color-navy</div>
+      </div>
+      <div style="background:#0f1a30; color:#fff; padding:1.5rem 2rem;">
+        <strong style="color:#c4922a;">Navy Deep</strong> — Navbar (scrolled), footer
+        <div style="font-size:0.85rem; color:rgba(255,255,255,0.5); margin-top:0.25rem;">#0f1a30 / --color-navy-deep</div>
+      </div>
+      <div style="background:#fefcf8; padding:1.5rem 2rem;">
+        <strong style="color:#1a2744;">Warm White</strong> — Default body background
+        <div style="font-size:0.85rem; color:#6b7a8d; margin-top:0.25rem;">#fefcf8 / --color-warm-white</div>
+      </div>
+      <div style="background:#faf8f4; padding:1.5rem 2rem;">
+        <strong style="color:#1a2744;">Cream</strong> — Alternating light sections
+        <div style="font-size:0.85rem; color:#6b7a8d; margin-top:0.25rem;">#faf8f4 / --color-cream</div>
+      </div>
+      <div style="background:#ffffff; padding:1.5rem 2rem;">
+        <strong style="color:#1a2744;">White</strong> — Cards, content surfaces
+        <div style="font-size:0.85rem; color:#6b7a8d; margin-top:0.25rem;">#ffffff / --color-surface</div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
