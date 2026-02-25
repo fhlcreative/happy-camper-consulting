@@ -176,7 +176,11 @@ excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
 <p>Want to strengthen your camp’s safety culture before strain exposes weakness?</p>
 
 <p>
-  <a href="/services">Learn about our camp consulting services</a>
+
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
+
   &nbsp;or&nbsp;
-  <a href="/contact">schedule a Camp Health Snapshot conversation</a>.
+
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">schedule a Camp Health Snapshot conversation</a>.
+
 </p>
