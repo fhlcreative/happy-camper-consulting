@@ -181,6 +181,6 @@ excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
 
   &nbsp;or&nbsp;
 
-  <a href="https://happy-camper-consulting.vercel.app/conversation/">schedule a Camp Health Snapshot conversation</a>.
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">Schedule a Camp Health Snapshot conversation</a>.
 
 </p>
