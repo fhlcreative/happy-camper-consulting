@@ -5,6 +5,7 @@ category: Culture
 featured_image: /images/articles/img_8399.jpg
 excerpt: Why Camp Culture Is Built Through Repeated Behaviors
 ---
+
 <h2>Introduction</h2>
 
 <p>Most camps have a values statement.</p>
@@ -175,11 +176,14 @@ It is shared behavioral patterns.</p>
 
 <hr />
 
-
 <p>Curious whether your camp’s behaviors align with its values?</p>
 
 <p>
-  <a href="/services">Explore our camp consulting services</a>
+
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
+
   &nbsp;or&nbsp;
-  <a href="/contact">schedule a Camp Health Snapshot conversation</a>.
+
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">schedule a Camp Health Snapshot conversation</a>.
+
 </p>
