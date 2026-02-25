@@ -258,10 +258,10 @@ excerpt: And What Strong Leaders Do About It
 
 <p>
 
-  <a href="/services">Explore our camp consulting services</a>
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
 
   &nbsp;or&nbsp;
 
-  <a href="/contact">schedule a Camp Health Snapshot conversation</a>.
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">schedule a Camp Health Snapshot conversation</a>.
 
 </p>
