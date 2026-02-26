@@ -174,7 +174,7 @@ It is shared behavioral patterns.</p>
 
 <p><strong>It is what you practice repeatedly.</strong>
 
-Leading to a Value-Driven, Behavior-Based Staff, a Healthy Culture and Happy Campers. </p>
+And that leads to a value-driven, behavior-based staff, a Healthy Culture and, ultimately, Happy Campers. </p>
 
 <hr />
 
