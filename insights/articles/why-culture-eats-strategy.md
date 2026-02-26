@@ -2,7 +2,7 @@
 title: 'Safety Culture: More Than Policies'
 date: 02/24/2026
 category: Safety & Systems
-featured_image: /images/articles/Rebecca_Brazil.png
+featured_image: /images/articles/Rebecca_Brazil.jpg
 excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
 ---
 

@@ -7,6 +7,10 @@
   <title>Loading... — Happy Camper Consulting</title>
   <meta name="robots" content="index, follow">
 
+  <!-- Geo -->
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -224,6 +228,22 @@
     var params = new URLSearchParams(window.location.search);
     var slug = params.get('slug');
 
+    function setMeta(name, content) {
+      var el = document.querySelector('meta[name="' + name + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute('name', name); document.head.appendChild(el); }
+      el.setAttribute('content', content);
+    }
+    function setOG(property, content) {
+      var el = document.querySelector('meta[property="' + property + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute('property', property); document.head.appendChild(el); }
+      el.setAttribute('content', content);
+    }
+    function setCanonical(href) {
+      var el = document.querySelector('link[rel="canonical"]');
+      if (!el) { el = document.createElement('link'); el.setAttribute('rel', 'canonical'); document.head.appendChild(el); }
+      el.setAttribute('href', href);
+    }
+
     if (!slug) {
       document.getElementById('content').innerHTML = '<p>Article not found.</p>';
     } else {
@@ -247,9 +267,16 @@
             var body = text;
           }
 
+          var title = frontMatter.title || slug;
+          var desc = frontMatter.excerpt || '';
+          var articleUrl = 'https://happycamperconsultant.com/insights/article.html?slug=' + slug;
+          var imageUrl = frontMatter.featured_image
+            ? (frontMatter.featured_image.startsWith('http') ? frontMatter.featured_image : 'https://happycamperconsultant.com/insights/' + frontMatter.featured_image.replace(/^\.?\//, ''))
+            : 'https://happycamperconsultant.com/images/logo/logo-white.png';
+
           // Populate hero
-          document.getElementById('title').textContent = frontMatter.title || slug;
-          document.title = (frontMatter.title || slug) + ' — Happy Camper Consulting';
+          document.getElementById('title').textContent = title;
+          document.title = title + ' — Happy Camper Consulting';
           document.getElementById('category').textContent = frontMatter.category || '';
 
           if (frontMatter.date) {
@@ -259,9 +286,49 @@
 
           if (frontMatter.featured_image) {
             document.getElementById('featured-img').src = frontMatter.featured_image;
-            document.getElementById('featured-img').alt = frontMatter.title || '';
+            document.getElementById('featured-img').alt = title;
             document.getElementById('featured-img-wrap').style.display = 'block';
           }
+
+          // Inject meta tags
+          setMeta('description', desc);
+          setCanonical(articleUrl);
+
+          // Open Graph
+          setOG('og:type', 'article');
+          setOG('og:title', title);
+          setOG('og:description', desc);
+          setOG('og:image', imageUrl);
+          setOG('og:url', articleUrl);
+
+          // Twitter Card
+          setMeta('twitter:card', 'summary_large_image');
+          setMeta('twitter:title', title);
+          setMeta('twitter:description', desc);
+          setMeta('twitter:image', imageUrl);
+
+          // Article schema
+          var schema = {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            'headline': title,
+            'description': desc,
+            'author': { '@type': 'Person', 'name': 'Jeff Rorabaugh' },
+            'publisher': {
+              '@type': 'ProfessionalService',
+              'name': 'Happy Camper Consulting',
+              'url': 'https://happycamperconsultant.com',
+              'logo': { '@type': 'ImageObject', 'url': 'https://happycamperconsultant.com/images/logo/logo-white.png' }
+            },
+            'url': articleUrl,
+            'image': imageUrl
+          };
+          if (frontMatter.date) schema.datePublished = frontMatter.date;
+
+          var schemaEl = document.createElement('script');
+          schemaEl.type = 'application/ld+json';
+          schemaEl.textContent = JSON.stringify(schema);
+          document.head.appendChild(schemaEl);
 
           // Render markdown
           document.getElementById('content').innerHTML = marked.parse(body);
