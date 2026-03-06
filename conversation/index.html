@@ -577,6 +577,21 @@
       .next-steps {
         grid-template-columns: 1fr;
       }
+      .section-talk > * {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .talk-snapshot {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .next-step:not(:last-child)::after {
+        position: static;
+        display: block;
+        transform: none;
+        text-align: center;
+        margin: var(--space-md) 0;
+      }
     }
   </style>
 </head>
@@ -885,7 +900,7 @@
           </div>
         </div>
         <div class="footer__col">
-          <h4>Explore</h4>
+          <h3>Explore</h3>
           <ul>
             <li><a href="../about/">About</a></li>
             <li><a href="../insights/">Insights</a></li>
@@ -893,7 +908,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Insights</h4>
+          <h3>Insights</h3>
           <ul>
             <li><a href="../insights/what-is-camp-consulting/">What is Camp Consulting?</a></li>
             <li><a href="../insights/culture/">Culture</a></li>

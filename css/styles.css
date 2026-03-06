@@ -19,7 +19,7 @@
   --color-surface: #ffffff;
   --color-text: #2c3e50;
   --color-text-muted: #6b7a8d;
-  --color-text-light: #94a3b4;
+  --color-text-light: #7a8a9b;
   --color-border: #e8e4de;
 
   /* Typography */
@@ -1284,7 +1284,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-gold-light);
 }
 
-.footer__col h4 {
+.footer__col h3 {
   color: #fff;
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -1598,7 +1598,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav .mobile-nav__subitems a {
   font-size: var(--text-sm);
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.7);
   padding: 0.35rem 0;
   border-bottom: none;
   font-weight: 400;
