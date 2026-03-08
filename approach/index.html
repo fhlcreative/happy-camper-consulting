@@ -156,32 +156,25 @@
       box-shadow: var(--shadow-sm);
     }
     .layer-card__header {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.25rem;
       margin-bottom: var(--space-xl);
     }
     .layer-card__number {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      background: var(--color-gold-muted);
-      color: var(--color-gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: var(--text-xl);
+      font-size: clamp(3rem, 5vw, 4rem);
+      color: rgba(0,0,0,0.08);
+      line-height: 1;
+      margin-bottom: var(--space-md);
     }
-    .layer-card__titles .overline {
-      margin-bottom: var(--space-xs);
+    .layer-card__titles {
+      max-width: 100%;
     }
     .layer-card__titles h2 {
       font-family: var(--font-heading);
       font-size: var(--text-2xl);
       color: var(--color-navy);
+      max-width: 100%;
     }
     .layer-card > p {
       color: var(--color-text);
@@ -596,10 +589,9 @@
         <!-- Layer 1 — Structure -->
         <div class="layer-card reveal" id="vdms">
           <div class="layer-card__header">
-            <span class="layer-card__number">1</span>
+            <span class="layer-card__number">01</span>
             <div class="layer-card__titles">
-              <span class="overline">Structure</span>
-              <h2 id="layer-1-heading">Value-Driven Management System (VDMS)</h2>
+              <h2 id="layer-1-heading">Structure: Value-Driven Management Systems</h2>
             </div>
           </div>
           <p>Healthy culture needs intentional architecture. Together, we:</p>
@@ -618,10 +610,9 @@
         <!-- Layer 2 — Translation -->
         <div class="layer-card reveal">
           <div class="layer-card__header">
-            <span class="layer-card__number">2</span>
+            <span class="layer-card__number">02</span>
             <div class="layer-card__titles">
-              <span class="overline">Translation</span>
-              <h2>Core Values &rarr; Observable Behaviors</h2>
+              <h2>Translation: Core Values &rarr; Observable Behaviors</h2>
             </div>
           </div>
           <p>Values only matter when they shape daily behavior. We work with your team to:</p>
@@ -640,13 +631,12 @@
         <!-- Layer 3 — Formation -->
         <div class="layer-card reveal">
           <div class="layer-card__header">
-            <span class="layer-card__number">3</span>
+            <span class="layer-card__number">03</span>
             <div class="layer-card__titles">
-              <span class="overline">Formation</span>
-              <h2>Leadership &amp; Staff Training Framework</h2>
+              <h2>Formation: Leadership &amp; Staff Training Framework</h2>
             </div>
           </div>
-          <p>Healthy culture must be taught, modeled, and reinforced. Our 4-Part Training framework equips staff and leaders to:</p>
+          <p>Healthy culture must be taught, modeled, and reinforced. Within the Formation layer, our 4-Part Training framework equips staff and leaders to:</p>
           <ul>
             <li>Understand the mission and flow of camp &mdash; &ldquo;The Why&rdquo;</li>
             <li>Internalize core values &mdash; &ldquo;The How&rdquo;</li>
@@ -661,10 +651,9 @@
         <!-- Layer 4 — Protection -->
         <div class="layer-card reveal">
           <div class="layer-card__header">
-            <span class="layer-card__number">4</span>
+            <span class="layer-card__number">04</span>
             <div class="layer-card__titles">
-              <span class="overline">Protection</span>
-              <h2>Safety, Risk &amp; Accountability Systems</h2>
+              <h2>Protection: Safety, Risk &amp; Accountability Systems</h2>
             </div>
           </div>
           <p>Joy is sustainable only when safety is secure. We help camps implement or strengthen:</p>
