@@ -19,7 +19,7 @@ collections:
     extension: "md"
     media_folder: ""
     public_folder: "/resources/downloads"
-    description: "Upload PDFs to share via direct link. After saving, the file URL will be: happycamperconsultant.com/resources/downloads/[filename].pdf"
+    description: "Upload PDFs to share via direct link. Use the Copy Link button to grab the URL."
     fields:
       - { label: "Title", name: "title", widget: "string", hint: "Name for this download (for your reference only)" }
       - { label: "PDF File", name: "file", widget: "file", hint: "Upload a PDF. After saving, copy the file path shown here to share as a link." }

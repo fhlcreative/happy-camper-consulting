@@ -12,73 +12,71 @@
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
-    // Add floating "Copy Download Link" bar when editing a Downloads entry
+    // Add "Copy Link" buttons to Downloads list items
     (function() {
       const DOMAIN = 'happycamperconsultant.com';
-      let lastPath = '';
+      const REPO = 'fhlcreative/happy-camper-consulting';
+      const cache = {};
 
-      function findFilePath() {
-        // Search all text nodes on the page for a resources/downloads path
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        while (walker.nextNode()) {
-          const match = walker.currentNode.textContent.match(/resources\/downloads\/[^\s]+\.pdf/);
-          if (match) return match[0];
-        }
-        return '';
+      async function getFileUrl(slug) {
+        if (cache[slug]) return cache[slug];
+        try {
+          const res = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/resources/downloads/' + slug + '.md');
+          if (!res.ok) return null;
+          const text = await res.text();
+          const match = text.match(/file:\s*["']?([^\s"']+\.pdf)["']?/);
+          if (match) {
+            const filename = match[1].split('/').pop();
+            const url = 'https://' + DOMAIN + '/resources/downloads/' + filename;
+            cache[slug] = url;
+            return url;
+          }
+        } catch(e) {}
+        return null;
       }
 
       function update() {
-        const onDownloadsEntry = location.hash.includes('/collections/downloads/entries/');
-        const bar = document.getElementById('hcc-copy-bar');
+        // Only run on the downloads list page
+        if (location.hash !== '#/collections/downloads' &&
+            !location.hash.startsWith('#/collections/downloads?')) return;
 
-        if (!onDownloadsEntry) {
-          if (bar) bar.style.display = 'none';
-          lastPath = '';
-          return;
-        }
+        // Find all links that point to download entries
+        const links = document.querySelectorAll('a[href*="/collections/downloads/entries/"]');
+        links.forEach(function(link) {
+          const row = link.closest('li, tr, [role="row"]') || link.parentElement;
+          if (!row || row.querySelector('.hcc-copy-btn')) return;
 
-        const filePath = findFilePath();
-        if (!filePath || filePath === lastPath) {
-          if (bar && filePath) bar.style.display = 'flex';
-          return;
-        }
-        lastPath = filePath;
-        const filename = filePath.split('/').pop();
-        const fullUrl = 'https://' + DOMAIN + '/resources/downloads/' + filename;
+          const slugMatch = link.getAttribute('href').match(/entries\/([^/]+)/);
+          if (!slugMatch) return;
+          const slug = slugMatch[1];
 
-        if (bar) bar.remove();
+          const btn = document.createElement('button');
+          btn.className = 'hcc-copy-btn';
+          btn.textContent = 'Copy Link';
+          btn.style.cssText = 'margin-left:auto;background:#1a2744;color:#fff;border:none;padding:5px 12px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;position:absolute;right:16px;top:50%;transform:translateY(-50%);';
+          row.style.position = 'relative';
 
-        const wrapper = document.createElement('div');
-        wrapper.id = 'hcc-copy-bar';
-        wrapper.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2744;color:#fff;display:flex;align-items:center;gap:12px;padding:10px 20px;font-family:-apple-system,sans-serif;font-size:13px;box-shadow:0 -2px 8px rgba(0,0,0,.2);';
-
-        const label = document.createElement('span');
-        label.textContent = 'Download link:';
-        label.style.cssText = 'opacity:0.7;white-space:nowrap;';
-
-        const urlText = document.createElement('code');
-        urlText.textContent = fullUrl;
-        urlText.style.cssText = 'flex:1;color:#c4922a;word-break:break-all;';
-
-        const copyBtn = document.createElement('button');
-        copyBtn.textContent = 'Copy Link';
-        copyBtn.style.cssText = 'background:#c4922a;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;';
-        copyBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          navigator.clipboard.writeText(fullUrl).then(function() {
-            copyBtn.textContent = 'Copied!';
-            copyBtn.style.background = '#2d6a4f';
-            setTimeout(function() {
-              copyBtn.textContent = 'Copy Link';
-              copyBtn.style.background = '#c4922a';
-            }, 2000);
+          btn.addEventListener('click', async function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            btn.textContent = '...';
+            const url = await getFileUrl(slug);
+            if (url) {
+              await navigator.clipboard.writeText(url);
+              btn.textContent = 'Copied!';
+              btn.style.background = '#c4922a';
+              setTimeout(function() {
+                btn.textContent = 'Copy Link';
+                btn.style.background = '#1a2744';
+              }, 2000);
+            } else {
+              btn.textContent = 'Error';
+              setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+            }
           });
-        });
 
-        wrapper.appendChild(label);
-        wrapper.appendChild(urlText);
-        wrapper.appendChild(copyBtn);
-        document.body.appendChild(wrapper);
+          row.appendChild(btn);
+        });
       }
 
       setInterval(update, 1500);
