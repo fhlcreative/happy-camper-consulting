@@ -12,80 +12,110 @@
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
-    // Add full URL + Copy button in the Preview pane next to PDF path
+    // Clear any stuck Sveltia draft backups for downloads entries
+    (function() {
+      try {
+        var dbs = indexedDB.databases ? indexedDB.databases() : null;
+        if (dbs) dbs.then(function(list) {
+          list.forEach(function(db) {
+            if (db.name && db.name.includes('sveltia')) {
+              var req = indexedDB.open(db.name);
+              req.onsuccess = function() {
+                var d = req.result;
+                var names = Array.from(d.objectStoreNames);
+                names.forEach(function(n) {
+                  if (n.includes('draft') || n.includes('backup')) {
+                    try {
+                      var tx = d.transaction(n, 'readwrite');
+                      tx.objectStore(n).clear();
+                    } catch(e) {}
+                  }
+                });
+                d.close();
+              };
+            }
+          });
+        });
+      } catch(e) {}
+    })();
+
+    // Show Copy Link bar at bottom of page on Downloads entry pages only
     (function() {
       const DOMAIN = 'happycamperconsultant.com';
-      let enhanced = false;
-      let lastHash = '';
+      let currentSlug = '';
 
-      function findAndEnhance() {
-        // Only on downloads entry pages
-        if (!location.hash.includes('/collections/downloads/entries/')) {
-          enhanced = false;
-          lastHash = '';
+      function getSlug() {
+        const m = location.hash.match(/\/collections\/downloads\/entries\/([^/?]+)/);
+        return m ? m[1] : '';
+      }
+
+      function findPdfPath() {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        while (walker.nextNode()) {
+          const m = walker.currentNode.textContent.match(/resources\/downloads\/[^\s]+\.pdf/);
+          if (m) return m[0];
+        }
+        return '';
+      }
+
+      function update() {
+        const slug = getSlug();
+        const bar = document.getElementById('hcc-bar');
+
+        if (!slug) {
+          if (bar) bar.style.display = 'none';
+          currentSlug = '';
           return;
         }
 
-        // Reset if navigated to a different entry
-        if (location.hash !== lastHash) {
-          enhanced = false;
-          lastHash = location.hash;
-          // Remove old enhancements
-          document.querySelectorAll('.hcc-url-row').forEach(el => el.remove());
+        if (slug === currentSlug) {
+          if (bar) bar.style.display = 'flex';
+          return;
         }
 
-        if (enhanced) return;
+        const path = findPdfPath();
+        if (!path) return;
 
-        // Search all text nodes for the PDF path pattern
-        // Collect ALL matches, then use the LAST one (preview pane, not edit pane)
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        let targetNode = null;
-        while (walker.nextNode()) {
-          const text = walker.currentNode.textContent.trim();
-          if (text.match(/^resources\/downloads\/.+\.pdf$/)) {
-            targetNode = walker.currentNode; // keep going to find the last one
-          }
-        }
-
-        if (!targetNode) return;
-
-        const filename = targetNode.textContent.trim().split('/').pop();
+        currentSlug = slug;
+        const filename = path.split('/').pop();
         const fullUrl = 'https://' + DOMAIN + '/resources/downloads/' + filename;
-        const parent = targetNode.parentElement;
-        if (!parent) return;
 
-        // Create a row with the full URL and copy button
-        const row = document.createElement('div');
-        row.className = 'hcc-url-row';
-        row.style.cssText = 'display:flex;align-items:center;gap:10px;margin-top:8px;padding:8px 12px;background:#f0f4f8;border-radius:6px;font-family:-apple-system,sans-serif;';
+        if (bar) bar.remove();
 
-        const urlText = document.createElement('code');
-        urlText.textContent = fullUrl;
-        urlText.style.cssText = 'flex:1;font-size:13px;color:#1a2744;word-break:break-all;';
+        const el = document.createElement('div');
+        el.id = 'hcc-bar';
+        el.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2744;color:#fff;padding:10px 24px;font-family:-apple-system,sans-serif;font-size:13px;box-shadow:0 -2px 8px rgba(0,0,0,.2);display:flex;align-items:center;gap:12px;';
+
+        const lbl = document.createElement('span');
+        lbl.textContent = 'Share this link:';
+        lbl.style.cssText = 'opacity:0.7;white-space:nowrap;';
+
+        const url = document.createElement('code');
+        url.textContent = fullUrl;
+        url.style.cssText = 'flex:1;color:#c4922a;word-break:break-all;';
 
         const btn = document.createElement('button');
         btn.textContent = 'Copy Link';
-        btn.style.cssText = 'background:#1a2744;color:#fff;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;';
+        btn.style.cssText = 'background:#c4922a;color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;';
         btn.addEventListener('click', function(e) {
           e.preventDefault();
-          e.stopPropagation();
           navigator.clipboard.writeText(fullUrl).then(function() {
             btn.textContent = 'Copied!';
-            btn.style.background = '#c4922a';
+            btn.style.background = '#2d6a4f';
             setTimeout(function() {
               btn.textContent = 'Copy Link';
-              btn.style.background = '#1a2744';
+              btn.style.background = '#c4922a';
             }, 2000);
           });
         });
 
-        row.appendChild(urlText);
-        row.appendChild(btn);
-        parent.insertAdjacentElement('afterend', row);
-        enhanced = true;
+        el.appendChild(lbl);
+        el.appendChild(url);
+        el.appendChild(btn);
+        document.body.appendChild(el);
       }
 
-      setInterval(findAndEnhance, 1000);
+      setInterval(update, 1000);
     })();
   </script>
 </body>
