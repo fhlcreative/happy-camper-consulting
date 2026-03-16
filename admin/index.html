@@ -65,12 +65,12 @@
         return btn;
       }
 
-      // --- ENTRY PAGE: full URL + Copy button under PDF File in preview ---
+      // --- ENTRY PAGE: Copy button inline next to PDF path in preview ---
       function handleEntryPage() {
         const m = location.hash.match(/\/collections\/downloads\/entries\/([^/?]+)/);
         if (!m) {
           entryEnhanced = '';
-          document.querySelectorAll('.hcc-url-row').forEach(function(el) { el.remove(); });
+          document.querySelectorAll('.hcc-inline-btn').forEach(function(el) { el.remove(); });
           return;
         }
         if (m[1] === entryEnhanced) return;
@@ -90,19 +90,14 @@
         const parent = target.parentElement;
         if (!parent) return;
 
-        document.querySelectorAll('.hcc-url-row').forEach(function(el) { el.remove(); });
+        document.querySelectorAll('.hcc-inline-btn').forEach(function(el) { el.remove(); });
 
-        const row = document.createElement('div');
-        row.className = 'hcc-url-row';
-        row.style.cssText = 'display:flex;align-items:center;gap:10px;margin-top:8px;padding:8px 12px;background:#f0f4f8;border-radius:6px;font-family:-apple-system,sans-serif;';
-
-        const urlText = document.createElement('code');
-        urlText.textContent = fullUrl;
-        urlText.style.cssText = 'flex:1;font-size:13px;color:#1a2744;word-break:break-all;';
-
-        row.appendChild(urlText);
-        row.appendChild(makeCopyBtn(fullUrl));
-        parent.insertAdjacentElement('afterend', row);
+        // Insert button inline right after the path text
+        const btn = makeCopyBtn(fullUrl);
+        btn.className = 'hcc-inline-btn';
+        btn.style.cssText += ';margin-left:10px;vertical-align:middle;display:inline-block;';
+        parent.style.display = 'inline';
+        parent.insertAdjacentElement('afterend', btn);
         entryEnhanced = m[1];
       }
 
