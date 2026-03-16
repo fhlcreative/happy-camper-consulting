@@ -37,13 +37,13 @@
         if (enhanced) return;
 
         // Search all text nodes for the PDF path pattern
+        // Collect ALL matches, then use the LAST one (preview pane, not edit pane)
         const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
         let targetNode = null;
         while (walker.nextNode()) {
           const text = walker.currentNode.textContent.trim();
           if (text.match(/^resources\/downloads\/.+\.pdf$/)) {
-            targetNode = walker.currentNode;
-            break;
+            targetNode = walker.currentNode; // keep going to find the last one
           }
         }
 
