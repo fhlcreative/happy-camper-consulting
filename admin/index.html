@@ -101,74 +101,110 @@
         entryEnhanced = m[1];
       }
 
-      // --- LIST PAGE: Copy button on each list row ---
+      // --- LIST PAGE: Overlay Copy buttons using GitHub API + bounding rects ---
+      let listCache = null;
+
+      async function loadListCache() {
+        if (listCache) return listCache;
+        try {
+          const res = await fetch('https://api.github.com/repos/' + REPO + '/contents/resources/downloads');
+          if (!res.ok) return null;
+          const files = await res.json();
+          const mdFiles = files.filter(function(f) { return f.name.endsWith('.md'); });
+          const entries = {};
+          for (const f of mdFiles) {
+            const raw = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/resources/downloads/' + f.name);
+            const text = await raw.text();
+            const titleMatch = text.match(/title:\s*["']?(.+?)["']?\s*$/m);
+            const fileMatch = text.match(/file:\s*["']?([^\s"']+)["']?/);
+            if (titleMatch && fileMatch) {
+              const filename = fileMatch[1].split('/').pop();
+              entries[titleMatch[1].trim()] = 'https://' + DOMAIN + '/resources/downloads/' + filename;
+            }
+          }
+          listCache = entries;
+          return entries;
+        } catch(e) { return null; }
+      }
+
       function handleListPage() {
         const onList = location.hash === '#/collections/downloads' ||
                        location.hash.startsWith('#/collections/downloads?');
+        const container = document.getElementById('hcc-list-overlay');
+
         if (!onList) {
-          listEnhanced = false;
+          if (container) container.style.display = 'none';
           return;
         }
 
-        // Deep-search for links to download entries (traverse shadow roots)
-        function deepQuery(root) {
-          let results = [];
-          const links = root.querySelectorAll('a[href*="downloads/entries"]');
-          results = results.concat(Array.from(links));
-          root.querySelectorAll('*').forEach(function(el) {
-            if (el.shadowRoot) {
-              results = results.concat(deepQuery(el.shadowRoot));
-            }
-          });
-          return results;
+        // Find entry title text nodes on the page
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const titleNodes = [];
+        while (walker.nextNode()) {
+          const text = walker.currentNode.textContent.trim();
+          // Skip short text, headers, UI labels
+          if (text.length > 2 && text.length < 200 &&
+              !text.includes('Downloads') && !text.includes('Upload') &&
+              !text.includes('Search') && !text.includes('Sort') &&
+              !text.includes('Delete') && !text.includes('New') &&
+              !text.includes('Insights') && !text.includes('Collections') &&
+              !text.includes('Copy')) {
+            titleNodes.push(walker.currentNode);
+          }
         }
 
-        const links = deepQuery(document);
-        if (!links.length) return;
-        if (listEnhanced && document.querySelector('.hcc-list-btn')) return;
+        if (!titleNodes.length) return;
 
-        links.forEach(function(link) {
-          const row = link.closest('li, tr, div, article') || link.parentElement;
-          if (!row || row.querySelector('.hcc-list-btn')) return;
+        // Load file URLs then position buttons
+        loadListCache().then(function(entries) {
+          if (!entries) return;
 
-          const slugMatch = (link.getAttribute('href') || '').match(/entries\/([^/?]+)/);
-          if (!slugMatch) return;
-          const slug = slugMatch[1];
+          // Remove old overlay
+          const old = document.getElementById('hcc-list-overlay');
+          if (old) old.remove();
 
-          const btn = document.createElement('button');
-          btn.className = 'hcc-list-btn';
-          btn.textContent = 'Copy Link';
-          btn.style.cssText = 'background:#1a2744;color:#fff;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px;font-weight:600;white-space:nowrap;position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:10;';
-          row.style.position = 'relative';
+          const overlay = document.createElement('div');
+          overlay.id = 'hcc-list-overlay';
+          overlay.style.cssText = 'position:fixed;top:0;left:0;width:0;height:0;z-index:99999;pointer-events:none;';
 
-          btn.addEventListener('click', async function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            btn.textContent = '...';
-            try {
-              const res = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/resources/downloads/' + slug + '.md');
-              const text = await res.text();
-              const fm = text.match(/file:\s*["']?([^\s"']+)["']?/);
-              if (fm) {
-                const filename = fm[1].split('/').pop();
-                const url = 'https://' + DOMAIN + '/resources/downloads/' + filename;
-                await navigator.clipboard.writeText(url);
+          titleNodes.forEach(function(node) {
+            const title = node.textContent.trim();
+            if (!entries[title]) return;
+
+            const rect = node.parentElement.getBoundingClientRect();
+            if (rect.width === 0) return;
+
+            // Find the full row width — go up to find a wider container
+            let rowEl = node.parentElement;
+            while (rowEl.parentElement && rowEl.getBoundingClientRect().width < 400) {
+              rowEl = rowEl.parentElement;
+            }
+            const rowRect = rowEl.getBoundingClientRect();
+
+            const btn = document.createElement('button');
+            btn.textContent = 'Copy Link';
+            btn.style.cssText = 'position:fixed;pointer-events:auto;background:#1a2744;color:#fff;border:none;padding:5px 12px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;' +
+              'top:' + (rowRect.top + rowRect.height/2 - 13) + 'px;' +
+              'right:' + (window.innerWidth - rowRect.right + 16) + 'px;';
+
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              navigator.clipboard.writeText(entries[title]).then(function() {
                 btn.textContent = 'Copied!';
                 btn.style.background = '#c4922a';
                 setTimeout(function() {
                   btn.textContent = 'Copy Link';
                   btn.style.background = '#1a2744';
                 }, 2000);
-                return;
-              }
-            } catch(ex) {}
-            btn.textContent = 'Error';
-            setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+              });
+            });
+
+            overlay.appendChild(btn);
           });
 
-          row.appendChild(btn);
+          document.body.appendChild(overlay);
         });
-        listEnhanced = true;
       }
 
       setInterval(function() {
