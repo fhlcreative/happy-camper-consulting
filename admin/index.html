@@ -39,83 +39,147 @@
       } catch(e) {}
     })();
 
-    // Show Copy Link bar at bottom of page on Downloads entry pages only
+    // Copy Link functionality for Downloads collection
     (function() {
       const DOMAIN = 'happycamperconsultant.com';
-      let currentSlug = '';
+      const REPO = 'fhlcreative/happy-camper-consulting';
+      let entryEnhanced = '';
+      let listEnhanced = false;
 
-      function getSlug() {
-        const m = location.hash.match(/\/collections\/downloads\/entries\/([^/?]+)/);
-        return m ? m[1] : '';
-      }
-
-      function findPdfPath() {
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        while (walker.nextNode()) {
-          const m = walker.currentNode.textContent.match(/resources\/downloads\/[^\s]+\.pdf/);
-          if (m) return m[0];
-        }
-        return '';
-      }
-
-      function update() {
-        const slug = getSlug();
-        const bar = document.getElementById('hcc-bar');
-
-        if (!slug) {
-          if (bar) bar.style.display = 'none';
-          currentSlug = '';
-          return;
-        }
-
-        if (slug === currentSlug) {
-          if (bar) bar.style.display = 'flex';
-          return;
-        }
-
-        const path = findPdfPath();
-        if (!path) return;
-
-        currentSlug = slug;
-        const filename = path.split('/').pop();
-        const fullUrl = 'https://' + DOMAIN + '/resources/downloads/' + filename;
-
-        if (bar) bar.remove();
-
-        const el = document.createElement('div');
-        el.id = 'hcc-bar';
-        el.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2744;color:#fff;padding:10px 24px;font-family:-apple-system,sans-serif;font-size:13px;box-shadow:0 -2px 8px rgba(0,0,0,.2);display:flex;align-items:center;gap:12px;';
-
-        const lbl = document.createElement('span');
-        lbl.textContent = 'Share this link:';
-        lbl.style.cssText = 'opacity:0.7;white-space:nowrap;';
-
-        const url = document.createElement('code');
-        url.textContent = fullUrl;
-        url.style.cssText = 'flex:1;color:#c4922a;word-break:break-all;';
-
+      function makeCopyBtn(url, label) {
         const btn = document.createElement('button');
-        btn.textContent = 'Copy Link';
-        btn.style.cssText = 'background:#c4922a;color:#fff;border:none;padding:6px 16px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;';
+        btn.textContent = label || 'Copy Link';
+        btn.style.cssText = 'background:#1a2744;color:#fff;border:none;padding:5px 12px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;';
         btn.addEventListener('click', function(e) {
           e.preventDefault();
-          navigator.clipboard.writeText(fullUrl).then(function() {
+          e.stopPropagation();
+          navigator.clipboard.writeText(url).then(function() {
             btn.textContent = 'Copied!';
-            btn.style.background = '#2d6a4f';
+            btn.style.background = '#c4922a';
             setTimeout(function() {
-              btn.textContent = 'Copy Link';
-              btn.style.background = '#c4922a';
+              btn.textContent = label || 'Copy Link';
+              btn.style.background = '#1a2744';
             }, 2000);
           });
         });
-
-        el.appendChild(lbl);
-        el.appendChild(url);
-        el.appendChild(btn);
-        document.body.appendChild(el);
+        return btn;
       }
 
-      setInterval(update, 1000);
+      // --- ENTRY PAGE: full URL + Copy button under PDF File in preview ---
+      function handleEntryPage() {
+        const m = location.hash.match(/\/collections\/downloads\/entries\/([^/?]+)/);
+        if (!m) {
+          entryEnhanced = '';
+          document.querySelectorAll('.hcc-url-row').forEach(function(el) { el.remove(); });
+          return;
+        }
+        if (m[1] === entryEnhanced) return;
+
+        // Find the LAST text node matching the PDF path (preview pane comes after edit pane)
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        let target = null;
+        while (walker.nextNode()) {
+          if (walker.currentNode.textContent.trim().match(/^resources\/downloads\/.+\.pdf$/)) {
+            target = walker.currentNode;
+          }
+        }
+        if (!target) return;
+
+        const filename = target.textContent.trim().split('/').pop();
+        const fullUrl = 'https://' + DOMAIN + '/resources/downloads/' + filename;
+        const parent = target.parentElement;
+        if (!parent) return;
+
+        document.querySelectorAll('.hcc-url-row').forEach(function(el) { el.remove(); });
+
+        const row = document.createElement('div');
+        row.className = 'hcc-url-row';
+        row.style.cssText = 'display:flex;align-items:center;gap:10px;margin-top:8px;padding:8px 12px;background:#f0f4f8;border-radius:6px;font-family:-apple-system,sans-serif;';
+
+        const urlText = document.createElement('code');
+        urlText.textContent = fullUrl;
+        urlText.style.cssText = 'flex:1;font-size:13px;color:#1a2744;word-break:break-all;';
+
+        row.appendChild(urlText);
+        row.appendChild(makeCopyBtn(fullUrl));
+        parent.insertAdjacentElement('afterend', row);
+        entryEnhanced = m[1];
+      }
+
+      // --- LIST PAGE: Copy button on each list row ---
+      function handleListPage() {
+        const onList = location.hash === '#/collections/downloads' ||
+                       location.hash.startsWith('#/collections/downloads?');
+        if (!onList) {
+          listEnhanced = false;
+          return;
+        }
+
+        // Deep-search for links to download entries (traverse shadow roots)
+        function deepQuery(root) {
+          let results = [];
+          const links = root.querySelectorAll('a[href*="downloads/entries"]');
+          results = results.concat(Array.from(links));
+          root.querySelectorAll('*').forEach(function(el) {
+            if (el.shadowRoot) {
+              results = results.concat(deepQuery(el.shadowRoot));
+            }
+          });
+          return results;
+        }
+
+        const links = deepQuery(document);
+        if (!links.length) return;
+        if (listEnhanced && document.querySelector('.hcc-list-btn')) return;
+
+        links.forEach(function(link) {
+          const row = link.closest('li, tr, div, article') || link.parentElement;
+          if (!row || row.querySelector('.hcc-list-btn')) return;
+
+          const slugMatch = (link.getAttribute('href') || '').match(/entries\/([^/?]+)/);
+          if (!slugMatch) return;
+          const slug = slugMatch[1];
+
+          const btn = document.createElement('button');
+          btn.className = 'hcc-list-btn';
+          btn.textContent = 'Copy Link';
+          btn.style.cssText = 'background:#1a2744;color:#fff;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px;font-weight:600;white-space:nowrap;position:absolute;right:16px;top:50%;transform:translateY(-50%);z-index:10;';
+          row.style.position = 'relative';
+
+          btn.addEventListener('click', async function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            btn.textContent = '...';
+            try {
+              const res = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/resources/downloads/' + slug + '.md');
+              const text = await res.text();
+              const fm = text.match(/file:\s*["']?([^\s"']+)["']?/);
+              if (fm) {
+                const filename = fm[1].split('/').pop();
+                const url = 'https://' + DOMAIN + '/resources/downloads/' + filename;
+                await navigator.clipboard.writeText(url);
+                btn.textContent = 'Copied!';
+                btn.style.background = '#c4922a';
+                setTimeout(function() {
+                  btn.textContent = 'Copy Link';
+                  btn.style.background = '#1a2744';
+                }, 2000);
+                return;
+              }
+            } catch(ex) {}
+            btn.textContent = 'Error';
+            setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
+          });
+
+          row.appendChild(btn);
+        });
+        listEnhanced = true;
+      }
+
+      setInterval(function() {
+        handleEntryPage();
+        handleListPage();
+      }, 1200);
     })();
   </script>
 </body>
