@@ -12,82 +12,76 @@
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
-    // Add "Copy Download Link" button when editing a Downloads entry
+    // Add floating "Copy Download Link" bar when editing a Downloads entry
     (function() {
       const DOMAIN = 'happycamperconsultant.com';
-      let lastUrl = '';
+      let lastPath = '';
 
-      function injectCopyButton() {
-        // Only run on downloads entry pages
-        if (!location.hash.includes('/collections/downloads/entries/')) return;
+      function findFilePath() {
+        // Search all text nodes on the page for a resources/downloads path
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        while (walker.nextNode()) {
+          const match = walker.currentNode.textContent.match(/resources\/downloads\/[^\s]+\.pdf/);
+          if (match) return match[0];
+        }
+        return '';
+      }
 
-        // Find the file widget's displayed path
-        const fileInputs = document.querySelectorAll('[data-field-name="file"] input, [data-field-name="file"] a');
-        let filePath = '';
-        for (const el of fileInputs) {
-          const val = el.value || el.textContent || el.href || '';
-          if (val.includes('.pdf') || val.includes('/resources/downloads/')) {
-            filePath = val;
-            break;
-          }
+      function update() {
+        const onDownloadsEntry = location.hash.includes('/collections/downloads/entries/');
+        const bar = document.getElementById('hcc-copy-bar');
+
+        if (!onDownloadsEntry) {
+          if (bar) bar.style.display = 'none';
+          lastPath = '';
+          return;
         }
 
-        // Fallback: build from slug in URL
-        if (!filePath) {
-          const match = location.hash.match(/entries\/([^/]+)/);
-          if (match) {
-            filePath = '/resources/downloads/' + match[1] + '.pdf';
-          }
+        const filePath = findFilePath();
+        if (!filePath || filePath === lastPath) {
+          if (bar && filePath) bar.style.display = 'flex';
+          return;
         }
-
-        if (!filePath) return;
-
-        // Normalize to just the filename
+        lastPath = filePath;
         const filename = filePath.split('/').pop();
         const fullUrl = 'https://' + DOMAIN + '/resources/downloads/' + filename;
 
-        // Don't re-inject if already present with same URL
-        if (document.getElementById('hcc-copy-link') && lastUrl === fullUrl) return;
-        lastUrl = fullUrl;
-
-        // Remove old button if URL changed
-        const old = document.getElementById('hcc-copy-link');
-        if (old) old.remove();
-
-        // Find a good place to inject — after the file field
-        const fileField = document.querySelector('[data-field-name="file"]');
-        if (!fileField) return;
+        if (bar) bar.remove();
 
         const wrapper = document.createElement('div');
-        wrapper.id = 'hcc-copy-link';
-        wrapper.style.cssText = 'margin: 8px 0 16px; padding: 10px 14px; background: #f0f4f8; border-radius: 6px; display: flex; align-items: center; gap: 10px; font-family: -apple-system, sans-serif; font-size: 13px;';
+        wrapper.id = 'hcc-copy-bar';
+        wrapper.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2744;color:#fff;display:flex;align-items:center;gap:12px;padding:10px 20px;font-family:-apple-system,sans-serif;font-size:13px;box-shadow:0 -2px 8px rgba(0,0,0,.2);';
+
+        const label = document.createElement('span');
+        label.textContent = 'Download link:';
+        label.style.cssText = 'opacity:0.7;white-space:nowrap;';
 
         const urlText = document.createElement('code');
         urlText.textContent = fullUrl;
-        urlText.style.cssText = 'flex: 1; color: #1a2744; word-break: break-all;';
+        urlText.style.cssText = 'flex:1;color:#c4922a;word-break:break-all;';
 
         const copyBtn = document.createElement('button');
         copyBtn.textContent = 'Copy Link';
-        copyBtn.style.cssText = 'background: #1a2744; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; white-space: nowrap;';
+        copyBtn.style.cssText = 'background:#c4922a;color:#fff;border:none;padding:8px 18px;border-radius:4px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;';
         copyBtn.addEventListener('click', function(e) {
           e.preventDefault();
           navigator.clipboard.writeText(fullUrl).then(function() {
             copyBtn.textContent = 'Copied!';
-            copyBtn.style.background = '#c4922a';
+            copyBtn.style.background = '#2d6a4f';
             setTimeout(function() {
               copyBtn.textContent = 'Copy Link';
-              copyBtn.style.background = '#1a2744';
+              copyBtn.style.background = '#c4922a';
             }, 2000);
           });
         });
 
+        wrapper.appendChild(label);
         wrapper.appendChild(urlText);
         wrapper.appendChild(copyBtn);
-        fileField.parentNode.insertBefore(wrapper, fileField.nextSibling);
+        document.body.appendChild(wrapper);
       }
 
-      // Poll for changes since the CMS is a SPA
-      setInterval(injectCopyButton, 1500);
+      setInterval(update, 1500);
     })();
   </script>
 </body>
