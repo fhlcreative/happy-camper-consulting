@@ -12,74 +12,109 @@
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
-    // Add "Copy Link" buttons to Downloads list items
+    // Floating "Copy Link" panel for Downloads collection
     (function() {
       const DOMAIN = 'happycamperconsultant.com';
       const REPO = 'fhlcreative/happy-camper-consulting';
-      const cache = {};
+      let loaded = false;
+      let lastHash = '';
 
-      async function getFileUrl(slug) {
-        if (cache[slug]) return cache[slug];
+      function isDownloadsPage() {
+        return location.hash === '#/collections/downloads' ||
+               location.hash.startsWith('#/collections/downloads?') ||
+               location.hash.includes('/collections/downloads/entries/');
+      }
+
+      async function buildPanel() {
+        if (loaded && document.getElementById('hcc-panel')) return;
+
+        // Fetch file list from GitHub API
+        let files;
         try {
-          const res = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/resources/downloads/' + slug + '.md');
-          if (!res.ok) return null;
-          const text = await res.text();
-          const match = text.match(/file:\s*["']?([^\s"']+\.pdf)["']?/);
-          if (match) {
-            const filename = match[1].split('/').pop();
-            const url = 'https://' + DOMAIN + '/resources/downloads/' + filename;
-            cache[slug] = url;
-            return url;
-          }
-        } catch(e) {}
-        return null;
+          const res = await fetch('https://api.github.com/repos/' + REPO + '/contents/resources/downloads');
+          if (!res.ok) return;
+          files = await res.json();
+        } catch(e) { return; }
+
+        const mdFiles = files.filter(f => f.name.endsWith('.md'));
+        if (!mdFiles.length) return;
+
+        // Fetch each .md to get the PDF path
+        const entries = [];
+        for (const f of mdFiles) {
+          try {
+            const res = await fetch('https://raw.githubusercontent.com/' + REPO + '/main/resources/downloads/' + f.name);
+            const text = await res.text();
+            const titleMatch = text.match(/title:\s*["']?(.+?)["']?\s*$/m);
+            const fileMatch = text.match(/file:\s*["']?([^\s"']+)["']?/);
+            if (fileMatch) {
+              const filename = fileMatch[1].split('/').pop();
+              entries.push({
+                title: titleMatch ? titleMatch[1] : f.name.replace('.md',''),
+                url: 'https://' + DOMAIN + '/resources/downloads/' + filename
+              });
+            }
+          } catch(e) {}
+        }
+        if (!entries.length) return;
+
+        // Remove old panel
+        const old = document.getElementById('hcc-panel');
+        if (old) old.remove();
+
+        // Build floating panel
+        const panel = document.createElement('div');
+        panel.id = 'hcc-panel';
+        panel.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#1a2744;color:#fff;padding:12px 24px;font-family:-apple-system,sans-serif;font-size:13px;box-shadow:0 -2px 10px rgba(0,0,0,.25);display:flex;align-items:center;gap:16px;flex-wrap:wrap;';
+
+        const label = document.createElement('span');
+        label.textContent = 'Download Links:';
+        label.style.cssText = 'font-weight:600;opacity:0.7;white-space:nowrap;';
+        panel.appendChild(label);
+
+        entries.forEach(function(entry) {
+          const item = document.createElement('div');
+          item.style.cssText = 'display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border-radius:4px;padding:4px 6px 4px 12px;';
+
+          const name = document.createElement('span');
+          name.textContent = entry.title;
+          name.style.cssText = 'color:#c4922a;white-space:nowrap;';
+
+          const btn = document.createElement('button');
+          btn.textContent = 'Copy';
+          btn.style.cssText = 'background:#c4922a;color:#fff;border:none;padding:4px 10px;border-radius:3px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;';
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigator.clipboard.writeText(entry.url).then(function() {
+              btn.textContent = 'Copied!';
+              btn.style.background = '#2d6a4f';
+              setTimeout(function() {
+                btn.textContent = 'Copy';
+                btn.style.background = '#c4922a';
+              }, 2000);
+            });
+          });
+
+          item.appendChild(name);
+          item.appendChild(btn);
+          panel.appendChild(item);
+        });
+
+        document.body.appendChild(panel);
+        loaded = true;
       }
 
       function update() {
-        // Only run on the downloads list page
-        if (location.hash !== '#/collections/downloads' &&
-            !location.hash.startsWith('#/collections/downloads?')) return;
-
-        // Find all links that point to download entries
-        const links = document.querySelectorAll('a[href*="/collections/downloads/entries/"]');
-        links.forEach(function(link) {
-          const row = link.closest('li, tr, [role="row"]') || link.parentElement;
-          if (!row || row.querySelector('.hcc-copy-btn')) return;
-
-          const slugMatch = link.getAttribute('href').match(/entries\/([^/]+)/);
-          if (!slugMatch) return;
-          const slug = slugMatch[1];
-
-          const btn = document.createElement('button');
-          btn.className = 'hcc-copy-btn';
-          btn.textContent = 'Copy Link';
-          btn.style.cssText = 'margin-left:auto;background:#1a2744;color:#fff;border:none;padding:5px 12px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:600;white-space:nowrap;position:absolute;right:16px;top:50%;transform:translateY(-50%);';
-          row.style.position = 'relative';
-
-          btn.addEventListener('click', async function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            btn.textContent = '...';
-            const url = await getFileUrl(slug);
-            if (url) {
-              await navigator.clipboard.writeText(url);
-              btn.textContent = 'Copied!';
-              btn.style.background = '#c4922a';
-              setTimeout(function() {
-                btn.textContent = 'Copy Link';
-                btn.style.background = '#1a2744';
-              }, 2000);
-            } else {
-              btn.textContent = 'Error';
-              setTimeout(function() { btn.textContent = 'Copy Link'; }, 2000);
-            }
-          });
-
-          row.appendChild(btn);
-        });
+        const panel = document.getElementById('hcc-panel');
+        if (isDownloadsPage()) {
+          if (!loaded) buildPanel();
+          else if (panel) panel.style.display = 'flex';
+        } else {
+          if (panel) panel.style.display = 'none';
+        }
       }
 
-      setInterval(update, 1500);
+      setInterval(update, 1000);
     })();
   </script>
 </body>
