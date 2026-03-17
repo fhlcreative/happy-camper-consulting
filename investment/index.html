@@ -244,8 +244,107 @@
       margin-bottom: 0;
       flex-grow: 0;
     }
+    .tier-card__best-for {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-sm);
+      color: var(--color-gold);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+      flex-grow: 0;
+    }
     @media (max-width: 768px) {
       .tiers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---- Self-Guided Tools ---- */
+    .section-self-guided {
+      position: relative;
+      background: var(--color-cream);
+      padding: var(--space-section) 0;
+    }
+    .section-self-guided::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+    }
+    .self-guided-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-2xl);
+    }
+    .self-guided-header h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      color: var(--color-navy);
+      margin-bottom: var(--space-md);
+    }
+    .self-guided-header p {
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      line-height: 1.7;
+    }
+    .self-guided-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(1rem, 2vw, 1.5rem);
+    }
+    .self-guided-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: clamp(1.5rem, 3vw, 2rem);
+      display: flex;
+      flex-direction: column;
+    }
+    .self-guided-card h3 {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      color: var(--color-navy);
+      margin-bottom: var(--space-sm);
+    }
+    .self-guided-card__price {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: var(--text-base);
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+    }
+    .self-guided-card > p {
+      color: var(--color-text);
+      font-size: var(--text-sm);
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+    .self-guided-cta {
+      text-align: center;
+      margin-top: var(--space-2xl);
+    }
+    .self-guided-cta p {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .self-guided-cta a {
+      color: var(--color-gold);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .self-guided-cta a:hover {
+      color: var(--color-gold-light);
+    }
+    @media (max-width: 768px) {
+      .self-guided-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -454,7 +553,7 @@
   <section class="approach-hero" id="main-content">
     <span class="overline reveal">Investment</span>
     <h1 class="reveal">Investment in Strength That Lasts</h1>
-    <p class="reveal">Healthy camps are not accidental. They are built with clarity, courage, and intentional systems. Every engagement with Happy Camper Consulting begins with a structured evaluation. Because transformation without clarity creates more confusion.</p>
+    <p class="reveal">Healthy camps are not accidental. They are built with clarity, courage, and intentional systems. Every engagement with Happy Camper Consulting begins with a structured evaluation. Because improvement without clarity creates more confusion.</p>
   </section>
 
 
@@ -498,6 +597,7 @@
           <h3>Focused Clarity Engagement</h3>
           <p>A structured assessment designed to evaluate leadership alignment, governance health, and cultural consistency&mdash;while identifying priority next steps. Many camps begin here to gain directional clarity before determining broader implementation.</p>
           <div class="tier-card__price">$5,000 &ndash; $12,000</div>
+          <p class="tier-card__best-for">Best for camps that sense something is off but need clarity before committing to full implementation.</p>
           <p class="tier-card__note">Investment varies based on the number of stakeholders involved, depth of interviews, and scope of review.</p>
         </div>
 
@@ -505,11 +605,47 @@
         <div class="tier-card reveal">
           <div class="tier-card__accent"></div>
           <h3>Framework Design &amp; Alignment</h3>
-          <p>Implementation of a Value-Driven Management System aligned to mission, governance structure, operational clarity, and measurable accountability. This engagement strengthens structural alignment and reduces recurring friction across leadership environments.</p>
+          <p>Implementation of the Camp VDMS&trade; (Value-Driven Management System) aligned to mission, governance structure, operational clarity, and measurable accountability. Includes deployment of the CPCS&trade; (Counselor-Proof Camp Culture System&trade;). This engagement strengthens structural alignment and reduces recurring friction across leadership environments.</p>
           <div class="tier-card__price">$22,000 &ndash; $48,000</div>
+          <p class="tier-card__best-for">Best for camps ready to strengthen systems, not just diagnose problems.</p>
           <p class="tier-card__note">Final investment reflects implementation depth, timeline, leadership complexity, and organizational scale.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 3b. Self-Guided Tools ===== -->
+  <section class="section-self-guided" aria-labelledby="self-guided-heading">
+    <div class="container">
+      <div class="self-guided-header reveal">
+        <h2 id="self-guided-heading">Not Ready for a Full Engagement? Start Here.</h2>
+        <p>Self-guided tools designed for camp directors who want to start building healthier culture today.</p>
+      </div>
+      <div class="self-guided-grid">
+
+        <div class="self-guided-card reveal">
+          <h3>Camp Health Snapshot&trade; Self-Assessment</h3>
+          <div class="self-guided-card__price">$500 &ndash; $1,000</div>
+          <p>A guided diagnostic tool you complete independently. Includes scoring rubric, benchmarks, and a prioritized action summary. See where your camp stands&mdash;on your own timeline.</p>
+        </div>
+
+        <div class="self-guided-card reveal">
+          <h3>Counselor-Proof Safety System&trade; Playbook</h3>
+          <div class="self-guided-card__price">$1,500 &ndash; $2,500</div>
+          <p>Scenario-based safety cards, drill scripts, training agenda, staff habit checklist, and ACA/insurance-compatible compliance cross-walk. Practical safety tools your team can implement immediately.</p>
+        </div>
+
+        <div class="self-guided-card reveal">
+          <h3>Staff Retention Toolkit</h3>
+          <div class="self-guided-card__price">$1,500 &ndash; $2,000</div>
+          <p>The 5-Moment Counselor Retention Framework, supervisor scripts, re-hire campaign templates, and exit interview guide. Keep your best people coming back.</p>
+        </div>
+
+      </div>
+      <div class="self-guided-cta reveal">
+        <p>Not sure where to start? <a href="../conversation/">Schedule a Camp Leadership Conversation</a>&mdash;no obligation, just clarity.</p>
       </div>
     </div>
   </section>
