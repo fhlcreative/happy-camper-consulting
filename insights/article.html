@@ -277,7 +277,7 @@
           var articleUrl = 'https://happycamperconsultant.com/insights/article.html?slug=' + slug;
           var imageUrl = frontMatter.featured_image
             ? (frontMatter.featured_image.startsWith('http') ? frontMatter.featured_image : 'https://happycamperconsultant.com/insights/' + frontMatter.featured_image.replace(/^\.?\//, ''))
-            : 'https://happycamperconsultant.com/images/logo/logo-white.png';
+            : 'https://happycamperconsultant.com/images/og-image.png';
 
           // Populate hero
           document.getElementById('title').textContent = title;
