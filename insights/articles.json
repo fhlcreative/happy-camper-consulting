@@ -1,34 +1,42 @@
 [
-  {
-    "slug": "from-founder-led-to-process-led-camps",
-    "title": "From Founder-led to Process-led Camps",
-    "date": "2026-02-24",
-    "category": "Sustainability",
-    "excerpt": "How Sustainable Camps Build Systems That Outlast Personalities",
-    "image": "/images/articles/Jeff_Board_Leadership_Workshop.jpg"
-  },
-  {
-    "slug": "post-for-feb-20-test",
-    "title": "A Behavior Is a Value in Action",
-    "date": "2026-02-24",
-    "category": "Culture",
-    "excerpt": "Why Camp Culture Is Built Through Repeated Behaviors",
-    "image": "/images/articles/img_8399.jpg"
-  },
-  {
-    "slug": "why-camp-directors-feel-isolated",
-    "title": "Why Camp Directors Feel Isolated",
-    "date": "2026-02-24",
-    "category": "Leadership",
-    "excerpt": "And What Strong Leaders Do About It",
-    "image": "/images/articles/Director_Isolation.JPG"
-  },
-  {
-    "slug": "why-culture-eats-strategy",
-    "title": "Safety Culture: More Than Policies",
-    "date": "2026-02-24",
-    "category": "Safety & Systems",
-    "excerpt": "Why Strong Camps Build Environments — Not Just Rulebooks",
-    "image": "/images/articles/Rebecca_Brazil.jpg"
-  }
+    {
+        "slug": "operational-reliability-in-overnight-camps",
+        "title": "Operational Reliability in Overnight Camps",
+        "date": "2026-03-24",
+        "category": "Safety & Systems",
+        "excerpt": "Why Excellence Is Built Through Repeatable Systems \u2014 Not Heroic Effort",
+        "image": "/images/articles/tree deep roots.jpg"
+    },
+    {
+        "slug": "from-founder-led-to-process-led-camps",
+        "title": "From Founder-led to Process-led Camps",
+        "date": "2026-02-24",
+        "category": "Sustainability",
+        "excerpt": "How Sustainable Camps Build Systems That Outlast Personalities",
+        "image": "/images/articles/Jeff_Board_Leadership_Workshop.jpg"
+    },
+    {
+        "slug": "post-for-feb-20-test",
+        "title": "A Behavior Is a Value in Action",
+        "date": "2026-02-24",
+        "category": "Culture",
+        "excerpt": "Why Camp Culture Is Built Through Repeated Behaviors",
+        "image": "/images/articles/img_8399.jpg"
+    },
+    {
+        "slug": "why-camp-directors-feel-isolated",
+        "title": "Why Camp Directors Feel Isolated",
+        "date": "2026-02-24",
+        "category": "Leadership",
+        "excerpt": "And What Strong Leaders Do About It",
+        "image": "/images/articles/Director_Isolation.JPG"
+    },
+    {
+        "slug": "why-culture-eats-strategy",
+        "title": "Safety Culture: More Than Policies",
+        "date": "2026-02-24",
+        "category": "Safety & Systems",
+        "excerpt": "Why Strong Camps Build Environments \u2014 Not Just Rulebooks",
+        "image": "/images/articles/Rebecca_Brazil.jpg"
+    }
 ]
