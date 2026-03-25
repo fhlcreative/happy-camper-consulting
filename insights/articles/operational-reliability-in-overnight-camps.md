@@ -2,7 +2,7 @@
 title: Operational Reliability in Overnight Camps
 date: 03/24/2026
 category: Safety & Systems
-featured_image: /images/articles/tree deep roots.jpg
+featured_image: /images/articles/Dining Hall SS Sherwin.jpg
 excerpt: Why Excellence Is Built Through Repeatable Systems — Not Heroic Effort
 ---
 
