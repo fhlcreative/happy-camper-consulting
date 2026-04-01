@@ -1,4 +1,11 @@
 {
   "buildCommand": "node build.js",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/vdms/:path*",
+      "destination": "/mdms/:path*",
+      "permanent": true
+    }
+  ]
 }
