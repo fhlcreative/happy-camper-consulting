@@ -1097,19 +1097,19 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 400px;
 }
 
-/* ---- VDMS Section ---- */
-.section-vdms {
+/* ---- MDMS Section ---- */
+.section-mdms {
   padding: var(--space-section) 0;
   background: var(--color-cream);
 }
 
-.section-vdms h2 {
+.section-mdms h2 {
   font-size: var(--text-3xl);
   text-align: center;
   margin-bottom: var(--space-lg);
 }
 
-.section-vdms__sub {
+.section-mdms__sub {
   text-align: center;
   color: var(--color-text-muted);
   font-size: var(--text-lg);
@@ -1117,14 +1117,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto var(--space-3xl);
 }
 
-.vdms-pillars {
+.mdms-pillars {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0;
   position: relative;
 }
 
-.vdms-pillar {
+.mdms-pillar {
   text-align: center;
   padding: clamp(1.5rem, 2.5vw, 2.5rem) clamp(1rem, 1.5vw, 1.5rem);
   border-right: 1px solid var(--color-border);
@@ -1132,17 +1132,17 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.35s var(--ease-out-expo);
 }
 
-.vdms-pillar:last-child {
+.mdms-pillar:last-child {
   border-right: none;
 }
 
-.vdms-pillar:hover {
+.mdms-pillar:hover {
   background: var(--color-surface);
   box-shadow: var(--shadow-md);
   z-index: 1;
 }
 
-.vdms-pillar__number {
+.mdms-pillar__number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1157,13 +1157,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-md);
 }
 
-.vdms-pillar h3 {
+.mdms-pillar h3 {
   font-size: var(--text-base);
   margin-bottom: var(--space-sm);
   font-weight: 600;
 }
 
-.vdms-pillar p {
+.mdms-pillar p {
   color: var(--color-text-muted);
   font-size: var(--text-sm);
   line-height: 1.5;
@@ -1357,16 +1357,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .vdms-pillars {
+  .mdms-pillars {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .vdms-pillar:nth-child(3) {
+  .mdms-pillar:nth-child(3) {
     border-right: none;
   }
 
-  .vdms-pillar:nth-child(4),
-  .vdms-pillar:nth-child(5) {
+  .mdms-pillar:nth-child(4),
+  .mdms-pillar:nth-child(5) {
     border-top: 1px solid var(--color-border);
   }
 }
@@ -1490,21 +1490,21 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 250px;
   }
 
-  .vdms-pillars {
+  .mdms-pillars {
     grid-template-columns: 1fr;
   }
 
-  .vdms-pillar {
+  .mdms-pillar {
     border-right: none;
     border-bottom: 1px solid var(--color-border);
   }
 
-  .vdms-pillar:last-child {
+  .mdms-pillar:last-child {
     border-bottom: none;
   }
 
-  .vdms-pillar:nth-child(4),
-  .vdms-pillar:nth-child(5) {
+  .mdms-pillar:nth-child(4),
+  .mdms-pillar:nth-child(5) {
     border-top: none;
   }
 
