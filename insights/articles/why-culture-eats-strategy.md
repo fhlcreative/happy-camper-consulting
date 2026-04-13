@@ -1,5 +1,5 @@
 ---
-title: 'Safety Culture: More Than Policies'
+title: 'Safety: Why Culture Eats Strategy for Lunch'
 date: 02/24/2026
 category: Safety & Systems
 featured_image: /images/articles/Rebecca_Brazil.jpg
