@@ -72,7 +72,7 @@ excerpt: And What Strong Leaders Do About It
 
 <h2>Decision Fatigue and Invisible Pressure</h2>
 
-<p>Camp directors make hundreds of decisions each week.</p>
+<p><a href="https://www.happycamperconsultant.com/who-its-for/">Camp directors</a> make hundreds of decisions each week.</p>
 
 <p>Some are operational.</p>
 
@@ -228,7 +228,7 @@ excerpt: And What Strong Leaders Do About It
 
   <li>Decision quality</li>
 
-  <li>Culture consistency</li>
+  <li><a href="https://www.happycamperconsultant.com/insights/article.html?slug=why-culture-eats-strategy">Culture consistency</a></li>
 
   <li>Board confidence</li>
 
@@ -254,7 +254,7 @@ excerpt: And What Strong Leaders Do About It
 
 <hr />
 
-<p>If leadership feels heavier than it should, it may be time for structured perspective.</p>
+<p>If leadership feels heavier than it should, it may be time for <a href="https://www.happycamperconsultant.com/approach/">structured perspective</a>.</p>
 
 <p>
 
