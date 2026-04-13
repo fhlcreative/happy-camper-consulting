@@ -92,7 +92,7 @@ Who built something meaningful from little.</p>
 
   <li>Written reporting flows</li>
 
-  <li>Operational checklists</li>
+  <li><a href="https://www.happycamperconsultant.com/insights/article.html?slug=operational-reliability-in-overnight-camps">Operational</a> checklists</li>
 
 </ul>
 
@@ -164,7 +164,7 @@ Who built something meaningful from little.</p>
 
 <h2>The Emotional Barrier to Transition</h2>
 
-<p>For many founders, transitioning to process-led leadership feels personal.</p>
+<p>For many founders, transitioning to <a href="https://www.happycamperconsultant.com/insights/article.html?slug=how-to-build-a-camp-that-outlasts-its-founder">process-led leadership</a> feels personal.</p>
 
 <p>It can feel like:</p>
 
