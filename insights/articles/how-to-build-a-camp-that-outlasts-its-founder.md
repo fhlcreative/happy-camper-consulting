@@ -77,7 +77,7 @@ Who built something meaningful from almost nothing.</p>
 
 <p>If the answer is "they'd have to ask me" — the system is the founder.</p>
 
-<p>Documented systems are not bureaucracy.</p>
+<p><a href="https://www.happycamperconsultant.com/approach/">Documented systems</a> are not bureaucracy.</p>
 <p>They are clarity made portable.</p>
 
 <p>As we often say: <a href="/insights/a-behavior-is-a-value-in-action">a behavior is a value in action</a>. Documentation turns those valued behaviors into repeatable standards that survive leadership transitions.</p>
@@ -100,7 +100,7 @@ Who built something meaningful from almost nothing.</p>
 <p>Succession is not a single event.</p>
 <p>It is an ongoing discipline.</p>
 
-<p>The healthiest camps have leaders at every level who can carry weight — not because they were thrown into it, but because they were <strong>better equipped</strong> over time.</p>
+<p>The healthiest camps have leaders at every level who can carry weight — not because they were thrown into it, but because they were <strong><a href="https://www.happycamperconsultant.com/how-we-help/">better equipped</a></strong> over time.</p>
 
 <hr />
 
