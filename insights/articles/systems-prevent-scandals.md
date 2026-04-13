@@ -172,7 +172,7 @@ This is how drift becomes risk.
 
 Supervisors are the translation layer of camp culture.
 
-They turn values into behavior.
+They turn [values into behavior](https://www.happycamperconsultant.com/insights/article.html?slug=a-behavior-is-a-value-in-action).
 
 They turn policy into practice.<br />
 
@@ -212,7 +212,7 @@ Boundary clarity is not built by handing out a handbook once in June.
 
 It is built through repeated language, scenario practice, and reinforcement.
 
-That is why safety culture is more than policies.
+That is why [safety culture is more than policies](https://www.happycamperconsultant.com/insights/article.html?slug=why-culture-eats-strategy).
 
 Policies matter. But practiced boundaries protect people.
 
@@ -246,7 +246,7 @@ It protects directors.<br />
 
 It protects the mission.</p>
 
-As we explored in Operational Reliability in Overnight Camps, reliability is built through repeatable systems — not heroic effort.
+As we explored in [Operational Reliability ](https://www.happycamperconsultant.com/insights/article.html?slug=operational-reliability-in-overnight-camps)in Overnight Camps, reliability is built through repeatable systems — not heroic effort.
 
 If your camp handles high-stakes issues differently depending on who is on duty, you do not yet have a reliable system.
 
