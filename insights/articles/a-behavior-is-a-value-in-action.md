@@ -30,7 +30,7 @@ excerpt: Why Camp Culture Is Built Through Repeated Behaviors
 
 <hr />
 
-<h2>Why Values Alone Don’t Shape Camp Culture</h2>
+<h2>Why Values Alone Don’t Shape <a href="https://www.happycamperconsultant.com/insights/article.html?slug=why-culture-eats-strategy">Camp Culture</a></h2>
 
 <p>Values are aspirational.</p>
 
@@ -80,7 +80,7 @@ excerpt: Why Camp Culture Is Built Through Repeated Behaviors
   <li>Do team members support or undercut one another?</li>
 </ul>
 
-<p>Repeated peer behavior defines morale.</p>
+<p><a href="https://www.happycamperconsultant.com/insights/article.html?slug=operational-reliability-in-overnight-camps">Repeated peer behavior</a> defines morale.</p>
 
 <p>Morale is not mood.<br />
 It is shared behavioral patterns.</p>
@@ -160,7 +160,7 @@ It is shared behavioral patterns.</p>
   <li>Parents feel trust.</li>
 </ul>
 
-<p>And the organization becomes <strong>better equipped</strong> for long-term impact.</p>
+<p>And the organization becomes <strong><a href="https://www.happycamperconsultant.com/how-we-help/">better equipped</a></strong> for long-term impact.</p>
 
 <hr />
 
