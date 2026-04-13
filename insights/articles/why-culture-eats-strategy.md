@@ -25,7 +25,7 @@ excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
   <li>Concerns will be taken seriously.</li>
   <li>Reporting will not create retaliation.</li>
   <li>Leaders will act promptly.</li>
-  <li>Systems will support protection.</li>
+  <li><a href="https://www.happycamperconsultant.com/approach/">Systems</a> will support protection.</li>
 </ul>
 
 <p><strong>Safety is not a document.</strong></p>
@@ -43,7 +43,7 @@ excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
 <p>When staff hesitate to report concerns, when follow-up is inconsistent, or when leadership tone minimizes issues, safety weakens — even if paperwork is complete.</p>
 
 <p>Strong camps move beyond compliance.</p>
-<p>They build systems and behaviors that reinforce protection daily.</p>
+<p>They build systems and <a href="https://www.happycamperconsultant.com/insights/article.html?slug=a-behavior-is-a-value-in-action">behaviors</a> that reinforce protection daily.</p>
 
 <hr />
 
@@ -165,7 +165,7 @@ excerpt: Why Strong Camps Build Environments — Not Just Rulebooks
 
 <p>Safety & Systems are not bureaucratic burdens.</p>
 
-<p>They are the framework that allows healthy camp culture to flourish.</p>
+<p>They are the framework that allows <a href="https://www.happycamperconsultant.com/how-we-help/">healthy camp culture</a> to flourish.</p>
 
 <p>When structure supports mission, camps become <strong>better equipped</strong> to serve families with confidence and credibility for years to come.</p>
 
