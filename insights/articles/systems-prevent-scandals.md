@@ -246,7 +246,7 @@ It protects directors.<br />
 
 It protects the mission.</p>
 
-As we explored in [Operational Reliability ](https://www.happycamperconsultant.com/insights/article.html?slug=operational-reliability-in-overnight-camps)in Overnight Camps, reliability is built through repeatable systems — not heroic effort.
+As we explored in [Operational Reliability](https://www.happycamperconsultant.com/insights/article.html?slug=operational-reliability-in-overnight-camps) in Overnight Camps, reliability is built through repeatable systems — not heroic effort.
 
 If your camp handles high-stakes issues differently depending on who is on duty, you do not yet have a reliable system.
 
@@ -370,4 +370,4 @@ Healthy camps don't happen by accident. They are built — on purpose.
 
 ## **Take the Next Step**
 
-If your camp's safety depends too heavily on instinct, memory, or one trusted leader, now is the time to strengthen structure before strain exposes weakness.
+If your camp's safety depends too heavily on instinct, memory, or one trusted leader, now is the time to strengthen structure before strain exposes weakness. [Schedule a Conversation](https://www.happycamperconsultant.com/conversation/).
