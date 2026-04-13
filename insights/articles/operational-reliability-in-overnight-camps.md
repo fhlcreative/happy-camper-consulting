@@ -189,6 +189,6 @@ excerpt: Why Excellence Is Built Through Repeatable Systems — Not Heroic Effor
 
 <hr />
 
-<p><em>Jeff Rorabaugh is the Founder &amp; Principal Consultant of <a href="https://www.happycamperconsultant.com">Happy Camper Consulting</a>, helping overnight camps build cultures that are structured, translated, formed, and protected. With 26+ years of camp leadership experience, Jeff works with directors who are ready to move from founder-dependent operations to process-driven excellence.</em></p>
+<p><em>Jeff Rorabaugh is the Founder &amp; Principal Consultant of <a href="https://www.happycamperconsultant.com">Happy Camper Consulting</a>, [helping overnight camps](https://www.happycamperconsultant.com/how-we-help/) build cultures that are structured, translated, formed, and protected. With 26+ years of camp leadership experience, Jeff works with directors who are ready to move from [founder-dependent operations ](https://www.happycamperconsultant.com/insights/article.html?slug=from-founder-led-to-process-led-camps)to [process-driven excellence](https://www.happycamperconsultant.com/approach/).</em></p>
 
 <p><em>Interested in assessing your camp's operational reliability? Start with the <a href="https://www.happycamperconsultant.com/camp-health-snapshot">Camp Health Snapshot™</a> — a diagnostic built specifically for overnight camps.</em></p>
