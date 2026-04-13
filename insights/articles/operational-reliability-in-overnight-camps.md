@@ -6,7 +6,7 @@ featured_image: /images/articles/Dining Hall SS Sherwin.jpg
 excerpt: Why Excellence Is Built Through Repeatable Systems — Not Heroic Effort
 ---
 
-<h2>Introduction</h2>
+## Introduction
 
 <p>Every summer, the same pattern plays out at camps across the country.</p>
 
@@ -189,6 +189,6 @@ excerpt: Why Excellence Is Built Through Repeatable Systems — Not Heroic Effor
 
 <hr />
 
-<p><em>Jeff Rorabaugh is the Founder &amp; Principal Consultant of <a href="https://www.happycamperconsultant.com">Happy Camper Consulting</a>, [helping overnight camps](https://www.happycamperconsultant.com/how-we-help/) build cultures that are structured, translated, formed, and protected. With 26+ years of camp leadership experience, Jeff works with directors who are ready to move from [founder-dependent operations ](https://www.happycamperconsultant.com/insights/article.html?slug=from-founder-led-to-process-led-camps)to [process-driven excellence](https://www.happycamperconsultant.com/approach/).</em></p>
+<p><em>Jeff Rorabaugh is the Founder &amp; Principal Consultant of <a href="https://www.happycamperconsultant.com">Happy Camper Consulting</a>, <a href="https://www.happycamperconsultant.com/how-we-help/">helping overnight camps</a> build cultures that are structured, translated, formed, and protected. With 26+ years of camp leadership experience, Jeff works with directors who are ready to move from <a href="https://www.happycamperconsultant.com/insights/article.html?slug=from-founder-led-to-process-led-camps:">founder-dependent operations</a> to <a href="https://www.happycamperconsultant.com/approach/">process-driven excellence</a>.</em></p>
 
 <p><em>Interested in assessing your camp's operational reliability? Start with the <a href="https://www.happycamperconsultant.com/camp-health-snapshot">Camp Health Snapshot™</a> — a diagnostic built specifically for overnight camps.</em></p>
