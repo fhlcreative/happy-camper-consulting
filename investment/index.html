@@ -290,6 +290,8 @@
       color: var(--color-text-muted);
       font-size: var(--text-base);
       line-height: 1.7;
+      margin: 0 auto;
+      max-width: 600px;
     }
     .self-guided-grid {
       display: grid;
@@ -303,17 +305,29 @@
       padding: clamp(1.5rem, 3vw, 2rem);
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+    }
+    .self-guided-card__image {
+      display: block;
+      max-width: none;
+      width: calc(100% + clamp(1.5rem, 3vw, 2rem) * 2);
+      margin: calc(clamp(1.5rem, 3vw, 2rem) * -1);
+      margin-bottom: clamp(1.25rem, 2.5vw, 1.5rem);
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
     }
     .self-guided-card h3 {
       font-family: var(--font-heading);
-      font-size: var(--text-lg);
+      font-size: var(--text-2xl);
+      font-weight: 600;
+      line-height: 1.2;
       color: var(--color-navy);
-      margin-bottom: var(--space-sm);
+      margin-bottom: var(--space-md);
     }
     .self-guided-card__price {
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: var(--text-base);
+      font-size: var(--text-xl);
       color: var(--color-gold);
       margin-bottom: var(--space-md);
     }
@@ -322,6 +336,18 @@
       font-size: var(--text-sm);
       line-height: 1.7;
       flex-grow: 1;
+      margin-bottom: var(--space-lg);
+    }
+    .self-guided-card__actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: auto;
+    }
+    .self-guided-card__actions .btn {
+      width: 100%;
+      justify-content: center;
+      padding: 0.75rem 1rem;
     }
     .self-guided-cta {
       text-align: center;
@@ -637,21 +663,45 @@
       <div class="self-guided-grid">
 
         <div class="self-guided-card reveal">
-          <h3>Camp Health Snapshot&trade; Self-Assessment</h3>
-          <div class="self-guided-card__price">$500 &ndash; $1,000</div>
-          <p>A guided diagnostic tool you complete independently. Includes scoring rubric, benchmarks, and a prioritized action summary. See where your camp stands&mdash;on your own timeline.</p>
+          <img class="self-guided-card__image"
+               src="https://images.unsplash.com/photo-1595505248358-221ad5cf0419?q=80&w=1200&auto=format&fit=crop"
+               alt="Notebook and pen — structured diagnostic tool"
+               loading="lazy" width="1200" height="750">
+          <h3>Camp Health Starter Kit&trade;</h3>
+          <div class="self-guided-card__price">$750</div>
+          <p>A guided diagnostic package that includes the Camp Health Snapshot&trade;, a CPCS&trade; Core Playbook overview, and a 30-minute debrief call with Jeff.</p>
+          <div class="self-guided-card__actions">
+            <a href="../starter-kit/" class="btn btn--outline">Learn More</a>
+            <a href="https://buy.stripe.com/bJe28r2e22Q4fWI5wUbMQ00" target="_blank" rel="noopener" class="btn btn--primary">Buy Now</a>
+          </div>
         </div>
 
         <div class="self-guided-card reveal">
+          <img class="self-guided-card__image"
+               src="https://images.unsplash.com/photo-1725119429100-4c83e0f5fe5a?q=80&w=1200&auto=format&fit=crop"
+               alt="Camp safety in practice"
+               loading="lazy" width="1200" height="750">
           <h3>Counselor-Proof Safety System&trade; Playbook</h3>
           <div class="self-guided-card__price">$1,500 &ndash; $2,500</div>
-          <p>Scenario-based safety cards, drill scripts, training agenda, staff habit checklist, and ACA/insurance-compatible compliance cross-walk. Practical safety tools your team can implement immediately.</p>
+          <p>A practical safety package for camps that want more than policies in a binder.</p>
+          <div class="self-guided-card__actions">
+            <a href="../safety-playbook/" class="btn btn--outline">Learn More</a>
+            <a href="https://buy.stripe.com/5kQ5kD2e22Q49ykgbybMQ03" target="_blank" rel="noopener" class="btn btn--primary">Buy Now</a>
+          </div>
         </div>
 
         <div class="self-guided-card reveal">
+          <img class="self-guided-card__image"
+               src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1200&auto=format&fit=crop"
+               alt="Camp staff team — continuity and return"
+               loading="lazy" width="1200" height="750">
           <h3>Staff Retention Toolkit</h3>
           <div class="self-guided-card__price">$1,500 &ndash; $2,000</div>
-          <p>The 5-Moment Counselor Retention Framework, supervisor scripts, re-hire campaign templates, and exit interview guide. Keep your best people coming back.</p>
+          <p>A practical retention system for camps that are tired of rebuilding culture from scratch every season.</p>
+          <div class="self-guided-card__actions">
+            <a href="../staff-retention-toolkit/" class="btn btn--outline">Learn More</a>
+            <a href="https://buy.stripe.com/4gMeVdbOCcqE8ugaRebMQ04" target="_blank" rel="noopener" class="btn btn--primary">Buy Now</a>
+          </div>
         </div>
 
       </div>
