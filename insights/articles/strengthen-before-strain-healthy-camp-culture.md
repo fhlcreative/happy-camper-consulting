@@ -2,7 +2,7 @@
 title: Strengthen Before Strain | Healthy Camp Culture
 date: 2026-04-21
 category: Culture
-featured_image: ''
+featured_image: /images/articles/IMG_8495.jpg
 excerpt: Most camp leaders do not realize how fragile their systems are until pressure hits. Healthy camps do not wait for crisis to test culture, they strengthen expectations, supervisors, and reporting habits before strain exposes what is weak.
 ---
 
@@ -152,3 +152,13 @@ That is what healthy camp culture does.
 It prepares before pressure makes the cost of waiting obvious.
 
 ────────────────────────────────────────────────────────────
+
+<p>
+
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
+
+  &nbsp;or&nbsp;
+
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">Schedule a Camp Health Snapshot conversation</a>.
+
+</p>
