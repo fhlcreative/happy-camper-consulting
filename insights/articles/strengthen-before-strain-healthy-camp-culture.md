@@ -8,7 +8,7 @@ excerpt: Most camp leaders do not realize how fragile their systems are until pr
 
 # **Strengthen Before Strain**
 
-## **Why healthy camp culture must be built before pressure exposes what is weak**
+## **Why** [**healthy camp culture**](https://www.happycamperconsultant.com/approach/) **must be built before pressure exposes what is weak**
 
 Most camp leaders do not realize how fragile their systems are until strain hits.
 
@@ -16,7 +16,7 @@ A hard week of weather. A homesick cabin. A staff conflict that starts small and
 
 Pressure has a way of revealing what normal days can hide.
 
-That is why healthy camp leadership does not wait for crisis to test culture. Healthy camps strengthen before strain.
+That is why healthy camp [leadership](https://www.happycamperconsultant.com/how-we-help/) does not wait for crisis to test culture. Healthy camps strengthen before strain.
 
 ## **Strain does not create the problem. It exposes it.**
 
@@ -36,7 +36,7 @@ If your expectations were assumed rather than translated, strain will expose it.
 
 In that sense, pressure is not the enemy. Pressure is a flashlight.
 
-It shows you whether your values have actually become behavior, whether your systems are clear enough to be used, and whether your leaders are strong enough to carry what the season demands.
+It shows you whether your [values have actually become behavior](https://www.happycamperconsultant.com/insights/article.html?slug=a-behavior-is-a-value-in-action), whether your [systems](https://www.happycamperconsultant.com/mdms/) are clear enough to be used, and whether your leaders are strong enough to carry what the season demands.
 
 ## **Strong camps prepare for predictable pressure**
 
@@ -61,7 +61,7 @@ Healthy culture is not proven by how a camp functions on an easy day. It is prov
 
 ## **Three things that must be strengthened before strain**
 
-### **1. Expectations must be translated**
+### **1.** [**Expectations must be translated**](https://www.happycamperconsultant.com/approach/)
 
 Many camps have good values but weak translation.
 
@@ -73,11 +73,11 @@ What does excellent communication actually sound like on a Tuesday afternoon whe
 
 What does safety look like at the waterfront, in the cabin, on the bus, or during free time?
 
-What is the reporting expectation when something feels off but is not yet a formal incident?
+What is the [reporting expectation](https://www.happycamperconsultant.com/insights/article.html?slug=systems-prevent-scandals) when something feels off but is not yet a formal incident?
 
 If those answers are not clear before pressure hits, people will improvise under stress. Improvisation is expensive.
 
-### **2. Supervisors must be equipped, not assumed**
+### **2.** [**Supervisors must be equipped**](https://www.happycamperconsultant.com/how-we-help/)**, not assumed**
 
 Many camps promote strong people into leadership and then quietly assume they know how to supervise.
 
@@ -91,9 +91,9 @@ A mature adult is not automatically prepared to coach, confront, clarify, and fo
 
 When strain hits, under-equipped supervisors become a liability fast. They hesitate. They soften when clarity is needed. They overreact when steadiness is needed. They avoid difficult conversations until the problem gets expensive.
 
-If you want healthy camps, strengthen your supervisors before the season exposes their gaps.
+If you want [healthy camps](https://www.happycamperconsultant.com/who-its-for/), strengthen your supervisors before the season exposes their gaps.
 
-### **3. Reporting culture must be normal**
+### **3.** [**Reporting culture**](https://www.happycamperconsultant.com/approach/) **must be normal**
 
 One of the most dangerous signs in a camp is silence.
 
