@@ -3,12 +3,16 @@ title: The Hidden Cost of Staff Turnover in Overnight Camps
 date: 2026-05-21
 category: Leadership
 featured_image: /images/articles/turnover.jpg
-excerpt: |-
-  When camp leaders talk about staff turnover, they usually talk about inconvenience. Another hiring scramble. Another round of interviews. Another missing piece in the summer staffing puzzle. Those frustrations are real. But the true cost of staff turnover runs much deeper than staffing logistics. Turnover affects safety consistency, supervisor capacity, parent trust, team culture, and the long-term stability of the entire camp. In other words, retention is not just an HR issue.
-  It is an operational health issue.
-  It is a leadership issue.
-  And in overnight camps, it is often a mission issue.
+excerpt: Staff turnover in overnight camps costs more than another round of hiring. It disrupts culture, weakens consistency, strains returning leaders, and quietly erodes the systems campers depend on. Healthy camps do not treat turnover as a seasonal inconvenience. They treat it as a leadership and sustainability issue.
 ---
+
+When camp leaders talk about staff turnover, they usually talk about inconvenience. Another hiring scramble. Another round of interviews. Another missing piece in the summer staffing puzzle. Those frustrations are real. But the true cost of staff turnover runs much deeper than staffing logistics. Turnover affects safety consistency, supervisor capacity, parent trust, team culture, and the long-term stability of the entire camp. In other words, retention is not just an HR issue.
+
+It is an operational health issue.
+
+It is a leadership issue.
+
+And in overnight camps, it is often a mission issue.
 
 ## **Why Turnover Hurts Camps Differently**
 
