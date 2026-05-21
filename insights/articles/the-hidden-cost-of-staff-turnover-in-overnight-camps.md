@@ -1,6 +1,6 @@
 ---
 title: The Hidden Cost of Staff Turnover in Overnight Camps
-date: 2026-05-21
+date: 2026-06-02
 category: Leadership
 featured_image: /images/articles/turnover.jpg
 excerpt: Staff turnover in overnight camps costs more than another round of hiring. It disrupts culture, weakens consistency, strains returning leaders, and quietly erodes the systems campers depend on. Healthy camps do not treat turnover as a seasonal inconvenience. They treat it as a leadership and sustainability issue.
