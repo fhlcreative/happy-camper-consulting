@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Camper Consulting — Email &amp; Domain Migration Plan</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1a2744;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.75in 0.85in;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    color: #1a2744;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #1a2744;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #c4922a;
+  }
+
+  h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a2744;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+
+  p { margin-bottom: 10px; }
+
+  .summary-box {
+    background: #faf8f4;
+    border: 1px solid #e5e0d5;
+    border-left: 4px solid #c4922a;
+    padding: 16px 20px;
+    margin: 16px 0 24px;
+    border-radius: 4px;
+  }
+
+  .summary-box p { margin-bottom: 6px; }
+  .summary-box p:last-child { margin-bottom: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 13.5px;
+  }
+
+  th {
+    background: #1a2744;
+    color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e5e0d5;
+  }
+
+  tr:nth-child(even) td { background: #faf8f4; }
+
+  .cost-highlight {
+    font-weight: 700;
+    color: #c4922a;
+  }
+
+  .step {
+    background: #fefcf8;
+    border: 1px solid #e5e0d5;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 12px 0;
+    page-break-inside: avoid;
+  }
+
+  .step-number {
+    display: inline-block;
+    background: #c4922a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .step-title {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .step ol, .step ul {
+    margin: 8px 0 4px 20px;
+  }
+
+  .step li {
+    margin-bottom: 5px;
+  }
+
+  .config-block {
+    background: #f4f2ed;
+    border: 1px solid #e0ddd5;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-family: monospace;
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .note {
+    background: #fff8e6;
+    border: 1px solid #f0e0a0;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+
+  .note strong { color: #8a6d1b; }
+
+  .footer {
+    margin-top: 36px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e0d5;
+    font-size: 12px;
+    color: #999;
+  }
+
+  @media print {
+    body { padding: 0.5in 0.65in; }
+    .step { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Email &amp; Domain Migration Plan</h1>
+<p class="subtitle">Happy Camper Consulting &bull; Prepared March 2, 2026</p>
+
+<div class="summary-box">
+  <p><strong>What's happening:</strong> Your website is hosted on Vercel, but your email and domain are still on Chillidog Hosting. Because these are split across two systems, email routing has been unreliable — including MachForms notifications.</p>
+  <p><strong>The fix:</strong> Move email to Google Workspace and eventually transfer the domain to Namecheap. This gives you reliable email, a clean DNS setup, and removes Chillidog from the equation.</p>
+</div>
+
+<h2>New Setup &amp; Costs</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>What It Does</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Vercel</strong></td>
+      <td>Website hosting (happycamperconsultant.com)</td>
+      <td>Free</td>
+    </tr>
+    <tr>
+      <td><strong>Google Workspace</strong></td>
+      <td>Email, Calendar, Google Drive using your domain</td>
+      <td class="cost-highlight">$7/month</td>
+    </tr>
+    <tr>
+      <td><strong>Namecheap</strong></td>
+      <td>Domain registration &amp; DNS management</td>
+      <td class="cost-highlight">~$13/year</td>
+    </tr>
+    <tr>
+      <td><strong>SiteGround</strong></td>
+      <td>MachForms hosting only</td>
+      <td>(current plan)</td>
+    </tr>
+    <tr>
+      <td><s>Chillidog Hosting</s></td>
+      <td><s>Email, DNS, domain</s></td>
+      <td><strong>Canceled</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Total new cost:</strong> approximately <strong>$7/month + $13/year</strong> for domain renewal.</p>
+
+<h2>Migration Steps</h2>
+
+<div class="step">
+  <p><span class="step-number">1</span><span class="step-title">Sign Up for Google Workspace</span></p>
+  <ol>
+    <li>Go to <strong>workspace.google.com</strong></li>
+    <li>Choose the <strong>Business Starter</strong> plan ($7/month)</li>
+    <li>Enter your domain: <strong>happycamperconsultant.com</strong></li>
+    <li>Create your admin account: <strong>jeff@happycamperconsultant.com</strong></li>
+    <li>Google will ask you to verify domain ownership (see Step 2)</li>
+  </ol>
+</div>
+
+<div class="step">
+  <p><span class="step-number">2</span><span class="step-title">Update DNS Records in Chillidog</span></p>
+  <p>Log into Chillidog <strong>cPanel &rarr; Zone Editor</strong> and make these changes:</p>
+
+  <h3>a) Add Google's verification TXT record</h3>
+  <p>Google will give you a TXT record during signup. Add it:</p>
+  <div class="config-block">
+    Type: TXT<br>
+    Name: @<br>
+    Value: (the verification string Google provides)
+  </div>
+
+  <h3>b) Delete the old MX record</h3>
+  <p>Remove the existing MX record pointing to <strong>bell.chillidoghosting.com</strong></p>
+
+  <h3>c) Add Google's MX records</h3>
+  <p>Add all 5 of these:</p>
+  <div class="config-block">
+    Priority 1 &rarr; ASPMX.L.GOOGLE.COM<br>
+    Priority 5 &rarr; ALT1.ASPMX.L.GOOGLE.COM<br>
+    Priority 5 &rarr; ALT2.ASPMX.L.GOOGLE.COM<br>
+    Priority 10 &rarr; ALT3.ASPMX.L.GOOGLE.COM<br>
+    Priority 10 &rarr; ALT4.ASPMX.L.GOOGLE.COM
+  </div>
+
+  <h3>d) Update the SPF record</h3>
+  <p>Edit the existing TXT record that starts with <code>v=spf1</code> and replace it with:</p>
+  <div class="config-block">
+    v=spf1 include:_spf.google.com +ip4:35.212.113.249 ~all
+  </div>
+  <p><em>This authorizes both Google and SiteGround (MachForms) to send email for your domain.</em></p>
+
+  <div class="note">
+    <strong>Note:</strong> Keep the existing A records (<code>@</code> pointing to Vercel, <code>forms</code> pointing to SiteGround) and the <code>www</code> CNAME — do not change those.
+  </div>
+</div>
+
+<div class="step">
+  <p><span class="step-number">3</span><span class="step-title">Migrate Your Old Emails</span></p>
+  <p>Pull your existing emails from Chillidog into Google Workspace:</p>
+  <ol>
+    <li>Log into <strong>admin.google.com</strong></li>
+    <li>Go to <strong>Account &rarr; Data migration</strong></li>
+    <li>Choose <strong>Email</strong> as the migration type</li>
+    <li>Select <strong>Other IMAP server</strong> and enter:</li>
+  </ol>
+  <div class="config-block">
+    IMAP Server: chillimail.chillidoghosting.com<br>
+    Port: 993<br>
+    Encryption: SSL<br>
+    Username: jeff@happycamperconsultant.com<br>
+    Password: (your current Chillidog email password)
+  </div>
+  <p>Google will pull all your old emails into Gmail. This runs in the background and may take a few hours.</p>
+</div>
+
+<div class="step">
+  <p><span class="step-number">4</span><span class="step-title">Update MachForms Email Settings</span></p>
+  <p>Log into MachForms admin &rarr; <strong>Settings &rarr; System Settings</strong>:</p>
+  <ol>
+    <li>Check <strong>"Use SMTP Server to Send Emails"</strong></li>
+    <li>Enter these settings:</li>
+  </ol>
+  <div class="config-block">
+    SMTP Server: smtp.gmail.com<br>
+    Port: 587<br>
+    Use TLS/SSL: Yes<br>
+    Use Authentication: Yes<br>
+    Username: jeff@happycamperconsultant.com<br>
+    Password: (App Password — see below)
+  </div>
+
+  <h3>Generating an App Password</h3>
+  <ol>
+    <li>Go to <strong>myaccount.google.com</strong></li>
+    <li>Navigate to <strong>Security &rarr; 2-Step Verification</strong> (enable if not already on)</li>
+    <li>Scroll down to <strong>App Passwords</strong></li>
+    <li>Create a new app password labeled "MachForms"</li>
+    <li>Google will give you a 16-character code — use that as the SMTP password</li>
+  </ol>
+</div>
+
+<div class="step">
+  <p><span class="step-number">5</span><span class="step-title">Transfer Domain to Namecheap (After 60 Days)</span></p>
+  <p>Your domain was registered less than 60 days ago, so it can't be transferred yet. Once eligible:</p>
+  <ol>
+    <li>Unlock the domain at Chillidog and get the <strong>EPP/authorization code</strong></li>
+    <li>Go to <strong>namecheap.com</strong> and initiate a domain transfer (~$13)</li>
+    <li>Enter the authorization code when prompted</li>
+    <li>Once transferred, set up DNS records at Namecheap:</li>
+  </ol>
+  <div class="config-block">
+    A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ &nbsp;&nbsp;&nbsp;&nbsp;&rarr; 216.198.79.1 (Vercel)<br>
+    CNAME &nbsp; www &nbsp;&nbsp;&rarr; f7254ef3a428f216.vercel-dns-017.com<br>
+    A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; forms &rarr; 35.212.113.249 (SiteGround)<br>
+    MX &nbsp;&nbsp;&nbsp;&nbsp; (Google Workspace records from Step 2)<br>
+    TXT &nbsp;&nbsp;&nbsp; (SPF record from Step 2)
+  </div>
+  <p>After this, <strong>cancel Chillidog Hosting</strong>. It will no longer be needed.</p>
+</div>
+
+<h2>After Migration</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>What</th>
+      <th>Where</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Check email</td>
+      <td><strong>mail.google.com</strong> or Gmail app</td>
+    </tr>
+    <tr>
+      <td>Manage email settings</td>
+      <td><strong>admin.google.com</strong></td>
+    </tr>
+    <tr>
+      <td>Manage DNS records</td>
+      <td><strong>Namecheap</strong> (after transfer) or Chillidog cPanel (until then)</td>
+    </tr>
+    <tr>
+      <td>Website &amp; CMS</td>
+      <td><strong>Vercel</strong> (no change)</td>
+    </tr>
+    <tr>
+      <td>MachForms</td>
+      <td><strong>SiteGround</strong> (no change, just new SMTP settings)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>Need help?</strong> Steps 1-4 can be done together on a call. The whole process takes about 30 minutes of hands-on time, plus a few hours of background email migration.
+</div>
+
+<div class="footer">
+  Prepared by Townsite Websites &bull; phil@fhlcreative.com
+</div>
+
+</body>
+</html>
