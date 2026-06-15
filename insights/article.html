@@ -18,6 +18,8 @@
 
   <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- HTML sanitizer (pinned + SRI) — strips any injected scripts/handlers from rendered markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" integrity="sha384-+VfUPEb0PdtChMwmBcBmykRMDd+v6D/oFmB3rZM/puCMDYcIvF968OimRh4KQY9a" crossorigin="anonymous"></script>
   <script src="../js/main.js" defer></script>
 
   <meta property="article:modified_time" content="2026-02-24T00:00:00-05:00">
@@ -335,8 +337,9 @@
           schemaEl.textContent = JSON.stringify(schema);
           document.head.appendChild(schemaEl);
 
-          // Render markdown
-          document.getElementById('content').innerHTML = marked.parse(body);
+          // Render markdown (sanitized — falls back to raw only if DOMPurify failed to load, so the page never goes blank)
+          var __rendered = marked.parse(body);
+          document.getElementById('content').innerHTML = window.DOMPurify ? DOMPurify.sanitize(__rendered) : __rendered;
         })
         .catch(function() {
           document.getElementById('content').innerHTML = '<p>Article not found.</p>';
