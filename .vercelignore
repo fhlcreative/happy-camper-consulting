@@ -1,0 +1,12 @@
+# Internal working files — must never be publicly served
+data/
+scripts/
+.claude/
+.agents/
+.agent/
+.windsurf/
+skills/
+skills-lock.json
+*.log
+.env
+.env.*
