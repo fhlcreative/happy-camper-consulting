@@ -6,7 +6,7 @@ featured_image: /images/articles/IMG_8473.JPG
 excerpt: Healthy camp leadership teams are not defined by individual talent alone. They create clarity together, reinforce the same standards, share responsibility well, and address drift early. Strong camps become more stable when leadership is aligned, not just hardworking.
 ---
 
-**Introduction**
+### **Introduction**
 
 Most camp leadership problems do not begin with bad people.
 
@@ -44,7 +44,7 @@ Healthy camp leadership teams do not succeed because every leader is equally gif
 
 They succeed because they are aligned around shared expectations, shared language, and shared responsibility.
 
-**Strong Camps Are Not Led by Lone Heroes**
+### **Strong Camps Are Not Led by Lone Heroes**
 
 Many camps still function as if one strong director can compensate for everything.
 
@@ -70,7 +70,7 @@ They remove unnecessary dependence on them.
 
 That is one reason camp directors often feel isolated (/insights/why-camp-directors-feel-isolated). They are carrying work a healthy leadership team should help absorb.
 
-**What Healthy Leadership Teams Do Differently**
+### **What Healthy Leadership Teams Do Differently**
 
 Healthy leadership teams are not perfect.
 
@@ -78,7 +78,7 @@ They still have tension, pressure, and hard weeks.
 
 But they tend to share a few clear habits.
 
-**1. They create clarity together**
+##### **1. They create clarity together**
 
 Unhealthy teams often assume clarity is obvious.
 
@@ -102,7 +102,7 @@ Healthy teams understand that clarity is not a luxury.
 
 It is leadership work.
 
-**2. They reinforce the same standards**
+##### **2. They reinforce the same standards**
 
 One of the fastest ways to weaken a camp is to let leaders hold different lines on the same issue.
 
@@ -124,7 +124,7 @@ As we often say, a behavior is a value in action (/insights/a-behavior-is-a-valu
 
 If leaders reinforce different behaviors, they are teaching different values.
 
-**3. They share responsibility instead of hoarding it**
+##### **3. They share responsibility instead of hoarding it**
 
 Unhealthy teams either dump responsibility carelessly or hoard it protectively.
 
@@ -153,7 +153,7 @@ That does not make leadership rigid.
 
 It makes it more dependable.
 
-**4. They talk about drift early**
+##### **4. They talk about drift early**
 
 Every camp drifts.
 
@@ -176,7 +176,7 @@ They do not assume pressure will create clarity.
 
 They build clarity before pressure exposes weakness.
 
-**5. They support the director by carrying real weight**
+##### **5. They support the director by carrying real weight**
 
 Healthy teams do not just attend meetings and relay announcements.
 
@@ -196,7 +196,7 @@ But it does keep the director from carrying preventable weight alone.
 
 That is what a leadership team is for.
 
-**What Unhealthy Leadership Teams Tend to Look Like**
+### **What Unhealthy Leadership Teams Tend to Look Like**
 
 Sometimes clarity comes best through contrast.
 
@@ -218,7 +218,7 @@ Good people begin compensating for weak structure.
 
 And when good people compensate long enough, burnout is not far behind.
 
-**Why Alignment Matters More Than Talent**
+### **Why Alignment Matters More Than Talent**
 
 Gifted leaders can still form an unhealthy team.
 
@@ -245,7 +245,7 @@ That is why healthy camps do not just look for talented leaders.
 
 They build aligned ones.
 
-**Practical Questions for Camp Directors**
+##### **Practical Questions for Camp Directors**
 
 If you want to assess the health of your leadership team, start here:
 
@@ -264,7 +264,7 @@ Healthy culture. Clear systems. Sustainable camps.
 
 That starts with the people who lead them together.
 
-**Conclusion**
+### **Conclusion**
 
 Healthy camp leadership teams do not happen by accident.
 
@@ -286,10 +286,16 @@ That is what healthy leadership teams do differently.
 
 They make clarity visible, shared, and repeatable.
 
-**Take the Next Step**
+### **Take the Next Step**
 
 If your camp’s leadership weight is concentrated in too few people, now is the time to build stronger alignment before strain exposes the gaps.
 
-Learn about our camp consulting services (/services)
-   or 
-  schedule a Camp Health Snapshot conversation (/contact).
+<p>
+
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
+
+  &nbsp;or&nbsp;
+
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">Schedule a Camp Health Snapshot conversation</a>.
+
+</p>
