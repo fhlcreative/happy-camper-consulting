@@ -2,7 +2,7 @@
 title: Why Camps Drift When Supervisors Avoid Hard Conversations
 date: 2026-07-07
 category: Leadership
-featured_image: ''
+featured_image: /images/articles/HCC-Article-Supervisor-Conversation.png
 excerpt: Camp drift rarely begins with open defiance. It usually starts when supervisors delay correction, tolerate blurry standards, and choose comfort over clarity. Healthy camps protect culture by equipping leaders to address small issues early, calmly, and consistently.
 ---
 
