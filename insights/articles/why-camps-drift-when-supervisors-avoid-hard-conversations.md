@@ -159,7 +159,7 @@ This is one reason camps become fragile under pressure.
 
 The supervisor layer is present, but it is not carrying enough real weight.
 
-##### **Hard conversations are part of hospitality**
+### **Hard conversations are part of hospitality**
 
 Some leaders still think correction and care are in tension.
 
@@ -181,7 +181,7 @@ Supervisors who address issues early are not damaging culture.
 
 They are preserving it.
 
-##### **What healthy supervisors do instead**
+### **What healthy supervisors do instead**
 
 Healthy supervisors do not wait for perfection before they speak.
 
@@ -216,7 +216,7 @@ They do not assume one conversation solved everything. They revisit, reinforce, 
 
 That kind of supervision does not create fear. It creates clarity.
 
-##### **How camps can better equip supervisors**
+### **How camps can better equip supervisors**
 
 If your supervisors are avoiding hard conversations, do not only ask more of them.
 
@@ -236,7 +236,7 @@ They do not wait until pressure exposes weak supervision.
 
 They build stronger reflexes before the season gets expensive.
 
-##### **Conclusion**
+### **Conclusion**
 
 Camp drift often starts quietly.
 
@@ -260,6 +260,16 @@ And culture becomes more durable under pressure.
 
 Healthy camps don't happen by accident. They are built — on purpose.
 
-**Take the Next Step**
+### **Take the Next Step**
 
 If your camp’s supervisors are carrying leadership responsibility without enough coaching or calibration, now is the time to strengthen that layer before drift becomes a larger problem.
+
+<p>
+
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
+
+  &nbsp;or&nbsp;
+
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">Schedule a Camp Health Snapshot conversation</a>.
+
+</p>
