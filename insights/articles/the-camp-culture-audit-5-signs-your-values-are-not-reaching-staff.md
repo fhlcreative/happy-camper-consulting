@@ -2,7 +2,7 @@
 title: 'The Camp Culture Audit: 5 Signs Your Values Are Not Reaching Staff'
 date: 2026-07-22
 category: Culture
-featured_image: ''
+featured_image: /images/articles/IMG_2376.JPG
 excerpt: Strong camp values are not enough if they stay abstract. When staff can repeat the language but not apply it consistently, culture begins to drift. This audit helps camp leaders spot five signs their values are not translating clearly into daily behavior.
 ---
 
@@ -256,3 +256,19 @@ Directors carry less uncertainty.
 And the culture becomes more durable across the whole operation.
 
 Healthy camps don't happen by accident. They are built — on purpose.
+
+────────────────────────────────────────────────────────────
+
+**Take the Next Step**
+
+If your camp has strong values but uneven day-to-day translation, now is the right time to inspect the gap before it becomes a larger cultural problem.
+
+<p>
+
+  <a href="https://happy-camper-consulting.vercel.app/how-we-help/">Explore our camp consulting services</a>
+
+  &nbsp;or&nbsp;
+
+  <a href="https://happy-camper-consulting.vercel.app/conversation/">Schedule a Camp Health Snapshot conversation</a>.
+
+</p>
