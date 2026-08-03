@@ -73,13 +73,14 @@ keys and passwords present in those sources were deliberately omitted.
 - Google Search Console sitemap submission; Rich Results validation.
 
 ### Gotchas
-- **⚠️ DNS incident 2026-07-07**: root A got clobbered to the forms IP. *"Vercel's recommended A record is now `216.150.1.1`"* — **not** the `216.198.79.1` used across the rest of the fleet.
+- **⚠️ DNS incident 2026-07-07**: root A got clobbered to the forms IP. *"Vercel's recommended A record is now `216.150.1.1`"* — **not** the `216.198.79.1` used across the rest of the fleet. Raised with Phil 2026-08-03; his read: *"I think everything should be fine."* The divergence is intentional/accepted — **don't "correct" it to match the fleet.**
 - **⚠️ Never move nameservers to Vercel** — *"it wipes out Chillidog's MX records and breaks email."* Keep NS at Chillidog, add A/CNAME there. Edits go through **cPanel → Zone Editor**.
 - `build.js` reads `insights/articles/*.md` as **build input** — a blanket `*.md` `.vercelignore` rule starves the build (you found this independently).
 - Centering gotcha: global `p, li, blockquote { max-width: 68ch }` left-aligns content inside centered wrappers.
 - Public `/data/extracted/*.md` (competitor research, site audit) was closed in the June audit.
-- Flagged as a **PUBLIC repo with no branch protection** in the June audit.
-- **⚠️ `hapi-incident.md` is an UNRESOLVED security incident** involving Jeff's own AI agent claiming exposed Google OAuth credentials in a repo Phil could never find. Status: *"Phil needs to talk to Jeff directly."* Nothing in later sources closes it.
+- **PUBLIC repo with no branch protection** — flagged in the June audit, and **deliberate**: Phil confirmed 2026-08-03 he made it public so Jeff could post through the CMS. See the note below — public may not actually be required.
+- ~~**⚠️ `hapi-incident.md` is an UNRESOLVED security incident**~~ — **CLOSED by Phil, 2026-08-03.** Jeff's own AI agent had claimed exposed Google OAuth credentials in a repo Phil could never locate. Phil's call: *"we can mark that issue as closed."* No further action.
+- **Public visibility may be unnecessary.** `jeffrorabaugh` is already a **collaborator** on this repo (`gh api repos/fhlcreative/happy-camper-consulting/collaborators`, checked 2026-08-03). Sveltia CMS authenticates as the logged-in GitHub user and works against private repos so long as that user has write access — so the repo could likely go private without affecting Jeff's publishing. Not changed; raised with Phil 2026-08-03, no decision yet.
 - Listed as having no EmailJS contact form (MachForms instead).
 
 ---
