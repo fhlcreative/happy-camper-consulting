@@ -10,3 +10,14 @@ skills-lock.json
 *.log
 .env
 .env.*
+
+# Internal docs — kept in the repo, never deployed to the public site.
+#
+# NOTE: do NOT use a blanket *.md rule on this site. build.js reads
+# insights/articles/*.md as build INPUTS and compiles them to
+# articles.json. A wildcard would break the Insights section.
+# Root-anchored paths only.
+/README.md
+
+# Per-site status/working notes.
+/SITE_STATUS.md
