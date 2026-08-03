@@ -70,7 +70,9 @@ keys and passwords present in those sources were deliberately omitted.
 ### Open / unresolved
 - ~~**Maintenance Request 2 is still on the `staging` branch awaiting Jeff's approval** (commit `421bc56`, submitted 2026-03-17) — 11 changes across investment/homepage/VDMS/christian-camps/services/about. Merge staging→main when approved. *Note: the per-site index says the Mar 17 staging merge happened; `hcc-maintenance.md` still lists it as pending. Sources conflict — verify branch state before assuming.*~~ **RESOLVED — verified 2026-08-04.** The conflict is settled in favour of the per-site index: after `git fetch`, `origin/main..origin/staging` is **0 commits**. Staging is fully merged; Request 2 shipped. `hcc-maintenance.md` is the stale source. Nothing to merge.
 
-- **⚠️ NEW, open as of 2026-08-04: `sitemap.xml` lists `/resources/`, which 404s.** Neither `/resources/` nor `/resources.html` exists. 14 of the 15 sitemap entries resolve; this one has been telling crawlers about a page that isn't there. Either create the page or drop the entry.
+- ~~**⚠️ NEW, open as of 2026-08-04: `sitemap.xml` lists `/resources/`, which 404s.**~~ **FIXED 2026-08-04** — entry dropped per Phil; sitemap is now 14 entries, all resolving.
+
+  ⚠️ **`/resources/` is not a page and never was — but `resources/downloads/` is live and in active use.** It serves 6 PDFs linked from `insights/`, `investment/` (×2) and `approach/`, and the Sveltia admin at `admin/index.html` reads and writes that directory via the GitHub API. The PDFs return 200; only the bare directory 404s, which is normal (no index, and Vercel does not list directories). **Do not "tidy up" the resources folder on the strength of the sitemap entry being gone.**
 - Domain transfer Chillidog → Namecheap, waiting on the 60-day lock; then cancel Chillidog.
 - Google Search Console sitemap submission; Rich Results validation.
 
