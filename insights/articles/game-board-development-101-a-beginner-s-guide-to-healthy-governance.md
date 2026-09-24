@@ -1,5 +1,5 @@
 ---
-title: "Camp Board Development 101: A Beginner's Guide to Healthy Governance"
+title: 'Camp Board Development 101: Governance, Management, and Where the Line Falls'
 date: 2026-09-24
 category: Leadership
 featured_image: /images/articles/Board-Governance-101.png
