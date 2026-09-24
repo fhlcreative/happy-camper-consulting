@@ -6,8 +6,6 @@ featured_image: /images/articles/Board-Governance-101.png
 excerpt: A healthy camp board doesn't run the camp. It protects the mission. Here's where governance ends, management begins, and how to build a board that helps.
 ---
 
-<h1>Camp Board Development 101: Governance, Management, and Where the Line Falls</h1>
-
 <p>A healthy camp board does more than approve budgets and attend meetings. It helps protect the camp’s mission, provides wise oversight, supports the director, and strengthens the organization’s ability to serve people well over time.</p>
 
 <p>That work becomes clearer when the board understands one foundational distinction:</p>
