@@ -1,12 +1,12 @@
 ---
-title: "Game Board Development 101: A Beginner's Guide to Healthy Governance"
+title: "Camp Board Development 101: A Beginner's Guide to Healthy Governance"
 date: 2026-09-24
 category: Leadership
 featured_image: /images/articles/Board-Governance-101.png
-excerpt: ''
+excerpt: A healthy camp board doesn't run the camp. It protects the mission. Here's where governance ends, management begins, and how to build a board that helps.
 ---
 
-<h1>Camp Board Development 101: A Beginner’s Guide to Healthy Governance</h1>
+<h1>Camp Board Development 101: Governance, Management, and Where the Line Falls</h1>
 
 <p>A healthy camp board does more than approve budgets and attend meetings. It helps protect the camp’s mission, provides wise oversight, supports the director, and strengthens the organization’s ability to serve people well over time.</p>
 
@@ -22,7 +22,7 @@ excerpt: ''
 
 <p>This guide offers a practical starting point for camp board development. It focuses on the board’s role, the boundary between governance and management, and how these responsibilities connect to the <strong>Structure</strong> layer of the <a href="https://www.happycamperconsultant.com/approach/">Healthy Camp Operating Model™</a>.</p>
 
-<h2>01, Clarify the Board’s Purpose</h2>
+<h2>1. Clarify the Board’s Purpose</h2>
 
 <p>A board exists to help the camp remain faithful to its mission and healthy in its leadership, finances, operations, and future direction.</p>
 
@@ -58,7 +58,7 @@ excerpt: ''
 
 <p>When the board’s purpose is clear, meetings become more focused. Conversations become more strategic. The director receives clearer support rather than a collection of disconnected opinions.</p>
 
-<h2>02, Understand Governance and Management</h2>
+<h2>2. Understand Governance and Management</h2>
 
 <p>Many board challenges begin when governance and management are not clearly separated.</p>
 
@@ -136,7 +136,7 @@ excerpt: ''
 
 <p>When expectations become clearer, friction decreases. When authority becomes clearer, decisions move more effectively. When the board and director understand their respective lanes, collaboration becomes easier.</p>
 
-<h2>03, Define the Board’s Core Responsibilities</h2>
+<h2>3. Define the Board’s Core Responsibilities</h2>
 
 <p>Healthy governance is not passive. It requires preparation, attention, questions, and follow-through.</p>
 
@@ -266,7 +266,7 @@ excerpt: ''
 
 <p>This role should be coordinated with the director and aligned with the camp’s communication practices. Representation is most helpful when board members speak accurately, consistently, and within their role.</p>
 
-<h2>04, Connect Governance to Structure</h2>
+<h2>4. Connect Governance to Structure</h2>
 
 <p>The Structure layer of the <a href="https://www.happycamperconsultant.com/approach/">Healthy Camp Operating Model™</a> focuses on the systems that clarify mission, define authority, align priorities, and establish measurable review rhythms.</p>
 
@@ -300,7 +300,7 @@ excerpt: ''
 
 <p>Do not add unnecessary complexity. Build what is needed.</p>
 
-<h2>05, Establish Better Board Rhythms</h2>
+<h2>5. Establish Better Board Rhythms</h2>
 
 <p>Good governance depends on more than a well-written role description. The board needs recurring practices that reinforce its purpose.</p>
 
@@ -387,7 +387,5 @@ excerpt: ''
 <p>The goal is not to create rules for every situation. It is to establish the clarity, boundaries, and review practices that help leaders act wisely.</p>
 
 <p>The goal is not isolated improvement. It is sustainable alignment between mission, governance, leadership, culture, operations, and safety.</p>
-
-<p>For additional perspective on camp governance, you may also find the <a href="https://www.acacamps.org/article/camping-magazine/board-camp">American Camp Association’s guidance on camp boards</a> and <a href="https://jcamp180.org/knowledge-center/governance">JCamp 180’s governance resources</a> useful as your board continues its development.</p>
 
 <p>If your board or leadership team is working through questions about governance clarity, director support, or the Structure layer of your operating model, you are welcome to <a href="https://calendly.com/jeff-happycamperconsulting">start a conversation with Jeff</a>. Together, you can determine what level of support, if any, would be appropriate for your camp.</p>
