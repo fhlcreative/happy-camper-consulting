@@ -8,8 +8,6 @@ excerpt: ''
 
 <h1>Camp Board Development 101: A Beginner’s Guide to Healthy Governance</h1>
 
-<p><img src="https://cdn.marblism.com/U-_qsESbbJS.webp" alt="Empty camp boardroom prepared for a governance meeting, with a wooded camp landscape visible through the windows"></p>
-
 <p>A healthy camp board does more than approve budgets and attend meetings. It helps protect the camp’s mission, provides wise oversight, supports the director, and strengthens the organization’s ability to serve people well over time.</p>
 
 <p>That work becomes clearer when the board understands one foundational distinction:</p>
