@@ -21,7 +21,7 @@ the log and the repo can't drift apart.
 | **Repo** | `https://github.com/fhlcreative/happy-camper-consulting.git` (private) |
 | **Deploy** | push to `main` → Vercel auto-deploys production |
 | **Live (Vercel production alias)** | https://www.happycamperconsultant.com |
-| **Canonical in markup** | https://happycamperconsultant.com/ |
+| **Canonical in markup** | https://www.happycamperconsultant.com/ (apex until 2026-10-27) |
 | **Build step** | `node build.js` |
 | **Markdown is a build input** | ⚠️ yes — insights/articles |
 | **Pages** | 20 HTML files |
@@ -36,6 +36,29 @@ the log and the repo can't drift apart.
 ## Other docs in this repo
 
 `README.md` — read these directly rather than trusting a summary here.
+
+## 2026-10-27 — Canonical, og:url, JSON-LD and sitemap moved to www
+
+**Committed locally, not deployed.** The apex `happycamperconsultant.com` 308s
+to `www`, so every canonical and sitemap URL pointed at a redirect. All
+`<head>` URLs (canonical, og:url, og:image, twitter:image), JSON-LD,
+`sitemap.xml`, `robots.txt`, `llms.txt`, `llms-full.txt` and
+`templates/product-template.html` now name `https://www.happycamperconsultant.com`.
+
+`build.js` holds no host (it only writes `insights/articles.json`). Article
+pages set their canonical, OG/Twitter tags and Article JSON-LD at runtime from
+the script in `insights/article.html`, and that script's URL constants moved
+to www too (`articleUrl`, `imageUrl`, publisher `url`/`logo`). Those values
+feed only meta tags and JSON-LD.
+
+Not changed: `data/qa/visual-qa.mjs` `BASE` and the `data/extracted/` snapshots
+(internal, not deployed), and article markdown body links.
+
+Verified: `npm run build` gives a byte-identical `articles.json` before and
+after. Every changed HTML line is above `</head>` or is one of those five
+`article.html` lines, and all 24 new www URLs return 200.
+
+---
 
 ## 2026-08-03 — SITE_STATUS.md seeded
 

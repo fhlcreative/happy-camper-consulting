@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://happycamperconsultant.com/sitemap.xml
+Sitemap: https://www.happycamperconsultant.com/sitemap.xml
 
 # AI Crawlers Welcome
 User-agent: GPTBot
