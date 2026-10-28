@@ -9,7 +9,6 @@
 
   // ---- Navbar scroll behavior ----
   const navbar = document.querySelector('.navbar');
-  let lastScroll = 0;
 
   function handleScroll() {
     const scrollY = window.scrollY;
@@ -20,7 +19,6 @@
       navbar.classList.remove('navbar--scrolled');
       navbar.classList.add('navbar--transparent');
     }
-    lastScroll = scrollY;
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
